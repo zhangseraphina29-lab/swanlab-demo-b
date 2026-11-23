@@ -1,0 +1,694 @@
+/* Supabase current Button / Menu / Input / Select / Table / Alert component treatment.
+   Page layout and the deployed demo3 component composition remain the baseline. */
+html[data-demo="4"] {
+ --d4-bg:#fdfdfd;--d4-card:#fff;--d4-popover:#fff;--d4-fg:#030303;--d4-muted:#464646;--d4-tertiary:#696969;
+ --d4-border:rgb(0 0 0 / .082);--d4-input:rgb(0 0 0 / .145);--d4-hover-border:rgb(3 3 3 / .298);
+ --d4-field:rgb(0 0 0 / .016);--d4-accent:rgb(0 0 0 / .039);--d4-primary:#0e7e4e;--d4-solid:#0e7e4e;--d4-solid-hover:#007243;--d4-on-solid:#fafcfb;--d4-ring:rgb(47 186 120 / .549);
+ --d4-danger:#ab413e;--d4-edge:0 0 0;--d4-drop:.04;
+ --d4-shadow:0 18px 47px #00000008,0 7.5px 19px #00000005,0 4px 10.5px #00000008,0 2.3px 5.8px #00000008,0 1.2px 3.1px #00000008,0 .5px 1.3px #00000005,0 0 0 1px rgb(0 0 0 / .056);
+ --d4-warning-bg:hsl(40 81.8% 97.8%);--d4-warning-border:hsl(41.9 100% 81.8%);--d4-warning-fg:#ac5800;
+}
+html[data-demo="4"][data-theme=dark] {
+ --d4-bg:#131413;--d4-card:#181a19;--d4-popover:#1b1d1c;--d4-fg:#edefee;--d4-muted:#bcbdbc;--d4-tertiary:#989a99;
+ --d4-border:rgb(242 242 242 / .074);--d4-input:rgb(240 240 240 / .133);--d4-hover-border:rgb(237 241 237 / .278);
+ --d4-field:rgb(0 0 0 / .122);--d4-accent:rgb(235 235 235 / .051);--d4-primary:#4acd8b;--d4-solid:#006338;--d4-solid-hover:#076e43;--d4-on-solid:#edefee;--d4-ring:rgb(75 206 138 / .549);
+ --d4-danger:#b54a46;--d4-edge:255 255 255;--d4-drop:.2;
+ --d4-shadow:0 18px 47px #00000026,0 7.5px 19px #0000001a,0 4px 10.5px #00000026,0 2.3px 5.8px #00000026,0 1.2px 3.1px #00000026,0 .5px 1.3px #0000001a,0 0 0 1px rgb(255 255 255 / .18);
+ --d4-warning-bg:hsl(36.6 100% 8%);--d4-warning-border:hsl(33.2 100% 14.5%);--d4-warning-fg:#f2af48;
+}
+/* Buttons: tiny by default; keep icon/text controls free of raised surfaces. */
+html[data-demo="4"] body [data-d4-button] {
+ --d4-button-shadow:0 1px 3px rgb(0 0 0 / var(--d4-drop)),inset 0 1px 0 rgb(var(--d4-edge) / .024),inset 0 0 0 1px rgb(var(--d4-edge) / .06);
+ height:26px;min-height:26px;gap:8px;padding:4px 10px;border:0;border-radius:8px;
+ background:var(--d4-card);color:var(--d4-fg);box-shadow:var(--d4-button-shadow);
+ font:500 12px/16px var(--sb-font-body);transform:none;
+ transition:color 200ms cubic-bezier(.22,1,.36,1),background-color 200ms cubic-bezier(.22,1,.36,1),scale 200ms cubic-bezier(.22,1,.36,1);
+}
+html[data-demo="4"] body [data-d4-button=primary] {background:linear-gradient(#ffffff04,#00000003),var(--d4-solid);color:var(--d4-on-solid)}
+html[data-demo="4"] body [data-d4-button=danger] {border:1px solid var(--d4-input);background:transparent;box-shadow:none;color:var(--d4-danger)}
+html[data-demo="4"] body [data-d4-button=text],html[data-demo="4"] body [data-d4-icon=true] {background:transparent;border-color:transparent;box-shadow:none;color:var(--d4-muted)}
+html[data-demo="4"] body [data-d4-icon=true] {width:26px;padding:5px;flex:0 0 26px}
+html[data-demo="4"] body [data-d4-button] svg {width:14px;height:14px;stroke-width:1.5}
+html[data-demo="4"] body [data-d4-button]:disabled {opacity:.5;cursor:not-allowed;pointer-events:none}
+html[data-demo="4"] body [data-d4-button]:focus-visible {outline:2px solid var(--d4-ring);outline-offset:2px}
+@media(hover:hover) and (pointer:fine){
+ html[data-demo="4"] body [data-d4-button=default]:hover:not(:disabled){background:var(--d4-accent)}
+ html[data-demo="4"] body [data-d4-button=primary]:hover:not(:disabled){background-color:var(--d4-solid-hover);color:var(--d4-on-solid)}
+ html[data-demo="4"] body [data-d4-button=danger]:hover:not(:disabled){border-color:var(--d4-danger);background:transparent}
+ html[data-demo="4"] body :is([data-d4-button=text],[data-d4-icon=true]):hover:not(:disabled){background:transparent!important;color:var(--d4-primary)!important;box-shadow:none}
+}
+@media(prefers-reduced-motion:no-preference){html[data-demo="4"] body [data-d4-button]:not([aria-haspopup]):active:not(:disabled){scale:.97}}
+/* Independent navigation items: no ordinary button chrome. */
+html[data-demo="4"] .organization-layout .settings-nav {background:var(--d4-bg);border-color:var(--d4-border);gap:2px}
+html[data-demo="4"] .organization-layout .settings-nav>h3 {padding:0;margin:0 12px 16px;border:0;font:500 13px/20px var(--sb-font-body);color:var(--d4-tertiary);letter-spacing:0;text-align:left}
+html[data-demo="4"] .organization-layout .settings-nav button {height:30px;min-height:30px;padding:4px 12px;border:0;border-radius:8px;background:transparent;box-shadow:none;font:450 13px/20px var(--sb-font-body);color:var(--d4-muted);text-align:left}
+html[data-demo="4"] .organization-layout .settings-nav button.active {background:var(--d4-accent);color:var(--d4-fg);font-weight:600}
+@media(hover:hover) and (pointer:fine){html[data-demo="4"] .organization-layout .settings-nav button:hover{background:var(--d4-accent);color:var(--d4-fg)}}
+/* Input and Select small size. No enlargement of the existing dense project toolbar. */
+html[data-demo="4"] body :is(input:not([type=checkbox],[type=radio],[type=color],[type=file]),textarea,select):not(.topbar *,#org-menu *,#account-menu *) {border-color:var(--d4-input);border-radius:8px;background:var(--d4-field);color:var(--d4-fg);box-shadow:none;font-family:var(--sb-font-body)}
+html[data-demo="4"] body :is(input,textarea)::placeholder {color:var(--d4-tertiary);opacity:1}
+html[data-demo="4"] body :is(input,textarea,select):focus-visible {outline:2px solid var(--d4-ring);outline-offset:2px;border-color:var(--d4-hover-border)}
+html[data-demo="4"] .single-select-trigger {border:0;background:var(--d4-card);color:var(--d4-fg);box-shadow:0 1px 3px rgb(0 0 0 / var(--d4-drop)),inset 0 0 0 1px var(--d4-input);border-radius:8px}
+html[data-demo="4"] .projects-toolbar {--toolbar-height:26px;gap:8px;align-items:center}
+html[data-demo="4"] .projects-toolbar :is(.search,.search input,.single-select-trigger,.filter-trigger,.reset-project-filters,.projects-primary-actions>.primary,.segments,.segments button) {height:26px;min-height:26px;box-sizing:border-box;font-size:12px;line-height:16px}
+html[data-demo="4"] .projects-toolbar :is(.single-select-trigger,.filter-trigger) {padding:4px 10px;border-radius:8px;gap:8px}
+html[data-demo="4"] .projects-toolbar .filter-trigger {background:transparent;border-color:var(--d4-input);font-weight:450}
+html[data-demo="4"] .projects-toolbar .segments button {width:26px;min-width:26px;flex-basis:26px;padding:5px;border:0;border-radius:6px;box-shadow:none;background:transparent;color:var(--d4-tertiary)}
+html[data-demo="4"] .projects-toolbar .segments button.selected {background:var(--d4-accent);color:var(--d4-fg)}
+html[data-demo="4"] .projects-toolbar .segments svg {width:16px;height:16px}
+html[data-demo="4"] .projects-toolbar>.search {position:relative;display:flex;align-items:center;border:1px solid var(--d4-input);border-radius:8px;background:var(--d4-field);padding:0;box-shadow:none}
+html[data-demo="4"] .projects-toolbar .search>svg {position:absolute;top:50%;left:8px;transform:translateY(-50%);width:14px;height:14px;color:var(--d4-tertiary);pointer-events:none}
+html[data-demo="4"] .projects-toolbar .search #search {height:24px;min-height:24px;padding:4px 8px 4px 28px;border:0;background:transparent;box-shadow:none;border-radius:0;outline:none;font:450 12px/16px var(--sb-font-body)}
+html[data-demo="4"] .projects-toolbar .search:focus-within {border-color:var(--d4-hover-border);outline:none;box-shadow:none}
+html[data-demo="4"] .projects-toolbar .search:has(input:focus-visible) {outline:2px solid var(--d4-ring);outline-offset:2px}
+/* Tables and tags: compact body retained, quieter metadata and consistent surfaces. */
+html[data-demo="4"] .tablewrap {background:var(--d4-card);border-color:var(--d4-border);border-radius:8px;box-shadow:none}
+html[data-demo="4"] table {background:transparent;font:450 13px/20px var(--sb-font-body)}
+html[data-demo="4"] table thead tr {border-bottom:1px solid var(--d4-border)}
+html[data-demo="4"] table th,html[data-demo="4"] #project-results table th {height:40px;padding:0 16px;background:var(--d4-field);color:var(--d4-tertiary);font:450 12px/16px var(--sb-font-body);border-color:var(--d4-border);vertical-align:middle}
+html[data-demo="4"] table td,html[data-demo="4"] #project-results table td {padding:12px 16px;border-color:var(--d4-border);font:450 13px/20px var(--sb-font-body);vertical-align:middle}
+html[data-demo="4"] table tbody tr:last-child td {border-bottom:0}
+html[data-demo="4"] #project-results .projecttitle {font:500 13px/20px var(--sb-font-body)}
+html[data-demo="4"] #project-results .project-discovery .projectdesc {font:450 12px/16px var(--sb-font-body);color:var(--d4-tertiary)}
+html[data-demo="4"] .tag {font:450 11px/18px var(--sb-font-body);border-radius:3px}
+html[data-demo="4"] .badge {font-size:11px;line-height:18px;border-radius:999px;border-color:var(--d4-border)}
+@media(hover:hover) and (pointer:fine){html[data-demo="4"] table tbody tr:hover{background:var(--d4-field)}}
+/* Preserve underline Tabs and page composition; unify their component type. */
+html[data-demo="4"] .tabs {border-color:var(--d4-border)}
+html[data-demo="4"] .tabs button {box-shadow:none;font-family:var(--sb-font-body);font-size:13px;font-weight:450;color:var(--d4-tertiary)}
+html[data-demo="4"] .tabs button.active {font-weight:500;color:var(--d4-fg);border-bottom-color:var(--d4-fg)}
+/* Floating surfaces use the official multi-layer outline shadow instead of double borders. */
+html[data-demo="4"] :is(.single-select-menu,.filter-popover,.scope-options,.project-card-actions,.admin-project-actions) {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:8px;box-shadow:var(--d4-shadow)}
+html[data-demo="4"] .single-select-option {font:450 13px/20px var(--sb-font-body);padding-block:6px;border-radius:6px;color:var(--d4-muted)}
+html[data-demo="4"] .single-select-option[aria-selected=true] {color:var(--d4-fg)}
+html[data-demo="4"] .filter-popover :is(header,footer) {background:transparent;border-color:var(--d4-border)}
+html[data-demo="4"] dialog {border:0;border-radius:10.6667px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
+html[data-demo="4"] dialog.role-drawer {border-radius:0}
+html[data-demo="4"] dialog::backdrop {background:rgb(0 0 0 / .4);backdrop-filter:none}
+html[data-demo="4"] .modalhead {background:transparent;border-color:var(--d4-border)}
+html[data-demo="4"] .modalhead h2 {font-size:18px;line-height:28px;letter-spacing:0}
+html[data-demo="4"] .modalfoot {background:transparent;border-color:var(--d4-border)}
+html[data-demo="4"] .project-card {border-color:var(--d4-border);background:var(--d4-card);box-shadow:0 1px 2px #0000000d}
+/* Keep the deployed banner's placement, single-line composition and height. */
+html[data-demo="4"] .shell>.main>.capacity-alert.warning {background:var(--d4-warning-bg);border-color:var(--d4-warning-border);color:var(--d4-fg)}
+html[data-demo="4"] .capacity-alert .capacity-alert-symbol {border:0;background:var(--d4-warning-fg);color:var(--d4-warning-bg);border-radius:4px}
+html[data-demo="4"] .capacity-alert [data-d4-button].alert-close {background:transparent;border:0;box-shadow:none}
+html[data-demo="4"] :is(.card-text-tooltip,.info-tip [role=tooltip],.inline-help [role=tooltip],.project-fullname) {padding:6px 8px;border:0;border-radius:8px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow);font:400 12px/16px var(--sb-font-body)}
+html[data-demo="4"] #toast {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:8px;box-shadow:var(--d4-shadow);font:450 13px/20px var(--sb-font-body)}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] [data-d4-button]{transition:none;scale:1}}
+html[data-demo="4"] .organization-layout .settings-nav {padding:24px 12px}
+html[data-demo="4"] .capacity-alert [data-d4-button].alert-close {position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;min-height:26px;padding:4px}
+@media(max-width:760px){html[data-demo="4"] .organization-layout .settings-nav {padding:16px}html[data-demo="4"] .organization-layout .settings-nav>h3 {margin:0 0 8px}}
+html[data-demo="4"] dialog:is(.role-drawer,.permissions-drawer)::backdrop {background:rgb(0 0 0 / .4);backdrop-filter:none}
+html[data-demo="4"] :is(.field-error,.inlineerror) {color:var(--d4-danger);font-size:12px;line-height:16px}
+@media(hover:hover) and (pointer:fine){html[data-demo="4"] :is(.single-select-option,.scope-options button):hover{background:var(--d4-accent);color:var(--d4-fg)}}
+/* Explicit dark component surfaces override demo3's legacy dark-button shorthand. */
+html[data-demo="4"][data-theme=dark] body [data-d4-button=default] {background:var(--d4-card);color:var(--d4-fg)}
+html[data-demo="4"][data-theme=dark] body [data-d4-button=primary] {background:linear-gradient(#ffffff04,#00000003),var(--d4-solid);color:var(--d4-on-solid)}
+html[data-demo="4"][data-theme=dark] body [data-d4-button=danger] {background:transparent;color:var(--d4-danger);border-color:var(--d4-input)}
+html[data-demo="4"][data-theme=dark] body :is([data-d4-button=text],[data-d4-icon=true]) {background:transparent;color:var(--d4-muted);box-shadow:none}
+html[data-demo="4"][data-theme=dark] body .single-select-trigger {background:var(--d4-card);color:var(--d4-fg)}
+html[data-demo="4"][data-theme=dark] body :is(.single-select-menu,.scope-options,.filter-popover,.project-card-actions,.admin-project-actions) {background:var(--d4-popover);color:var(--d4-fg)}
+@media(hover:hover) and (pointer:fine){html[data-demo="4"][data-theme=dark] body [data-d4-button=primary]:hover:not(:disabled){background-color:var(--d4-solid-hover)}}
+html[data-demo="4"] img[data-d4-logo] {width:20px;height:20px;object-fit:contain;background:transparent;border:0;border-radius:0;box-shadow:none}
+
+/* Keep compact controls aligned across project discovery and administration. */
+html[data-demo="4"] body .single-select-trigger {transition:background-color 150ms ease,color 150ms ease;transform:none}
+html[data-demo="4"] body .single-select-option {background:transparent;box-shadow:none;border:0;transform:none}
+html[data-demo="4"] body .single-select-option:focus-visible {background:var(--d4-accent);color:var(--d4-fg);outline:none}
+@media(hover:hover) and (pointer:fine){
+ html[data-demo="4"] body .single-select-trigger:hover:not(:disabled) {background:var(--d4-accent);color:var(--d4-fg);box-shadow:inset 0 0 0 1px var(--d4-hover-border)}
+ html[data-demo="4"] body .single-select-option:hover:not(:disabled) {background:var(--d4-accent);color:var(--d4-fg);box-shadow:none}
+}
+html[data-demo="4"] #project-results table td:nth-child(2) .tags {display:flex;align-items:center;align-content:center;flex-wrap:nowrap;gap:4px;min-height:26px}
+html[data-demo="4"] #project-results table .tag {flex-shrink:0}
+html[data-demo="4"] #project-results table .tag-edit {flex:0 0 20px;width:20px;height:20px;min-height:20px;padding:3px}
+html[data-demo="4"] .admin-project-toolbar {align-items:center;gap:8px}
+html[data-demo="4"] .admin-project-toolbar :is(.search,.search input,.single-select-trigger,.filter-trigger) {height:26px;min-height:26px;box-sizing:border-box;font-size:12px;line-height:16px}
+html[data-demo="4"] .admin-project-toolbar :is(.single-select-trigger,.filter-trigger) {padding:4px 10px}
+html[data-demo="4"] .organization-content>.heading>[data-d4-button] {height:26px;min-height:26px;box-sizing:border-box}
+html[data-demo="4"] body .capacity-alert .alert-link[data-d4-button],
+html[data-demo="4"] body .organization-content td button[data-action="edit"][data-d4-button] {background:transparent;border:0;box-shadow:none;color:var(--d4-muted)}
+
+/* A single compact height for page-level search, filter and action controls. */
+html[data-demo="4"] #content :is(.toolbar,.recycle-toolbar,.recycle-search) :is(.single-select-trigger,.filter-trigger,.search,input:not([type=checkbox],[type=radio]),[data-d4-button]),
+html[data-demo="4"] #content .search {height:26px;min-height:26px;box-sizing:border-box}
+html[data-demo="4"] #content :is(.toolbar,.recycle-toolbar) .single-select-trigger {padding:4px 10px;font-size:12px;line-height:16px}
+html[data-demo="4"] #content .search input {height:24px;min-height:24px;box-sizing:border-box;padding-block:3px;font-size:12px;line-height:16px}
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .recycle-toolbar .tabs {min-width:0;width:max-content;flex:0 0 auto;border-bottom:0;gap:20px}
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .recycle-toolbar .tabs button {min-width:0;width:auto;padding-inline:0;flex:0 0 auto}
+html[data-demo="4"] body :is(.filter-trigger,.single-select-trigger):is(:hover,:active,[aria-expanded=true]) {transform:none!important;scale:1!important;translate:none!important}
+
+html[data-demo="4"] .sidebar-mode-control {width:100%;padding-bottom:8px}
+html[data-demo="4"] body .sidebar-mode-trigger {display:flex;align-items:center;gap:10px;width:191px;height:32px;min-height:32px;padding:8px;border:0;background:transparent;color:var(--muted);box-shadow:none;border-radius:6px;font-size:13px;white-space:nowrap}
+html[data-demo="4"] .sidebar-mode-trigger svg {width:16px;height:16px;flex:0 0 16px}
+html[data-demo="4"] .sidebar-mode-trigger>span {opacity:0}
+html[data-demo="4"] .sidebar:hover .sidebar-mode-trigger>span,html[data-demo="4"] .sidebar:focus-within .sidebar-mode-trigger>span {opacity:1}
+html[data-demo="4"] .sidebar-mode-menu {position:fixed;margin:0;padding:4px;width:172px;border:0;border-radius:8px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
+html[data-demo="4"] body .sidebar-mode-menu button {display:flex;justify-content:space-between;width:100%;height:32px;padding:6px 8px;border:0;border-radius:5px;background:transparent;box-shadow:none;color:var(--d4-fg);font:450 13px/20px var(--sb-font-body)}
+html[data-demo="4"] .sidebar-mode-menu button span {visibility:hidden}
+html[data-demo="4"] .sidebar-mode-menu button[aria-checked=true] span {visibility:visible}
+html[data-demo="4"] body .sidebar-mode-menu button:hover {background:var(--d4-accent)}
+html[data-demo="4"][data-sidebar-mode=expanded] .shell>.sidebar {width:208px}
+html[data-demo="4"][data-sidebar-mode=expanded] .shell>.sidebar :is(.nav-label,.count,.upgrade-label,.sidebar-mode-trigger>span) {opacity:1}
+html[data-demo="4"][data-sidebar-mode=expanded] .shell>.sidebar :is(.navgroup button,.capacitymini .upgrade-entry) {width:191px}
+html[data-demo="4"][data-sidebar-mode=expanded] .shell {grid-template-columns:208px minmax(0,1fr)}
+html[data-demo="4"][data-sidebar-mode=collapsed] .shell>.sidebar {width:48px}
+html[data-demo="4"][data-sidebar-mode=collapsed] .shell>.sidebar :is(.nav-label,.count,.upgrade-label,.sidebar-mode-trigger>span) {opacity:0}
+html[data-demo="4"][data-sidebar-mode=collapsed] .shell>.sidebar :is(.navgroup button,.capacitymini .upgrade-entry) {width:32px}
+html[data-demo="4"] body .filter-popover footer .filter-manage-tags {border:0;background:transparent;box-shadow:none;padding-inline:0}
+
+html[data-demo="4"] .topbar .org-overview-link,
+html[data-demo="4"] .topbar .org-overview-link:is(:hover,:active,:focus) {transform:none!important;scale:1!important;translate:none!important;animation:none!important;transition:none!important}
+
+html[data-demo="4"] body .sidebar-mode-trigger {width:32px;min-width:32px;justify-content:flex-start;padding:8px;gap:0}
+html[data-demo="4"] .sidebar-mode-trigger>span {display:none}
+html[data-demo="4"] .header-brand:after,
+html[data-demo="4"] .topbar .crumb>.d4-crumb-separator {font:300 20px/24px var(--sb-font-body);color:var(--d4-border);letter-spacing:0}
+html[data-demo="4"] body .capacity-alert [data-d4-button].alert-close {font-size:22px;line-height:22px;font-weight:400;display:flex;align-items:center;justify-content:center}
+html[data-demo="4"] body .capacity-alert .alert-close svg {width:18px;height:18px}
+/* Organization overview follows the same centered content width as projects. */
+html[data-demo="4"] #content:has(>.org-overview) {padding-inline:0}
+html[data-demo="4"] .org-overview {width:min(1100px,calc(100% - 48px));margin-inline:auto}
+@media(max-width:760px){html[data-demo="4"] .org-overview{width:calc(100% - 32px);margin-inline:auto}}
+/* Upgrade is the one emphasized rail action. */
+html[data-demo="4"] body .capacitymini .upgrade-entry {background:var(--d4-solid);color:#fff;border-radius:8px;box-shadow:0 1px 2px #0002}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {background:var(--d4-solid-hover);color:#fff}
+html[data-demo="4"] body .capacitymini .upgrade-entry svg {color:currentColor}
+
+html[data-demo="4"] .org-overview {width:min(1100px,calc(100% - 32px))!important;margin-left:auto!important;margin-right:auto!important}
+html[data-demo="4"] .org-overview .overview-setting-link svg {width:16px;height:16px}
+@media(max-width:1200px){html[data-demo="4"] .org-overview{width:calc(100% - 32px)!important}}
+/* Tag manager drawer: panel-reveal motion, with a soft backdrop fade. */
+@keyframes d4-panel-reveal {from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes d4-panel-backdrop {from{opacity:0}to{opacity:1}}
+html[data-demo="4"] #modal.tag-management-drawer[open] {animation:d4-panel-reveal 280ms cubic-bezier(.22,1,.36,1) both}
+html[data-demo="4"] #modal.tag-management-drawer::backdrop {animation:d4-panel-backdrop 220ms ease-out both;background:rgb(0 0 0 / .28);backdrop-filter:none}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] #modal.tag-management-drawer[open],html[data-demo="4"] #modal.tag-management-drawer::backdrop{animation:none}}
+/* Global skeleton-loader and content reveal treatment. */
+@keyframes d4-skeleton-shimmer {0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes d4-content-reveal {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+html[data-demo="4"] .skeleton {gap:16px;min-height:360px;max-width:1100px;margin:0 auto;padding-top:8px}
+html[data-demo="4"] .skeleton div {height:72px;border-radius:8px;background:linear-gradient(100deg,var(--d4-field) 30%,var(--d4-accent) 45%,var(--d4-field) 60%);background-size:200% 100%;animation:d4-skeleton-shimmer 1.25s ease-in-out infinite}
+html[data-demo="4"] .skeleton div:first-child {width:38%;height:28px}
+html[data-demo="4"] .skeleton div:nth-child(2) {width:100%;height:180px}
+html[data-demo="4"] .skeleton p {color:var(--d4-tertiary);font-size:12px}
+html[data-demo="4"] #content > :not(.skeleton) {animation:none}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] .skeleton div,html[data-demo="4"] #content > :not(.skeleton){animation:none}}
+/* Sliding tab and view-switch transitions. */
+html[data-demo="4"] .segments {isolation:isolate}
+html[data-demo="4"] .segments button {transition:color 180ms ease,background-color 220ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1)}
+html[data-demo="4"] .segments button:active {transform:none!important}
+html[data-demo="4"] .tabs button {transition:color 180ms ease,background-color 220ms cubic-bezier(.22,1,.36,1),border-color 220ms cubic-bezier(.22,1,.36,1)}
+/* Account popover follows a restrained modal open/close reveal. */
+@keyframes d4-modal-open {from{opacity:0;transform:translateY(-6px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+html[data-demo="4"] #account-menu:popover-open {animation:d4-modal-open 180ms cubic-bezier(.22,1,.36,1) both;transform-origin:top right}
+html[data-demo="4"] #account-trigger:active {transform:none!important;scale:1!important}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] .segments button,html[data-demo="4"] .tabs button,html[data-demo="4"] #account-menu:popover-open{transition:none;animation:none}}
+/* Organization settings rail stays fixed while its content changes. */
+html[data-demo="4"] .organization-layout > .settings-nav {position:sticky;top:56px;align-self:start;animation:none!important;transition:none!important;transform:none!important}
+html[data-demo="4"] .organization-layout > .settings-nav button,
+html[data-demo="4"] .organization-layout > .settings-nav button:is(:hover,:active,:focus) {transform:none!important;scale:1!important;translate:none!important;transition:none!important}
+
+/* Delayed tooltips for compact icon-only controls. */
+html[data-demo="4"] [data-d4-tooltip] {position:relative}
+html[data-demo="4"] [data-d4-tooltip]::after {content:attr(data-d4-tooltip);position:absolute;z-index:100;top:calc(100% + 8px);right:0;white-space:nowrap;padding:5px 8px;border-radius:6px;background:var(--d4-fg);color:var(--d4-bg);font:450 11px/16px var(--sb-font-body);pointer-events:none;opacity:0;transform:translateY(-2px);transition:opacity 140ms ease,transform 140ms ease;transition-delay:500ms}
+html[data-demo="4"] [data-d4-tooltip]:hover::after,html[data-demo="4"] [data-d4-tooltip]:focus-visible::after {opacity:1;transform:translateY(0)}
+html[data-demo="4"] #account-trigger::after {right:0}
+html[data-demo="4"] .header-resources [data-d4-tooltip]::after {right:0}
+html[data-demo="4"] [data-d4-tooltip]:hover {box-shadow:none!important}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] [data-d4-tooltip]::after{transition:none;transition-delay:0}}
+/* Organization settings navigation must remain completely stationary between tabs. */
+html[data-demo="4"] #content > .organization-layout,
+html[data-demo="4"] #content > .organization-layout > .settings-nav,
+html[data-demo="4"] #content > .organization-layout > .settings-nav * {animation:none!important;transform:none!important;transition:none!important}
+html[data-demo="4"] #content > .organization-layout > .settings-nav button {background:transparent}
+html[data-demo="4"] #content > .organization-layout > .settings-nav button.active {background:var(--d4-accent)}
+
+/* Content renders immediately on navigation, reload and local updates. */
+html[data-demo="4"] #content > :not(.skeleton) {animation:none !important}
+/* Tooltip open/close motion: delayed reveal with a short lift and scale. */
+html[data-demo="4"] [data-d4-tooltip]::after {transform:translateY(-4px) scale(.96);transform-origin:top right;transition:opacity 160ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1);transition-delay:500ms}
+html[data-demo="4"] [data-d4-tooltip]:hover::after,html[data-demo="4"] [data-d4-tooltip]:focus-visible::after {transform:translateY(0) scale(1)}
+html[data-demo="4"] :is(.info-tip [role=tooltip],.inline-help [role=tooltip],.card-text-tooltip,.project-fullname) {animation:d4-tooltip-reveal 180ms cubic-bezier(.22,1,.36,1) both}
+@keyframes d4-tooltip-reveal {from{opacity:0;transform:translateY(-4px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* Accordion-style arrow rotation for every expandable control. */
+html[data-demo="4"] :is(summary,button[aria-expanded],.single-select-trigger,.filter-trigger,.crumb-org-switch) > svg:last-child {transition:transform 220ms cubic-bezier(.22,1,.36,1)}
+html[data-demo="4"] :is(summary,button[aria-expanded])[aria-expanded="true"] > svg:last-child {transform:rotate(180deg)}
+html[data-demo="4"] .single-select-trigger[aria-expanded="true"] > svg:last-child,
+html[data-demo="4"] .filter-trigger[aria-expanded="true"] > svg:last-child {transform:rotate(-90deg)}
+html[data-demo="4"] details[open] > summary > svg:last-child {transform:rotate(180deg)}
+html[data-demo="4"] .crumb-org-switch[aria-expanded="true"] > svg:last-child {transform:rotate(-90deg)}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] :is(summary,button[aria-expanded],.single-select-trigger,.filter-trigger,.crumb-org-switch)>svg:last-child{transition:none}html[data-demo="4"] :is(.info-tip [role=tooltip],.inline-help [role=tooltip],.card-text-tooltip,.project-fullname){animation:none}}
+/* Changelog-card treatment: preserve project data while emphasizing title, update meta and bookmark action. */
+html[data-demo="4"] #project-results .project-card,
+html[data-demo="4"] .org-overview .project-card {position:relative;overflow:hidden;border-radius:12px;background:var(--d4-card);box-shadow:0 1px 2px #0000000b,0 8px 24px #00000008;transition:border-color 180ms ease,box-shadow 220ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1)}
+html[data-demo="4"] #project-results .project-card::before,
+html[data-demo="4"] .org-overview .project-card::before {content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--d4-solid);opacity:0;transition:opacity 180ms ease}
+html[data-demo="4"] #project-results .project-card:hover,
+html[data-demo="4"] .org-overview .project-card:hover {border-color:color-mix(in srgb,var(--d4-solid) 38%,var(--d4-border));box-shadow:0 12px 30px #00000012;transform:translateY(-2px)}
+html[data-demo="4"] #project-results .project-card:hover::before,
+html[data-demo="4"] .org-overview .project-card:hover::before {opacity:1}
+html[data-demo="4"] #project-results .project-card-header {position:relative;z-index:1}
+html[data-demo="4"] #project-results .projecttitle {font-weight:600;letter-spacing:-.01em}
+html[data-demo="4"] #project-results .projectdesc {color:var(--d4-muted)}
+html[data-demo="4"] #project-results .card-pin {transition:opacity 160ms ease,color 160ms ease,transform 220ms cubic-bezier(.22,1,.36,1);border:0;background:transparent;box-shadow:none}
+html[data-demo="4"] #project-results .card-pin:hover {color:var(--d4-primary);background:transparent;transform:translateY(-1px)}
+html[data-demo="4"] #project-results .card-pin.active {opacity:1;color:var(--d4-primary)}
+html[data-demo="4"] #project-results .card-bottom {padding-top:4px;border-top:1px solid var(--d4-border)}
+html[data-demo="4"] #project-results .card-update {color:var(--d4-tertiary)}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] #project-results .project-card{transition:none}html[data-demo="4"] #project-results .project-card:hover{transform:none}}
+
+/* Card cleanup: no divider, hover accent line, or rotating overflow trigger. */
+html[data-demo="4"] #project-results .card-bottom {border-top:0}
+html[data-demo="4"] #project-results .project-card::before,
+html[data-demo="4"] #project-results .project-card:hover::before {opacity:0}
+html[data-demo="4"] #project-results .project-card-menu > summary > svg:last-child,
+html[data-demo="4"] #project-results .project-card-menu[open] > summary > svg:last-child {transform:none!important;transition:none!important}
+/* Project titles remain clean links without hover underlines. */
+html[data-demo="4"] #project-results .projecttitle,
+html[data-demo="4"] #project-results .projecttitle:hover {text-decoration:none!important}
+/* Glide Select-style option feedback. */
+html[data-demo="4"] .single-select-menu {overflow:hidden;padding:4px}
+html[data-demo="4"] .single-select-option {position:relative;transition:background-color 160ms ease,color 160ms ease,transform 180ms cubic-bezier(.22,1,.36,1);transform:translateX(0)}
+html[data-demo="4"] .single-select-option:hover,
+html[data-demo="4"] .single-select-option:focus-visible {transform:translateX(2px);background:var(--d4-accent);color:var(--d4-fg)}
+html[data-demo="4"] .single-select-option[aria-selected="true"] {background:color-mix(in srgb,var(--d4-solid) 9%,var(--d4-popover));color:var(--d4-fg)}
+html[data-demo="4"] .single-select-option[aria-selected="true"] .single-select-check {transform:scale(1);transition:transform 180ms cubic-bezier(.22,1,.36,1)}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] .single-select-option{transition:none;transform:none!important}}
+html[data-demo="4"] .single-select-option:hover,
+html[data-demo="4"] .single-select-option:focus-visible {transform:none!important}
+/* Organization overview cards use the same interaction treatment as project cards. */
+html[data-demo="4"] .org-overview .project-card {transition:border-color 180ms ease,box-shadow 220ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1)}
+html[data-demo="4"] .org-overview .project-card:hover {border-color:color-mix(in srgb,var(--d4-solid) 38%,var(--d4-border));box-shadow:0 12px 30px #00000012;transform:translateY(-2px)}
+html[data-demo="4"] .org-overview .project-card::before,
+html[data-demo="4"] .org-overview .project-card:hover::before {opacity:0}
+html[data-demo="4"] .org-overview .card-bottom {border-top:0}
+html[data-demo="4"] .org-overview .card-pin {transition:opacity 160ms ease,color 160ms ease,transform 220ms cubic-bezier(.22,1,.36,1);border:0;background:transparent;box-shadow:none}
+html[data-demo="4"] .org-overview .card-pin:hover {color:var(--d4-primary);background:transparent;transform:translateY(-1px)}
+html[data-demo="4"] .org-overview .card-pin.active {opacity:1;color:var(--d4-primary)}
+html[data-demo="4"] .org-overview .project-card-menu > summary > svg:last-child,
+html[data-demo="4"] .org-overview .project-card-menu[open] > summary > svg:last-child {transform:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] .org-overview .project-card{transition:none}html[data-demo="4"] .org-overview .project-card:hover{transform:none}}
+html[data-demo="4"] .org-overview .projecttitle,
+html[data-demo="4"] .org-overview .projecttitle:hover {text-decoration:none!important;background:transparent!important;box-shadow:none!important;color:var(--d4-fg)}
+/* Project list cards follow the same responsive grid breakpoints as organization overview. */
+@media(max-width:1050px){html[data-demo="4"] #project-results .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){html[data-demo="4"] #project-results .grid{grid-template-columns:1fr}}
+html[data-demo="4"] .project-total {border:0!important;background:transparent!important;padding:0!important}
+html[data-demo="4"] .capacity-alert .alert-link {text-decoration:none!important}
+html[data-demo="4"] #project-results table td:nth-child(2) .tags {flex-wrap:wrap!important;align-items:center;row-gap:4px}
+html[data-demo="4"] #project-results table td:nth-child(2) .tag-edit {flex:0 0 20px;white-space:nowrap}
+/* Command palette and search placeholders follow the light, neutral reference treatment. */
+html[data-demo="4"] #modal.command-dialog .command-search,
+html[data-demo="4"] #modal.command-dialog .command-search input,
+html[data-demo="4"] #command-search {background:transparent!important;box-shadow:none!important}
+html[data-demo="4"] #modal.command-dialog .command-search {border-bottom:1px solid var(--d4-border);border-radius:0}
+html[data-demo="4"] #modal.command-dialog input::placeholder,
+html[data-demo="4"] .global-search span,
+html[data-demo="4"] #search::placeholder,
+html[data-demo="4"] .projects-toolbar .search input::placeholder {color:var(--d4-tertiary);opacity:.65}
+html[data-demo="4"] #modal.command-dialog .command-search input {font-size:16px;line-height:24px}
+html[data-demo="4"] #modal.command-dialog .command-result {transition:background-color 160ms ease,color 160ms ease}
+html[data-demo="4"] #modal.command-dialog .command-search:focus-within {outline:2px solid var(--d4-ring);outline-offset:1px;border-radius:6px}
+html[data-demo="4"] #modal.command-dialog .command-search:focus-within > svg {color:var(--d4-primary)}
+/* Organization switch chevron points upward while its menu is active. */
+html[data-demo="4"] .crumb-org-switch[aria-expanded="true"] > svg:last-child {transform:rotate(-90deg)!important}
+html[data-demo="4"] .crumb-org-switch[aria-expanded="false"] > svg:last-child {transform:rotate(90deg)!important}
+/* Tooltip open/close uses the same eased reveal and reverse fade. */
+html[data-demo="4"] [data-d4-tooltip]::after {will-change:opacity,transform}
+html[data-demo="4"] [data-d4-tooltip]:not(:hover):not(:focus-visible)::after {transition-delay:0ms}
+
+/* Final UI pass: fixed organization settings rail, restrained upgrade CTA, and icon hover treatment. */
+html[data-demo="4"] .organization-layout > .settings-nav {
+  position: sticky;
+  top: 64px;
+  align-self: flex-start;
+  height: calc(100dvh - 80px);
+  max-height: calc(100dvh - 80px);
+  overflow: auto;
+  scrollbar-width: thin;
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+html[data-demo="4"] .organization-layout > .settings-nav button,
+html[data-demo="4"] .organization-layout > .settings-nav button:hover,
+html[data-demo="4"] .organization-layout > .settings-nav button:active,
+html[data-demo="4"] .organization-layout > .settings-nav button:focus-visible {
+  transform: none !important;
+  transition: none !important;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry {
+  background: linear-gradient(135deg, #f4c44f 0%, #f56565 100%) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 1px 2px #b53b3b33;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+  background: linear-gradient(135deg, #ffd66a 0%, #ff7070 100%) !important;
+  color: #fff !important;
+}
+html[data-demo="4"] .badge.green { background: #e7f6ea; color: #247a3b; border-color: #bfe5c8; }
+html[data-demo="4"] .badge.red { background: #fde8e8; color: #a33a3a; border-color: #f4c2c2; }
+/* Shared icon affordance: preserve the icon's foreground color while adding a quiet rounded hover surface. */
+@media (hover:hover) and (pointer:fine) {
+  html[data-demo="4"] body :is(.main,.topbar,.content,.profile-layout,.settings-body) :is(.icon-only-control,.header-icon,.overview-setting-link,.card-pin,.alert-close,.project-card-menu > summary,.tag-edit,.member-more,.title-help):hover {
+    background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    border-radius: 8px;
+  }
+}
+@media (hover:hover) and (pointer:fine) {
+  html[data-demo="4"] body .sidebar :is(.sidebar-toggle,.navgroup button):hover {
+    background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    border-radius: 8px;
+  }
+}
+
+/* Latest review adjustments. */
+html[data-demo="4"] .breadcrumb-org .org-overview-link:hover,
+html[data-demo="4"] .breadcrumb-org .org-overview-link:hover .org-crumb-name { text-decoration: underline; text-underline-offset: 3px; }
+html[data-demo="4"] body .capacitymini .upgrade-entry,
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+  background: linear-gradient(135deg, #f05a5a 0%, #b83280 100%) !important;
+  color: #fff !important;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover { filter: brightness(1.1); }
+html[data-demo="4"] .projects-page-title { margin-bottom: 16px !important; }
+html[data-demo="4"] .organization-layout .settings-nav button.active { background: var(--d4-accent) !important; color: var(--d4-fg) !important; }
+html[data-demo="4"] .organization-layout .settings-nav button:hover:not(.active) { background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important; color: var(--d4-primary) !important; }
+html[data-demo="4"] .badge { min-height: 22px; line-height: 20px; padding: 1px 8px; }
+html[data-demo="4"] .organization-content > .panel.row { border: 1px solid var(--d4-border); border-radius: 8px; padding: 16px; background: var(--d4-card); }
+html[data-demo="4"] .single-select-option[aria-selected="true"] { background: var(--d4-accent) !important; color: var(--d4-fg) !important; }
+html[data-demo="4"] .single-select-option:hover,
+html[data-demo="4"] .single-select-option:focus-visible { background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important; color: var(--d4-primary) !important; }
+
+/* Reference upgrade button: soft red glow and subtle star dust. Dimensions stay unchanged. */
+html[data-demo="4"] body .capacitymini .upgrade-entry,
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 999px !important;
+  background: var(--upgrade-surface) !important;
+  color: #fff !important;
+  box-shadow: var(--upgrade-shadow) !important;
+  transition: filter 160ms ease, box-shadow 160ms ease;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #ffffff66 .65px, transparent 1px);
+  background-size: 9px 9px;
+  opacity: .55;
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover { filter: brightness(1.1); }
+html[data-demo="4"] body .capacitymini .upgrade-entry svg { color: #fff; fill: #fff; stroke-width: 1.4; }
+
+html[data-demo="4"] {
+  --upgrade-surface: radial-gradient(ellipse at center, #c63150 0%, #d74760 44%, #eb8995 78%, #f4c2bf 100%);
+  --upgrade-shadow: inset 0 0 0 1px #ffffff70, inset 0 2px 5px #ffe0df99, inset 0 -2px 4px #ffd5c980, 0 1px 2px #8e234326;
+}
+html[data-demo="4"][data-theme="dark"] {
+  --upgrade-surface: radial-gradient(ellipse at center, #a92b46 0%, #bc3854 44%, #cc6073 78%, #d9909b 100%);
+  --upgrade-shadow: inset 0 0 0 1px #ffd3d54d, inset 0 2px 5px #ffc6cf40, inset 0 -2px 4px #f79da533, 0 1px 3px #0005;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry svg {fill:none;flex-shrink:0;}
+
+/* Keep the supplied star and upgrade surface in balance with the compact UI. */
+html[data-demo="4"] {
+  --upgrade-surface: linear-gradient(110deg, #df5360 0%, #ce4562 58%, #bd416c 100%);
+  --upgrade-shadow: inset 0 0 0 1px #ffffff26, inset 0 1px 0 #ffffff30, 0 1px 2px #9d30431a;
+}
+html[data-demo="4"][data-theme="dark"] {
+  --upgrade-surface: linear-gradient(110deg, #ad3e50 0%, #a33957 58%, #953b60 100%);
+  --upgrade-shadow: inset 0 0 0 1px #ffffff20, inset 0 1px 0 #ffffff18;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry {border-radius:8px !important;}
+html[data-demo="4"] body .capacitymini .upgrade-entry::before {display:none;}
+html[data-demo="4"] body .capacitymini .upgrade-entry svg {fill:currentColor;stroke:none;width:14px;height:14px;}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {filter:brightness(1.08);}
+
+/* Hover changes the surface only; foreground colors retain their resting state. */
+@media (hover:hover) and (pointer:fine) {
+  html[data-demo="4"] body .organization-layout .settings-nav button:hover:not(.active) {color:var(--d4-muted) !important;}
+  html[data-demo="4"] body .single-select-option:hover {color:var(--d4-muted) !important;}
+  html[data-demo="4"] body .single-select-option[aria-selected="true"]:hover {color:var(--d4-fg) !important;}
+  html[data-demo="4"] body [data-d4-button="text"]:hover:not(:disabled),
+  html[data-demo="4"] body [data-d4-icon="true"]:hover:not(:disabled) {
+    color:var(--d4-muted) !important;
+    background:color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important;
+  }
+  html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+    background:color-mix(in srgb, var(--d4-hover-tint, #f56565) 16%, var(--d4-card)) !important;
+    color:#fff !important;
+    filter:none;
+    box-shadow:none !important;
+  }
+  html[data-demo="4"] body .capacitymini .upgrade-entry:hover svg {color:inherit;}
+}
+
+/* Upgrade CTA keeps its shape and saturated gradient during hover. */
+html[data-demo="4"] body .capacitymini .upgrade-entry,
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+  border-radius:8px !important;
+  background:var(--upgrade-surface) !important;
+  color:#fff !important;
+  box-shadow:var(--upgrade-shadow) !important;
+  translate:var(--upgrade-x, 0px) var(--upgrade-y, 0px);
+  transition:translate 160ms cubic-bezier(.22,1,.36,1), filter 150ms ease;
+}
+@media(hover:hover) and (pointer:fine) {
+  html[data-demo="4"] body .capacitymini .upgrade-entry:hover {filter:brightness(1.12) !important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  html[data-demo="4"] body .capacitymini .upgrade-entry {translate:none !important;transition:none !important;}
+}
+
+/* Command palette search: one shared field shell, including the leading icon. */
+html[data-demo="4"] #modal.command-dialog .command-search {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:48px;
+  min-height:48px;
+  box-sizing:border-box;
+  padding:0 12px;
+  border:1px solid var(--d4-input) !important;
+  border-radius:8px !important;
+  background:var(--d4-field) !important;
+  box-shadow:none !important;
+}
+html[data-demo="4"] #modal.command-dialog .command-search > svg { flex:0 0 16px; width:16px; height:16px; color:var(--d4-tertiary); }
+html[data-demo="4"] #modal.command-dialog .command-search input {
+  flex:1;
+  width:auto;
+  height:46px;
+  min-height:46px;
+  padding:0;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none !important;
+}
+html[data-demo="4"] #modal.command-dialog .command-search:focus-within {
+  border-color:var(--d4-hover-border) !important;
+  outline:2px solid var(--d4-ring);
+  outline-offset:1px;
+}
+html[data-demo="4"] #modal.command-dialog .command-search:focus-within > svg { color:var(--d4-primary); }
+
+/* Header resource controls keep their circular shape in every interaction state. */
+html[data-demo="4"] body .topbar .header-resources > :is(a,button),
+html[data-demo="4"] body .topbar .header-resources > :is(a,button):hover {
+  border-radius:50% !important;
+  color:var(--muted) !important;
+}
+@media(hover:hover) and (pointer:fine) {
+  html[data-demo="4"] body .topbar .header-resources > :is(a,button):hover:not(:disabled) {
+    background:color-mix(in srgb, var(--d4-hover-tint, #f56565) 14%, transparent) !important;
+    box-shadow:none !important;
+  }
+}
+
+/* QingIcon owns the path geometry; existing control sizing and theme colors remain in place. */
+html[data-demo="4"] body svg.qingicon,
+html[data-demo="4"] body svg.lucide {fill:none;}
+html[data-demo="4"] body .capacitymini .upgrade-entry svg {fill:none;stroke:none;}
+html[data-demo="4"] .sidebar-mode-menu svg {width:14px;height:14px;}
+
+/* Equal access-scope and member-status badge geometry. */
+html[data-demo="4"] body :is(.scope-badge, .organization-content td > .badge),
+html[data-demo="4"] body #project-results :is(.project-discovery td > .scope-badge, .card-scope > .scope-badge) {
+  display:inline-flex;align-items:center;gap:4px;box-sizing:border-box;
+  height:24px;min-height:24px;padding:0 8px;line-height:20px;
+}
+/* QingIcon line variants use a lighter weight consistently, including embedded paths. */
+html[data-demo="4"] body :is(svg.lucide,svg.qingicon) [data-role="stroke"] {stroke-width:1.5 !important;}
+
+/* Filled alert remains full-width; the reference stripe treatment fades in on the right. */
+html[data-demo="4"] {
+ --alert-fill: #fffaf5;
+ --alert-stripe: #ff963b20;
+ --alert-tint: #ff963b12;
+}
+html[data-demo="4"][data-theme="dark"] {
+ --alert-fill: #282017;
+ --alert-stripe: #f5a04a18;
+ --alert-tint: #f5a04a0c;
+}
+html[data-demo="4"] .shell > .main > .capacity-alert {
+ justify-content:flex-start;
+ text-align:left;
+ background:linear-gradient(90deg,var(--d4-card),var(--alert-fill)) !important;
+ border-radius:0;
+ isolation:isolate;
+}
+html[data-demo="4"] .shell > .main > .capacity-alert::before {
+ content:"";
+ position:absolute;
+ inset:0;
+ z-index:-1;
+ pointer-events:none;
+ background:repeating-linear-gradient(135deg,var(--alert-stripe) 0 12px,var(--alert-tint) 12px 24px);
+ mask-image:linear-gradient(90deg,transparent 25%,#000 100%);
+}
+html[data-demo="4"] .capacity-alert > div {justify-content:flex-start;text-align:left;}
+
+/* Filter/search renders retain their position; reveal belongs to navigation only. */
+html[data-demo="4"][data-palette="magenta"] #content:not(.d4-route-enter) > :not(.skeleton) {
+ animation:none !important;
+}
+
+/* Align banner copy to the normal content gutter, without narrowing its full-width fill. */
+html[data-demo="4"] .shell > .main > .capacity-alert {padding-left:32px;padding-right:44px;}
+@media(max-width:760px) {
+ html[data-demo="4"] .shell > .main > .capacity-alert {padding-left:16px;padding-right:36px;}
+}
+/* Community and documentation hover affect the circular outline only. */
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body .topbar .header-resources > a:is(:nth-child(1),:nth-child(2)):hover {
+  background:transparent !important;
+  border-color:var(--d4-primary) !important;
+  border-radius:50% !important;
+  color:var(--muted) !important;
+  box-shadow:none !important;
+ }
+ html[data-demo="4"] body .topbar .header-resources > a:is(:nth-child(1),:nth-child(2)):hover svg {color:inherit !important;}
+}
+
+/* Completed reveal must not establish a containing block for fixed-position menus. */
+@keyframes d4-content-reveal {
+ from {opacity:0;transform:translateY(6px);}
+ to {opacity:1;transform:none;}
+}
+html[data-demo="4"] body .admin-project-menu {display:inline-block;width:max-content;vertical-align:middle;}
+html[data-demo="4"] body .project-card-menu > summary,
+html[data-demo="4"] body .project-card-menu > summary:hover {
+ border-radius:6px !important;
+}
+/* Outline upgrade CTA retains its existing dimensions and pointer feedback. */
+html[data-demo="4"] body .capacitymini .upgrade-entry,
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+ background:transparent !important;
+ color:var(--d4-primary) !important;
+ border:1px solid var(--d4-primary) !important;
+ border-radius:8px !important;
+ box-shadow:none !important;
+ filter:none !important;
+}
+html[data-demo="4"] body .capacitymini .upgrade-entry svg {color:inherit !important;}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
+  background:color-mix(in srgb,var(--d4-primary) 10%,transparent) !important;
+ }
+}
+
+/* Linear selection mark, without a filled circular backing. */
+html[data-demo="4"] .single-select-option .single-select-check,
+html[data-demo="4"] .single-select-option[aria-selected="true"] .single-select-check {
+ background:transparent !important;
+ color:var(--d4-primary) !important;
+ border:0;
+ border-radius:0;
+}
+html[data-demo="4"] .single-select-check svg {width:14px;height:14px;fill:none;}
+/* QingIcon chevron points right in the source: +90 is down, -90 is up. */
+html[data-demo="4"] body :is(.filter-trigger,.single-select-trigger) > svg:last-child {
+ transform:rotate(90deg) !important;
+ transform-origin:center;
+ transition:transform 180ms cubic-bezier(.22,1,.36,1) !important;
+}
+html[data-demo="4"] body :is(.filter-trigger,.single-select-trigger)[aria-expanded="true"] > svg:last-child {
+ transform:rotate(-90deg) !important;
+}
+@media(prefers-reduced-motion:reduce) {
+ html[data-demo="4"] body :is(.filter-trigger,.single-select-trigger) > svg:last-child {transition:none !important;}
+}
+
+/* Top-layer positioning avoids transformed ancestors and table clipping. */
+html[data-demo="4"] body .admin-project-menu .project-card-actions[popover] {
+ position:fixed;inset:auto;margin:0;transform:none !important;
+ animation:none !important;transition:none !important;
+ width:160px;max-width:calc(100vw - 16px);box-sizing:border-box;
+}
+html[data-demo="4"] body .admin-project-menu .project-card-actions[popover]:not(:popover-open) {display:none;}
+
+/* Resource hover changes only the fill; preserve the existing circular outline. */
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body .topbar .header-resources > a:is(:nth-child(1),:nth-child(2)):hover {
+  background:color-mix(in srgb,#f56565 12%,transparent) !important;
+  border-color:var(--border) !important;
+  border-radius:50% !important;
+  color:var(--muted) !important;
+  box-shadow:none !important;
+ }
+}
+
+/* Organization breadcrumbs grow with their contents rather than wrapping. */
+html[data-demo="4"] .onboarding-header {flex-wrap:nowrap;white-space:nowrap;}
+html[data-demo="4"] .onboarding-header>:not(.avatar) {flex-shrink:0;}
+html[data-demo="4"] .onboarding-header>[role="button"],
+html[data-demo="4"] .onboarding-header .create-org-crumb {
+ display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;width:max-content;max-width:none;white-space:nowrap;
+}
+html[data-demo="4"] .onboarding-header .org-symbol {display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;}
+html[data-demo="4"] .onboarding-header .org-plan-badge {flex-shrink:0;white-space:nowrap;}
+html[data-demo="4"] .project-example-link .example-chevron {display:inline-flex;transition:transform 350ms cubic-bezier(.22,1,.36,1);}
+html[data-demo="4"] .project-example-link .example-chevron path {transform-box:view-box;transform-origin:10px 8px;vector-effect:non-scaling-stroke;transition:transform 350ms cubic-bezier(.22,1,.36,1);}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] .project-example-link:hover .example-chevron {transform:translateX(2px);}
+ html[data-demo="4"] .project-example-link:hover .example-chevron-top {transform:rotate(8deg);}
+ html[data-demo="4"] .project-example-link:hover .example-chevron-bottom {transform:rotate(-8deg);}
+}
+@media(prefers-reduced-motion:reduce){html[data-demo="4"] .project-example-link .example-chevron,html[data-demo="4"] .project-example-link .example-chevron path{transition:none!important;transform:none!important;}}
+
+html[data-demo="4"] .onboarding-header .onboarding-account {margin-left:auto;display:inline-flex;align-items:center;justify-content:center;flex:0 0 32px;width:32px;height:32px;min-height:32px;padding:0;border:0;border-radius:50%;background:transparent;box-shadow:none;cursor:pointer;}
+html[data-demo="4"] .onboarding-account .avatar {pointer-events:none;}
+
+/* Tag creation stays at the drawer bottom; only the tag list scrolls. */
+html[data-demo="4"] #modal.tag-management-drawer>.modalbody {
+ display:flex;flex-direction:column;overflow:hidden;min-height:0;
+}
+html[data-demo="4"] #modal.tag-management-drawer .tag-manager-search {flex:none;}
+html[data-demo="4"] #modal.tag-management-drawer .tag-manager {
+ flex:1 1 0;min-height:0;overflow-y:auto;
+}
+html[data-demo="4"] #modal.tag-management-drawer .tag-search-empty {flex:none;}
+html[data-demo="4"] #modal.tag-management-drawer .inline-tag-create {
+ flex:0 0 auto;margin-top:16px;padding-top:20px;background:var(--bg-canvas);
+ max-height:calc(100dvh - 180px);overflow-y:auto;
+}
+html[data-demo="4"] #modal.tag-management-drawer .inline-tag-create>.modalfoot {
+ border:0!important;box-shadow:none;padding:12px 0 0;
+}
