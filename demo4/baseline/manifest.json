@@ -1,0 +1,19 @@
+{
+  "url": "https://zhangseraphina29-lab.github.io/swanlab-demo-b/demo3.html",
+  "sha256": "d4b9090282bbaafc1d26b542643e478292477b2a43edeb2e7eccc68ddb84cd1d",
+  "files": {
+    "icons.js": "71711c349c8e969941cf6aec09fb39a316200e65e2f3789cd4953f8d64038d96",
+    "supabase.css": "79d15aee64e369b7f3507009061a6a62f2c226f4d498b2b1e9e32a88d1602210",
+    "index.html": "f78f1592a6bfb6962578fb44f5ab76c20277e8cc04bd54630bfb7b804cb1dbf8",
+    "linear.css": "6cd57d222e76a383b905f306a2ad48e795360e83c89c041f9e09acbf8c1c3d06",
+    "foundations.css": "839dae6fe539a934b33e84c488b773135ea9c93122e6e3cde538d9db12f16e5d",
+    "logo.png": "e35128565e82d735b8a85fd6719f97f6bd8508380cdfc21eeb7aedf89ff44cbd",
+    "style.css": "5b0536642f9c5fa966ab7a57e375b7a7ee4b96771c24fceafac1fafab47e33b0",
+    "model.js": "c40aa3f3e172a42f46064961b872cae0e239da9810ecd380b0e0c8e4a1fbd25c",
+    "LUCIDE-LICENSE": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+    "app.js": "082abb336100090a76d2abf054b6b5df993776b6456e43f888a97b210d8f97e5",
+    "assets/INTER-LICENSE.txt": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+    "assets/inter-latin.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "design-reference/supabase/tokens.css": "56d17becb290763f35afb704f427a91a299be0d23c8edfb118438fe94d6853ec"
+  }
+}

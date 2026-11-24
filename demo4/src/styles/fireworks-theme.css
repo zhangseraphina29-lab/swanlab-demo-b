@@ -1,0 +1,25 @@
+/* Restrained Fireworks Bloom accent. Existing layout, typography and status colors stay intact. */
+html[data-demo="4"] {
+ --d4-primary:var(--fw-bloom-700);--d4-solid:var(--fw-bloom-700);--d4-solid-hover:var(--fw-bloom-600);--d4-on-solid:#fff;
+ --d4-ring:color-mix(in srgb,var(--fw-bloom-600) 38%,transparent);
+ --accent:var(--fw-bloom-700);--focus:var(--fw-bloom-600);--green:#0e7e4e;
+ --sb-color-raw-green:var(--fw-bloom-700);--sb-color-action-primary:var(--fw-bloom-700);--sb-color-action-text:#fff;
+ --sb-color-proposed-focus-strong:var(--fw-bloom-600);--sb-color-raw-focus:var(--d4-ring);
+}
+/* The supplied source has no dark theme; these aliases adapt its Bloom palette to existing dark surfaces. */
+html[data-demo="4"][data-theme=dark] {
+ --d4-primary:var(--fw-bloom-200);--d4-solid:var(--fw-bloom-500);--d4-solid-hover:var(--fw-bloom-600);--d4-on-solid:#fff;
+ --d4-ring:color-mix(in srgb,var(--fw-bloom-300) 38%,transparent);
+ --accent:var(--fw-bloom-200);--focus:var(--fw-bloom-300);--green:#4acd8b;
+ --sb-color-raw-green:var(--fw-bloom-500);--sb-color-action-primary:var(--fw-bloom-500);--sb-color-action-text:#fff;
+ --sb-color-proposed-focus-strong:var(--fw-bloom-300);--sb-color-raw-focus:var(--d4-ring);
+}
+/* Navigation and tabs stay neutral, rather than making every selection a brand accent. */
+html[data-demo="4"] .organization-layout .settings-nav button.active {background:var(--d4-accent);color:var(--d4-fg)}
+html[data-demo="4"] .projects-toolbar .segments button.selected {background:var(--d4-accent);color:var(--d4-fg)}
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .tabs button.active,
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .recycle-toolbar .tabs button.active,
+html[data-demo="4"] .profile-project-main>.tabs button.active {color:var(--d4-fg);border-bottom-color:var(--d4-fg)}
+html[data-demo="4"] input:is([type=checkbox],[type=radio]) {accent-color:var(--d4-solid)}
+html[data-demo="4"] .single-select-option[aria-selected=true] .single-select-check {background:var(--d4-solid);color:#fff}
+html[data-demo="4"] .scope-options button[aria-pressed=true]:before {background:var(--d4-solid)}

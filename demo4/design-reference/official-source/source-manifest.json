@@ -1,0 +1,100 @@
+{
+  "repo": "https://github.com/supabase/supabase",
+  "commit": "c18904c171b0527c41b2c1a201513deb0e95ec08",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/LICENSE",
+      "sha256": "c29468abcd629e248c2f76848155c386b733872bcabcc4cf65ef1e7c61431042"
+    },
+    {
+      "path": "apps/studio/styles/globals.css",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/apps/studio/styles/globals.css",
+      "sha256": "8e7e06c04328a087e3a17d8de3fb621a6f54f9a91f91fd1d2269b87b8f55d578"
+    },
+    {
+      "path": "packages/config/css/shadows.css",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/config/css/shadows.css",
+      "sha256": "c861d95cc0ac4812017700a39f16f56260e4bd574f4b79ef58eaec4b25ab8045"
+    },
+    {
+      "path": "packages/config/css/utilities.css",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/config/css/utilities.css",
+      "sha256": "c5b2d1e4ea1db9a797f5ecfad759f2ce2e784dd1558573964b0dd6745b770251"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/package.json",
+      "sha256": "8a1dfa4d62b5ba6e0354ba90d8c7b33ab1487151c1b6dd8cc7da9936bcd89894"
+    },
+    {
+      "path": "packages/ui/src/components/Button/Button.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/Button/Button.tsx",
+      "sha256": "0d8a53df185fae5a1da94df9327a1322db106a6d9e170ff700eac53c5a53e258"
+    },
+    {
+      "path": "packages/ui/src/components/Menu/Menu.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/Menu/Menu.tsx",
+      "sha256": "2412dd104ac4d55cd56728ab1733447c4ae550447037586d8d29b0bc9c1450c9"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/button.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/button.tsx",
+      "sha256": "0d49e9a1ebca52f3ab7df743dc07814e446f701eadee43b2cd143dc6ec2a80b4"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/input.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/input.tsx",
+      "sha256": "71f625bb134961823cf0fdedc178c8d29661a0a616bf5b940eeaa7ae50e3beb3"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/select-trigger.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/select-trigger.tsx",
+      "sha256": "02fadcd7fafb8381ca3abc44e3c5d3b651ef6ef030f68ec300b0369870c0665e"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/select.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/select.tsx",
+      "sha256": "fe16aaf45ce7a09e582f87a19fa45a3201a9612d0fd8215d7cc6ccd610a6d8a4"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/table.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/table.tsx",
+      "sha256": "6b3ead77acc5679ba19afa86ffeadb93860bf6637dcb2c2c3d18bc803438fb6a"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/tooltip.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/components/shadcn/ui/tooltip.tsx",
+      "sha256": "f29c3ace4cadf358107d1e291644c55de4446e34b6365c4a4a6ac139854f086d"
+    },
+    {
+      "path": "packages/ui/src/lib/constants.ts",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/lib/constants.ts",
+      "sha256": "159f4b944d351912db3576767a6cfce03af2f158898857679decd1ba1da146e0"
+    },
+    {
+      "path": "packages/ui/src/lib/raised-control-surface.ts",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui/src/lib/raised-control-surface.ts",
+      "sha256": "e07b807e65487481d31a6abaee3a7a097a08812692faae3edb0c6eb10c94516d"
+    },
+    {
+      "path": "packages/ui-patterns/src/info-tooltip.tsx",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/c18904c171b0527c41b2c1a201513deb0e95ec08/packages/ui-patterns/src/info-tooltip.tsx",
+      "sha256": "162b4b74bf1a727fedeace2c1517268dc6aadc90b66a3414840ac6780977e049"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/alert.tsx",
+      "ref": "master",
+      "readAt": "2026-11-20",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/master/packages/ui/src/components/shadcn/ui/alert.tsx",
+      "sha256": "ae1921dd896e28c30b55c1547ade3fe3b5956b11c85a31bbf8e89ede092992c9"
+    },
+    {
+      "path": "packages/ui/src/components/shadcn/ui/input-group.tsx",
+      "ref": "master",
+      "readAt": "2026-11-20",
+      "url": "https://raw.githubusercontent.com/supabase/supabase/master/packages/ui/src/components/shadcn/ui/input-group.tsx",
+      "sha256": "90e6cedd66c3dc40dc4618efe8331c42fc38cdf9457f9e854427bee984b66e92"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+/* Crimson palette supplied by the user. Neutral surfaces and semantic statuses are retained. */
+html[data-demo="4"] {
+ --crimson-1:#fffcfd;--crimson-2:#fef7f9;--crimson-3:#ffe9f0;--crimson-4:#fedce7;
+ --crimson-5:#facedd;--crimson-6:#f3bed1;--crimson-7:#eaacc3;--crimson-8:#e093b2;
+ --crimson-9:#e93d82;--crimson-10:#df3478;--crimson-11:#cb1d63;--crimson-12:#621639;
+ --crimson-a3:#ff005216;--crimson-a9:#e2005bc2;
+ --d4-primary:var(--crimson-11);--d4-solid:var(--crimson-11);--d4-solid-hover:color-mix(in srgb,var(--crimson-11) 86%,var(--crimson-12));--d4-on-solid:#fff;
+ --d4-ring:color-mix(in srgb,var(--crimson-9) 55%,transparent);
+ --accent:var(--crimson-11);--focus:var(--crimson-9);--green:#0e7e4e;
+ --sb-color-raw-green:var(--crimson-11);--sb-color-action-primary:var(--crimson-11);--sb-color-action-text:#fff;
+ --sb-color-proposed-focus-strong:var(--crimson-9);--sb-color-raw-focus:var(--d4-ring);
+}
+html[data-demo="4"][data-theme=dark] {
+ --crimson-1:#191114;--crimson-2:#201318;--crimson-3:#381525;--crimson-4:#4d122f;
+ --crimson-5:#5c1839;--crimson-6:#6d2545;--crimson-7:#873356;--crimson-8:#b0436e;
+ --crimson-9:#e93d82;--crimson-10:#ee518a;--crimson-11:#ff92ad;--crimson-12:#fdd3e8;
+ --crimson-a3:#fe2a8b2a;--crimson-a9:#ff418de8;
+ --d4-primary:var(--crimson-11);--d4-solid:var(--crimson-9);--d4-solid-hover:var(--crimson-10);--d4-on-solid:var(--crimson-1);
+ --accent:var(--crimson-11);--focus:var(--crimson-9);--green:#4acd8b;
+ --sb-color-raw-green:var(--crimson-9);--sb-color-action-primary:var(--crimson-9);--sb-color-action-text:var(--crimson-1);
+}
+html[data-demo="4"] .organization-layout .settings-nav button.active {background:var(--crimson-3);color:var(--crimson-11)}
+html[data-demo="4"] .projects-toolbar .segments button.selected {background:var(--crimson-3);color:var(--crimson-11)}
+html[data-demo="4"] .tabs button.active {color:var(--crimson-11);border-bottom-color:var(--crimson-9)}
+html[data-demo="4"] input:is([type=checkbox],[type=radio]) {accent-color:var(--d4-solid)}
+html[data-demo="4"] .bar>i {background:var(--crimson-9)}
+html[data-demo="4"] .single-select-option[aria-selected=true] .single-select-check {background:var(--crimson-11);color:var(--crimson-1)}
+html[data-demo="4"] .scope-options button[aria-pressed=true]:before {background:var(--crimson-11)}
+html[data-demo="4"][data-theme=dark] {--d4-ring:color-mix(in srgb,var(--crimson-9) 55%,transparent);--sb-color-proposed-focus-strong:var(--crimson-9);--sb-color-raw-focus:var(--d4-ring)}
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .tabs button.active,
+html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .recycle-toolbar .tabs button.active,
+html[data-demo="4"] .profile-project-main>.tabs button.active {color:var(--crimson-11);border-bottom-color:var(--crimson-9)}
