@@ -91,3 +91,69 @@ html[data-demo="4"] body #account-trigger:hover>.avatar {
   background:var(--brand-soft)!important;color:var(--text-primary)!important;
  }
 }
+
+/* Compact classification labels; neutral state badges remain distinguishable. */
+html[data-demo="4"] body .tag {font-size:11px!important;line-height:16px!important;}
+html[data-demo="4"] body .badge:not(.green):not(.red):not(.amber) {
+ background:color-mix(in srgb,var(--text-primary) 10%,var(--bg-canvas));color:var(--text-secondary);
+}
+html[data-demo="4"][data-theme="dark"] body .badge:not(.green):not(.red):not(.amber) {
+ background:color-mix(in srgb,var(--text-primary) 14%,var(--bg-canvas));
+}
+html[data-demo="4"] body .project-card-actions button.danger {
+ color:var(--danger-text)!important;background:transparent;
+}
+html[data-demo="4"] body .single-select-option,
+html[data-demo="4"] body .single-select-option[aria-selected=true] .single-select-check {
+ color:var(--text-primary)!important;
+}
+html[data-demo="4"] body .single-select-option[aria-selected=true],
+html[data-demo="4"] body .single-select-option:hover:not(:disabled) {
+ background:var(--bg-muted)!important;color:var(--text-primary)!important;
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout) {
+ grid-template-columns:220px minmax(0,1fr);
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav {
+ width:220px;box-sizing:border-box;
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav>button,
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav>h3 {
+ font-size:13px!important;line-height:20px!important;
+}
+html[data-demo="4"] body .tabs {position:relative;}
+html[data-demo="4"] body .tabs>button,
+html[data-demo="4"] body .tabs>button.active {border-bottom-color:transparent!important;}
+html[data-demo="4"] body .tabs>button::after {display:none!important;}
+html[data-demo="4"] body .tabs>.d4-tab-line {
+ position:absolute;left:0;bottom:0;width:1px;height:2px;min-width:0;padding:0;margin:0;
+ background:var(--text-primary);transform-origin:left center;pointer-events:none;
+}
+@media(max-width:760px) {
+ html[data-demo="4"] body .organization-layout:not(.account-layout) {grid-template-columns:minmax(0,1fr);}
+ html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav {width:100%;}
+}
+@media(prefers-reduced-motion:reduce) {
+ html[data-demo="4"] body .tabs>.d4-tab-line {animation:none!important;transition:none!important;}
+}
+
+/* Keep the global search outline visible in both themes and every resting state. */
+html[data-demo="4"] body .topbar button.global-search,
+html[data-demo="4"] body .topbar button.global-search:hover {
+ border:1px solid var(--border);box-shadow:none;
+}
+/* Preserve existing control typography independently of settings-body inheritance. */
+html[data-demo="4"] body .single-select-option {
+ font:450 13px/20px var(--sb-font-body);
+}
+html[data-demo="4"] body #content :is(.toolbar,.recycle-toolbar) :is(.single-select-trigger,.filter-trigger) {
+ font-size:12px;line-height:16px;
+}
+
+/* Header outlines share the resource-icon border; plan badges stay unfilled. */
+html[data-demo="4"] body .topbar .badge.org-plan {
+ background:transparent!important;border:1px solid var(--border);
+}
+/* Keep horizontal tab navigation available without transient scrollbars. */
+html[data-demo="4"] body .tabs {overflow-y:hidden;scrollbar-width:none;}
+html[data-demo="4"] body .tabs::-webkit-scrollbar {display:none;width:0;height:0;}
