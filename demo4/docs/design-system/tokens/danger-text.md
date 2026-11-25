@@ -33,4 +33,5 @@
 - [src/styles/lucide-theme.css:20](../../../src/styles/lucide-theme.css)：`color: var(--danger-text)`
 - [src/styles/lucide-theme.css:27](../../../src/styles/lucide-theme.css)：`border-color: var(--danger-text)`
 - [src/styles/lucide-theme.css:104](../../../src/styles/lucide-theme.css)：`color: var(--danger-text)`
+- [src/styles/organization-overview.css:163](../../../src/styles/organization-overview.css)：`border-color: var(--danger-text)`
 <!-- generated:end -->
