@@ -17,10 +17,6 @@
   - 值：`#007243`
 - [src/styles/demo4-ui.css:14](../../../src/styles/demo4-ui.css) · 条件：`html[data-demo="4"][data-theme=dark]`
   - 值：`#076e43`
-- [src/styles/palette-magenta.css:9](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`var(--magenta-600)`
-- [src/styles/palette-magenta.css:19](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
-  - 值：`var(--magenta-600)`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
   - 值：`var(--action-hover)`
 

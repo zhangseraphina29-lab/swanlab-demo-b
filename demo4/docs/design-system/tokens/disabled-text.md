@@ -13,9 +13,9 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/foundations.css:2](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:7](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#747b85`
-- [src/styles/foundations.css:3](../../../src/styles/foundations.css) · 条件：`:root[data-theme=dark]`
+- [src/styles/foundations.css:8](../../../src/styles/foundations.css) · 条件：`:root[data-theme=dark]`
   - 值：`#9ba4b1`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`#85858c`
@@ -30,7 +30,7 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/foundations.css:17](../../../src/styles/foundations.css)：`color: var(--disabled-text)`
+- [src/styles/foundations.css:22](../../../src/styles/foundations.css)：`color: var(--disabled-text)`
 - [src/styles/linear.css:9](../../../src/styles/linear.css)：`color: var(--disabled-text)`
 - [src/styles/linear.css:12](../../../src/styles/linear.css)：`color: var(--disabled-text)`
 - [src/styles/supabase.css:14](../../../src/styles/supabase.css)：`color: var(--disabled-text)`

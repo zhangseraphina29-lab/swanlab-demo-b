@@ -21,10 +21,6 @@
   - 值：`var(--sb-color-action-primary)`
 - [src/styles/supabase.css:5](../../../src/styles/supabase.css) · 条件：`:root[data-theme=dark]`
   - 值：`var(--sb-color-action-primary)`
-- [src/styles/palette-magenta.css:12](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`var(--magenta-500)`
-- [src/styles/palette-magenta.css:20](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
-  - 值：`var(--magenta-300)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
   - 值：`var(--brand-text)`
 

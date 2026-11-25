@@ -1,19 +1,30 @@
-import { currentOrg, isManager } from './model.js';
+import { currentOrg, isManager, canAccessProject } from './model.js';
 
 export function organizationOverviewStats(state) {
   if (!isManager(state)) return null;
   const org = currentOrg(state);
   const members = org.members.filter(member => member.status === 'active');
   const totalExperiments = org.projects.reduce((sum, project) => sum + project.experiments, 0);
-  // The prototype stores experiment totals, not live execution or participant data.
-  const liveCount = totalExperiments === 0 ? 0 : null;
+  // Fixed demo activity counts, capped by the selected organization totals.
+  const hasExperiments = totalExperiments > 0;
   return {
     members: members.length,
+    administrators: members.filter(member => member.role === '管理员').length,
     owners: members.filter(member => member.role === 'Owner').length,
     projects: org.projects.length,
-    experimenters: liveCount,
-    runningProjects: liveCount,
-    runningExperiments: liveCount,
+    experimenters: hasExperiments ? Math.min(3, members.length) : 0,
+    runningProjects: hasExperiments ? Math.min(2, org.projects.length) : 0,
+    runningExperiments: Math.min(8, totalExperiments),
     totalExperiments,
   };
+}
+
+export function organizationRecentUpdates(state){
+ const visible=currentOrg(state).projects.filter(project=>canAccessProject(state,project));
+ const projects=[...visible].sort((a,b)=>(b.lastExperimentAt||b.updated||'').localeCompare(a.lastExperimentAt||a.updated||'')).slice(0,5);
+ const experiments=visible.flatMap(project=>{
+  if(project.experimentRecords?.length)return project.experimentRecords.map(record=>({...record,projectId:project.id,projectName:project.name,updatedBy:record.updatedBy||record.createdBy||project.lastExperimentBy,updated:record.updatedAt||record.updated||record.createdAt||project.lastExperimentAt||project.updated}));
+  return project.experiments>0?[{id:project.id+'-latest',name:project.name+' / latest',projectId:project.id,projectName:project.name,updatedBy:project.lastExperimentBy,updated:project.lastExperimentAt||project.updated}]:[];
+ }).sort((a,b)=>(b.updated||'').localeCompare(a.updated||''));
+ return {projects,experiments:experiments.slice(0,5),projectCount:visible.length,experimentCount:experiments.length};
 }

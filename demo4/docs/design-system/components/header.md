@@ -6,15 +6,15 @@
 
 > - 全局搜索、FREE 标签及右侧资源图标使用同一 border token、1px 描边；FREE 透明底。
 
-来源：[demo4-UI规则.md · 第 74 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 74 行](../sources/ui.txt)
 
 > - 基线社区、官方文档等图标 hover 底色浅红，原有边框、圆角及图标色不变，不加阴影。
 
-来源：[demo4-UI规则.md · 第 40 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 40 行](../sources/ui.txt)
 
 > - 账号头像 hover 不增加描边或外圈；保留键盘焦点提示。账号菜单只显示实际 ID，不显示 ID: account: 前缀。
 
-来源：[demo4-UI规则.md · 第 41 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 41 行](../sources/ui.txt)
 
 ## 其他样式与规格
 

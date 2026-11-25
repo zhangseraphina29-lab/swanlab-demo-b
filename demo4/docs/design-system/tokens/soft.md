@@ -13,13 +13,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#ecebe9`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#2b2b28`
-- [src/styles/foundations.css:110](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:115](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#f2f2f2`
-- [src/styles/foundations.css:119](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:124](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#1f1f1f`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`lch(95.24% 0 282)`
@@ -36,10 +36,10 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/foundations.css:82](../../../src/styles/foundations.css)：`background: var(--soft)`
-- [src/styles/foundations.css:86](../../../src/styles/foundations.css)：`background: var(--soft)`
 - [src/styles/foundations.css:87](../../../src/styles/foundations.css)：`background: var(--soft)`
-- [src/styles/foundations.css:125](../../../src/styles/foundations.css)：`background: var(--soft)`
-- [src/styles/foundations.css:151](../../../src/styles/foundations.css)：`background: var(--soft)`
+- [src/styles/foundations.css:91](../../../src/styles/foundations.css)：`background: var(--soft)`
+- [src/styles/foundations.css:92](../../../src/styles/foundations.css)：`background: var(--soft)`
+- [src/styles/foundations.css:130](../../../src/styles/foundations.css)：`background: var(--soft)`
+- [src/styles/foundations.css:156](../../../src/styles/foundations.css)：`background: var(--soft)`
 - [src/styles/linear.css:9](../../../src/styles/linear.css)：`background: var(--soft)`
 <!-- generated:end -->

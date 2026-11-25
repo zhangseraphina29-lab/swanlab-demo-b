@@ -13,9 +13,9 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/foundations.css:2](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:7](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`0 2px 4px #10182806,0 8px 20px #1018280a,0 24px 48px #1018280f`
-- [src/styles/foundations.css:3](../../../src/styles/foundations.css) · 条件：`:root[data-theme=dark]`
+- [src/styles/foundations.css:8](../../../src/styles/foundations.css) · 条件：`:root[data-theme=dark]`
   - 值：`0 2px 4px #0003,0 8px 20px #0003,0 24px 48px #0004`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`0 0 0 .5px #18182012,0 4px 12px #1818200d,0 20px 60px #1818201f`
@@ -30,10 +30,10 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/foundations.css:30](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
-- [src/styles/foundations.css:36](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
-- [src/styles/foundations.css:48](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
-- [src/styles/foundations.css:51](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
+- [src/styles/foundations.css:35](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
+- [src/styles/foundations.css:41](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
+- [src/styles/foundations.css:53](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
+- [src/styles/foundations.css:56](../../../src/styles/foundations.css)：`box-shadow: var(--floating-shadow)`
 - [src/styles/linear.css:20](../../../src/styles/linear.css)：`box-shadow: var(--floating-shadow)`
 - [src/styles/linear.css:23](../../../src/styles/linear.css)：`box-shadow: var(--floating-shadow)`
 <!-- generated:end -->

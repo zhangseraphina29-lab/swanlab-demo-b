@@ -7,12 +7,13 @@
 @import "../../design-reference/supabase/tokens.css";
 @import "./supabase.css";
 @import "./demo4-ui.css";
-@import "./palette-magenta.css";
 @import "./billing.css";
-@import "./lucide-tokens.css";
+@import "./fireworks-tokens.css";
+@import "./fireworks-neutral-tokens.css";
 @import "./lucide-theme.css";
 @import "./auth.css";
 @import "./pricing.css";
 @import "./organization-overview.css";
+@import "./fireworks-theme.css";
 
 @source "../";

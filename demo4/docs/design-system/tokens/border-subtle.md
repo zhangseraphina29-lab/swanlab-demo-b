@@ -6,7 +6,7 @@
 
 > 角色：分割线；Token：border-subtle；用途：卡片分组边框、列表分割线；不作为输入框唯一识别边界。
 
-来源：[usage.md · 第 10 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 10 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,10 +15,14 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:66](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:65](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--neutral-300)`
-- [src/styles/lucide-tokens.css:93](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
-  - 值：`color-mix(in oklch, var(--neutral-700) 40%, var(--bg-canvas))`
+- [src/styles/fireworks-tokens.css:94](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--neutral-700)`
+- [src/styles/fireworks-neutral-tokens.css:66](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--neutral-300)`
+- [src/styles/fireworks-neutral-tokens.css:95](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
+  - 值：`var(--neutral-700)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

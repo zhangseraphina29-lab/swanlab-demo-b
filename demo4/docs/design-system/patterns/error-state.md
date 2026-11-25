@@ -6,11 +6,11 @@
 
 > - 状态色只用于状态标签、提示、相关图标与错误字段，不扩散到整个页面。状态底色必须配对应状态文字色。
 
-来源：[usage.md · 第 34 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 34 行](../sources/color.txt)
 
 > - 输入框错误时采用 danger-text 边框，字段下方提供具体错误原因；聚焦时保留独立 focus-ring。
 
-来源：[usage.md · 第 36 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 36 行](../sources/color.txt)
 
 ## 其他样式与规格
 

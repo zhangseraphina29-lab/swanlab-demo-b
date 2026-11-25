@@ -16,8 +16,6 @@
 - [design-reference/supabase/tokens.css:15](../../../design-reference/supabase/tokens.css) · 条件：`[data-design-system],
 [data-design-system][data-ds-mode="light"]`
   - 值：`oklch(0.7 0.15 157.5 / 0.55)`
-- [src/styles/palette-magenta.css:14](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`var(--d4-ring)`
 - [src/styles/lucide-theme.css:8](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
   - 值：`var(--focus-ring)`
 

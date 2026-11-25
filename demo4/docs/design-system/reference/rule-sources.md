@@ -4,12 +4,12 @@
 
 ## 已读取的主要文件
 
-- **UI**：[ demo4-UI规则.md ](../../../../../设计系统搭建/demo4-UI规则.md)
-- **MOTION**：[ demo4-motion-guidelines.md ](../../../../../设计系统搭建/demo4-motion-guidelines.md)
-- **COLOR**：[ usage.md ](../../../../outputs/lucide-colors/usage.md)
-- **SCOPE**：[ 结论.md ](../../../../Project改版/版本记录/V0.3.1_设计目标与边界/结论.md)
-- **STYLE**：[ 结论.md ](../../../../Project改版/版本记录/V0.3.2_产品风格定义/结论.md)
-- **EVIDENCE**：[ Supabase Token 证据规则.md ](../../../../Project改版/版本记录/V0.5.1/Supabase%20Token%20证据规则.md)
+- **UI**：[ demo4-UI规则.md ](../sources/ui.txt)
+- **MOTION**：[ demo4-motion-guidelines.md ](../sources/motion.txt)
+- **COLOR**：[ usage.md ](../sources/color.txt)
+- **SCOPE**：[ 结论.md ](../sources/scope.txt)
+- **STYLE**：[ 结论.md ](../sources/style.txt)
+- **EVIDENCE**：[ Supabase Token 证据规则.md ](../sources/evidence.txt)
 
 ## 本次整理原则
 

@@ -6,7 +6,7 @@
 
 > - 列表／卡片视图和 Tab 切换使用背景、颜色、边框的滑动式过渡，约 180–220ms。
 
-来源：[demo4-motion-guidelines.md · 第 23 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 23 行](../sources/motion.txt)
 
 ## 其他样式与规格
 

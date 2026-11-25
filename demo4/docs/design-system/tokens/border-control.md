@@ -6,7 +6,7 @@
 
 > 角色：控件边框；Token：border-control；用途：输入框、下拉框、复选框的默认浅灰边界；只略强于分割线，不使用文字灰作为常态描边。
 
-来源：[usage.md · 第 11 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 11 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,10 +15,18 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:67](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:66](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`var(--neutral-600)`
+- [src/styles/fireworks-tokens.css:95](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--neutral-500)`
+- [src/styles/fireworks-neutral-tokens.css:67](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--neutral-600)`
+- [src/styles/fireworks-neutral-tokens.css:96](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
+  - 值：`var(--neutral-500)`
+- [src/styles/fireworks-theme.css:15](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"]`
   - 值：`var(--neutral-400)`
-- [src/styles/lucide-tokens.css:94](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
-  - 值：`color-mix(in oklch, var(--neutral-500) 35%, var(--bg-canvas))`
+- [src/styles/fireworks-theme.css:16](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--neutral-700)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

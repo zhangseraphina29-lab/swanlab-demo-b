@@ -6,7 +6,7 @@
 
 > 角色：柔和焦点环；Token：focus-ring；用途：键盘焦点提示；独立于默认边框，不使用实心深红。
 
-来源：[usage.md · 第 18 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 18 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,10 +15,14 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:78](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`color-mix(in oklch, var(--coral-500) 35%, transparent)`
-- [src/styles/lucide-tokens.css:105](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
-  - 值：`color-mix(in oklch, var(--coral-300) 40%, transparent)`
+- [src/styles/fireworks-tokens.css:77](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`var(--wine-600)`
+- [src/styles/fireworks-tokens.css:106](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--wine-300)`
+- [src/styles/fireworks-neutral-tokens.css:78](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--wine-600)`
+- [src/styles/fireworks-neutral-tokens.css:107](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
+  - 值：`var(--wine-300)`
 - [src/styles/lucide-theme.css:37](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
   - 值：`color-mix(in oklch,var(--magenta-500) 35%,transparent)`
 - [src/styles/lucide-theme.css:40](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`

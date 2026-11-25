@@ -21,10 +21,8 @@
   - 值：`linear-gradient(110deg, #df5360 0%, #ce4562 58%, #bd416c 100%)`
 - [src/styles/demo4-ui.css:433](../../../src/styles/demo4-ui.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
   - 值：`linear-gradient(110deg, #ad3e50 0%, #a33957 58%, #953b60 100%)`
-- [src/styles/palette-magenta.css:15](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`linear-gradient(110deg,var(--magenta-500),var(--magenta-600))`
-- [src/styles/palette-magenta.css:22](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
-  - 值：`linear-gradient(110deg,var(--magenta-600),var(--magenta-700))`
+- [src/styles/fireworks-theme.css:3](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--action-primary)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

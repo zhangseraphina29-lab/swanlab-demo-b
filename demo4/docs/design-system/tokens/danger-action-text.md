@@ -13,10 +13,10 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:180](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`var(--neutral-50)`
-- [src/styles/lucide-tokens.css:181](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
-  - 值：`var(--neutral-900)`
+- [src/styles/fireworks-tokens.css:119](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`var(--action-text)`
+- [src/styles/fireworks-theme.css:4](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--action-text)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

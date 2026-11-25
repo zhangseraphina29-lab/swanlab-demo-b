@@ -6,11 +6,11 @@
 
 > - 不在业务组件里直接引用 50–900 色阶或硬编码 HEX；引用语义 token。图表、插画等额外色彩需求另行定义。
 
-来源：[usage.md · 第 40 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 40 行](../sources/color.txt)
 
 > - 状态色只用于状态标签、提示、相关图标与错误字段，不扩散到整个页面。状态底色必须配对应状态文字色。
 
-来源：[usage.md · 第 34 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 34 行](../sources/color.txt)
 
 ## 其他样式与规格
 

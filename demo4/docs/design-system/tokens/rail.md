@@ -13,13 +13,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#f1f0ee`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#1c1c1a`
-- [src/styles/foundations.css:110](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:115](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#fafafa`
-- [src/styles/foundations.css:119](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:124](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#0a0a0a`
 - [src/styles/linear.css:37](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`var(--sidebar)`
@@ -30,10 +30,10 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/foundations.css:78](../../../src/styles/foundations.css)：`background: var(--rail)`
-- [src/styles/foundations.css:91](../../../src/styles/foundations.css)：`background: var(--rail)`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css)：`background: var(--rail)`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css)：`background: var(--rail)`
-- [src/styles/foundations.css:112](../../../src/styles/foundations.css)：`background: var(--rail)`
-- [src/styles/foundations.css:119](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:83](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:96](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:117](../../../src/styles/foundations.css)：`background: var(--rail)`
+- [src/styles/foundations.css:124](../../../src/styles/foundations.css)：`background: var(--rail)`
 <!-- generated:end -->

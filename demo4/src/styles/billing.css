@@ -2,22 +2,22 @@ html[data-demo="4"] .billing-org-context {margin:-10px 0 24px;color:var(--d4-ter
 html[data-demo="4"] .billing-section {margin:0 0 28px;}
 html[data-demo="4"] .billing-section > h3 {font-size:14px;margin:0 0 12px;}
 html[data-demo="4"] .billing-section > .row {margin-bottom:12px;}
-html[data-demo="4"] .billing-box {padding:20px;border:1px solid var(--d4-border);border-radius:8px;background:var(--d4-card);}
+html[data-demo="4"] .billing-box {padding:20px;border:1px solid var(--d4-border);border-radius:var(--radius-input);background:var(--d4-card);}
 html[data-demo="4"] .billing-usage-stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:16px;}
 html[data-demo="4"] .billing-usage-stats strong {display:block;font-size:26px;line-height:36px;font-weight:600;}
 html[data-demo="4"] .billing-usage-stats strong small {font-size:13px;font-weight:400;}
-html[data-demo="4"] .billing-usage-alert {padding:12px 16px;background:var(--d4-warning-bg);border:1px solid var(--d4-warning-border);border-radius:8px;margin:16px 0;}
+html[data-demo="4"] .billing-usage-alert {padding:12px 16px;background:var(--d4-warning-bg);border:1px solid var(--d4-warning-border);border-radius:var(--radius-input);margin:16px 0;}
 html[data-demo="4"] .billing-usage-alert p {font-size:12px;margin-top:4px;}
 html[data-demo="4"] .billing-project-heading {margin-top:20px;}
 html[data-demo="4"] .billing-intro {display:flex;gap:12px;align-items:center;margin:36px 0 12px;}
-html[data-demo="4"] .billing-demo {padding:10px 12px;border-radius:6px;background:var(--d4-field);color:var(--d4-tertiary);font-size:12px;line-height:20px;margin-bottom:20px;}
+html[data-demo="4"] .billing-demo {padding:10px 12px;border-radius:var(--radius-control);background:var(--d4-field);color:var(--d4-tertiary);font-size:12px;line-height:20px;margin-bottom:20px;}
 html[data-demo="4"] .billing-plan-head {display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;}
 html[data-demo="4"] .billing-plan-head h3 {display:inline-block;font-size:16px;margin-right:8px;}
 html[data-demo="4"] .billing-fact {display:flex;justify-content:space-between;gap:24px;padding:9px 0;font-size:13px;line-height:20px;}
 html[data-demo="4"] .billing-fact > span:first-child {color:var(--d4-tertiary);flex-shrink:0;}
 html[data-demo="4"] .billing-fact > span:last-child {text-align:right;overflow-wrap:anywhere;min-width:0;}
 html[data-demo="4"] .billing-secondary {display:block;margin-top:6px;color:var(--d4-tertiary);font-size:12px;line-height:20px;}
-html[data-demo="4"] .billing-empty,html[data-demo="4"] .billing-loading {padding:24px;border:1px solid var(--d4-border);border-radius:8px;color:var(--d4-tertiary);text-align:center;}
+html[data-demo="4"] .billing-empty,html[data-demo="4"] .billing-loading {padding:24px;border:1px solid var(--d4-border);border-radius:var(--radius-input);color:var(--d4-tertiary);text-align:center;}
 html[data-demo="4"] .billing-error {color:var(--d4-danger);font-size:12px;line-height:20px;}
 html[data-demo="4"] .billing-processing {margin-top:12px;font-size:12px;color:var(--d4-warning-fg);}
 html[data-demo="4"] .billing-records {margin:12px 0;}
@@ -35,7 +35,7 @@ html[data-demo="4"] #modal.billing-drawer .modalbody {overflow:auto;}
  html[data-demo="4"] .billing-records {border:0;background:transparent;}
  html[data-demo="4"] .billing-records table,html[data-demo="4"] .billing-records tbody {display:block;}
  html[data-demo="4"] .billing-records thead {display:none;}
- html[data-demo="4"] .billing-records tbody tr {display:block;height:auto;border:1px solid var(--d4-border);border-radius:8px;padding:12px;margin-bottom:12px;}
+ html[data-demo="4"] .billing-records tbody tr {display:block;height:auto;border:1px solid var(--d4-border);border-radius:var(--radius-input);padding:12px;margin-bottom:12px;}
  html[data-demo="4"] .billing-records td {display:flex;justify-content:space-between;gap:12px;border:0;padding:6px 0;font-size:12px;}
  html[data-demo="4"] .billing-records td::before {content:attr(data-label);color:var(--d4-tertiary);min-width:36px;}
  html[data-demo="4"] .billing-records td:nth-child(2) {display:block;}

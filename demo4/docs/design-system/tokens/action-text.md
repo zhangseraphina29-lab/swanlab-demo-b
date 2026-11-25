@@ -6,7 +6,7 @@
 
 > 角色：主要按钮；Token：action-primary；用途：创建、保存、确认等当前区域最重要的推进动作，配浅色 action-text（#FFFFFF）文字。
 
-来源：[usage.md · 第 19 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 19 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,15 +15,20 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:75](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:76](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--neutral-50)`
-- [src/styles/lucide-tokens.css:102](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:105](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--wine-900)`
+- [src/styles/fireworks-neutral-tokens.css:77](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
   - 值：`var(--neutral-50)`
+- [src/styles/fireworks-neutral-tokens.css:106](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
+  - 值：`var(--wine-900)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
+- [src/styles/fireworks-tokens.css:119](../../../src/styles/fireworks-tokens.css)：`--danger-action-text: var(--action-text)`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css)：`--d4-on-solid: var(--action-text)`
 - [src/styles/lucide-theme.css:8](../../../src/styles/lucide-theme.css)：`--sb-color-action-text: var(--action-text)`
 - [src/styles/lucide-theme.css:10](../../../src/styles/lucide-theme.css)：`color: var(--action-text)`

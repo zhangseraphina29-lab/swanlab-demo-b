@@ -25,6 +25,8 @@
   - 值：`var(--sb-color-proposed-warning)`
 - [src/styles/supabase.css:5](../../../src/styles/supabase.css) · 条件：`:root[data-theme=dark]`
   - 值：`var(--sb-color-proposed-warning)`
+- [src/styles/fireworks-theme.css:5](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--warning-text)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

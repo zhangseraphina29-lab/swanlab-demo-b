@@ -13,14 +13,16 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:17](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`oklch(0.831 0 0)`
+- [src/styles/fireworks-tokens.css:16](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`oklch(0.807 0.015 64.296)`
+- [src/styles/fireworks-neutral-tokens.css:17](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`oklch(0.820 0.000 0.000)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/lucide-tokens.css:67](../../../src/styles/lucide-tokens.css)：`--border-control: var(--neutral-400)`
-- [src/styles/lucide-tokens.css:96](../../../src/styles/lucide-tokens.css)：`--text-secondary: var(--neutral-400)`
-- [src/styles/lucide-tokens.css:97](../../../src/styles/lucide-tokens.css)：`--text-muted: var(--neutral-400)`
+- [src/styles/fireworks-tokens.css:97](../../../src/styles/fireworks-tokens.css)：`--text-secondary: var(--neutral-400)`
+- [src/styles/fireworks-neutral-tokens.css:98](../../../src/styles/fireworks-neutral-tokens.css)：`--text-secondary: var(--neutral-400)`
+- [src/styles/fireworks-theme.css:15](../../../src/styles/fireworks-theme.css)：`--border-control: var(--neutral-400)`
 <!-- generated:end -->

@@ -17,8 +17,6 @@
   - 值：`rgb(47 186 120 / .549)`
 - [src/styles/demo4-ui.css:14](../../../src/styles/demo4-ui.css) · 条件：`html[data-demo="4"][data-theme=dark]`
   - 值：`rgb(75 206 138 / .549)`
-- [src/styles/palette-magenta.css:10](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`color-mix(in srgb,var(--magenta-400) 40%,transparent)`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
   - 值：`var(--focus-ring)`
 
@@ -31,5 +29,4 @@
 - [src/styles/demo4-ui.css:63](../../../src/styles/demo4-ui.css)：`outline: 2px solid var(--d4-ring)`
 - [src/styles/demo4-ui.css:313](../../../src/styles/demo4-ui.css)：`outline: 2px solid var(--d4-ring)`
 - [src/styles/demo4-ui.css:506](../../../src/styles/demo4-ui.css)：`outline: 2px solid var(--d4-ring)`
-- [src/styles/palette-magenta.css:14](../../../src/styles/palette-magenta.css)：`--sb-color-raw-focus: var(--d4-ring)`
 <!-- generated:end -->

@@ -19,7 +19,7 @@ html[data-demo="4"] body .badge.red {background:var(--danger-bg);color:var(--dan
 html[data-demo="4"] body .badge.amber {background:var(--warning-bg);color:var(--warning-text);border-color:transparent}
 html[data-demo="4"] body :is(.error,.billing-error) {color:var(--danger-text)}
 html[data-demo="4"] body .error {background:var(--danger-bg)}
-html[data-demo="4"] body .billing-processing {background:var(--info-bg);color:var(--info-text);padding:10px 12px;border-radius:6px}
+html[data-demo="4"] body .billing-processing {background:var(--info-bg);color:var(--info-text);padding:10px 12px;border-radius:var(--radius-control)}
 html[data-demo="4"] body :is(.single-select-option[aria-selected=true],.organization-layout .settings-nav button.active,.segments button.selected) {background:var(--brand-soft)!important;color:var(--brand-text)!important}
 html[data-demo="4"] body .single-select-option[aria-selected=true] .single-select-check {background:transparent;color:var(--brand-text)}
 html[data-demo="4"] input:is([type=checkbox],[type=radio]) {accent-color:var(--action-primary)}

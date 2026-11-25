@@ -15,7 +15,7 @@
 
 - [src/styles/style.css:1](../../../src/styles/style.css) · 条件：`:root`
   - 值：`#c33b43`
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#a63239`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`#b42335`
@@ -33,7 +33,7 @@
 - [src/styles/style.css:1](../../../src/styles/style.css)：`color: var(--red)`
 - [src/styles/style.css:21](../../../src/styles/style.css)：`color: var(--red)`
 - [src/styles/style.css:22](../../../src/styles/style.css)：`border-color: color-mix(in srgb,var(--red) 30%,transparent)`
-- [src/styles/foundations.css:35](../../../src/styles/foundations.css)：`border: 1px solid color-mix(in oklch,var(--red) 30%,transparent)`
-- [src/styles/foundations.css:130](../../../src/styles/foundations.css)：`color: var(--red)`
-- [src/styles/foundations.css:134](../../../src/styles/foundations.css)：`color: var(--red)`
+- [src/styles/foundations.css:40](../../../src/styles/foundations.css)：`border: 1px solid color-mix(in oklch,var(--red) 30%,transparent)`
+- [src/styles/foundations.css:135](../../../src/styles/foundations.css)：`color: var(--red)`
+- [src/styles/foundations.css:139](../../../src/styles/foundations.css)：`color: var(--red)`
 <!-- generated:end -->

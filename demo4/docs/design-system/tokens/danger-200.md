@@ -13,13 +13,17 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:55](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`oklch(0.847 0.084 26.199)`
+- [src/styles/fireworks-tokens.css:54](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`oklch(0.850 0.050 27.428)`
+- [src/styles/fireworks-neutral-tokens.css:55](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`oklch(0.869 0.070 18.599)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/lucide-tokens.css:113](../../../src/styles/lucide-tokens.css)：`--danger-text: var(--danger-200)`
-- [src/styles/lucide-tokens.css:178](../../../src/styles/lucide-tokens.css)：`--danger-hover: var(--danger-200)`
+- [src/styles/fireworks-tokens.css:114](../../../src/styles/fireworks-tokens.css)：`--danger-text: var(--danger-200)`
+- [src/styles/fireworks-tokens.css:116](../../../src/styles/fireworks-tokens.css)：`--danger-hover: var(--danger-200)`
+- [src/styles/fireworks-neutral-tokens.css:115](../../../src/styles/fireworks-neutral-tokens.css)：`--danger-text: var(--danger-200)`
+- [src/styles/fireworks-neutral-tokens.css:117](../../../src/styles/fireworks-neutral-tokens.css)：`--danger-hover: var(--danger-200)`
 <!-- generated:end -->

@@ -17,13 +17,13 @@
   - 值：`#fff`
 - [src/styles/style.css:13](../../../src/styles/style.css) · 条件：`:root[data-theme=dark]`
   - 值：`#1c1f24`
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#fff`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#20201e`
-- [src/styles/foundations.css:110](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:115](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#fff`
-- [src/styles/foundations.css:119](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:124](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#111`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`#fff`

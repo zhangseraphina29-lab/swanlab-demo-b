@@ -6,11 +6,11 @@
 
 > - 仅对图标按钮或截断信息使用 Tooltip。
 
-来源：[demo4-motion-guidelines.md · 第 12 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 12 行](../sources/motion.txt)
 
 > - 鼠标悬停约 500ms 后显示，键盘聚焦可立即显示。
 
-来源：[demo4-motion-guidelines.md · 第 13 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 13 行](../sources/motion.txt)
 
 ## 其他样式与规格
 

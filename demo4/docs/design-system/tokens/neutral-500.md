@@ -13,14 +13,19 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:18](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`oklch(0.708 0 0)`
+- [src/styles/fireworks-tokens.css:17](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`oklch(0.683 0.018 61.831)`
+- [src/styles/fireworks-neutral-tokens.css:18](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`oklch(0.699 0.000 0.000)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/lucide-tokens.css:94](../../../src/styles/lucide-tokens.css)：`--border-control: color-mix(in oklch, var(--neutral-500) 35%, var(--bg-canvas))`
-- [src/styles/lucide-tokens.css:177](../../../src/styles/lucide-tokens.css)：`--text-disabled: var(--neutral-500)`
-- [src/styles/lucide-tokens.css:178](../../../src/styles/lucide-tokens.css)：`--text-disabled: var(--neutral-500)`
+- [src/styles/fireworks-tokens.css:69](../../../src/styles/fireworks-tokens.css)：`--text-disabled: var(--neutral-500)`
+- [src/styles/fireworks-tokens.css:95](../../../src/styles/fireworks-tokens.css)：`--border-control: var(--neutral-500)`
+- [src/styles/fireworks-tokens.css:98](../../../src/styles/fireworks-tokens.css)：`--text-disabled: var(--neutral-500)`
+- [src/styles/fireworks-neutral-tokens.css:70](../../../src/styles/fireworks-neutral-tokens.css)：`--text-disabled: var(--neutral-500)`
+- [src/styles/fireworks-neutral-tokens.css:96](../../../src/styles/fireworks-neutral-tokens.css)：`--border-control: var(--neutral-500)`
+- [src/styles/fireworks-neutral-tokens.css:99](../../../src/styles/fireworks-neutral-tokens.css)：`--text-disabled: var(--neutral-500)`
 <!-- generated:end -->

@@ -6,7 +6,7 @@
 
 > 角色：主要文字；Token：text-primary；用途：标题、正文、字段标签、主要图标。
 
-来源：[usage.md · 第 12 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 12 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,9 +15,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:68](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`var(--neutral-800)`
-- [src/styles/lucide-tokens.css:95](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:67](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`var(--neutral-900)`
+- [src/styles/fireworks-tokens.css:96](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--neutral-100)`
+- [src/styles/fireworks-neutral-tokens.css:68](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--neutral-900)`
+- [src/styles/fireworks-neutral-tokens.css:97](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--neutral-100)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。

@@ -13,12 +13,15 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:40](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`oklch(0.454 0.087 65.274)`
+- [src/styles/fireworks-tokens.css:39](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`oklch(0.442 0.072 71.382)`
+- [src/styles/fireworks-neutral-tokens.css:40](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`oklch(0.470 0.093 67.122)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/lucide-tokens.css:82](../../../src/styles/lucide-tokens.css)：`--warning-text: var(--warning-700)`
+- [src/styles/fireworks-tokens.css:81](../../../src/styles/fireworks-tokens.css)：`--warning-text: var(--warning-700)`
+- [src/styles/fireworks-neutral-tokens.css:82](../../../src/styles/fireworks-neutral-tokens.css)：`--warning-text: var(--warning-700)`
 <!-- generated:end -->

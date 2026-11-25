@@ -6,15 +6,15 @@
 
 > - 所有 `.tabs` 使用单条 2px 中性下划线，220ms cubic-bezier(.65,0,.35,1)，从当前显示位置移动至目标；只动画 transform，首次渲染不播放。
 
-来源：[demo4-motion-guidelines.md · 第 42 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 42 行](../sources/motion.txt)
 
 > - 减少动态效果时直接定位；内容和设置侧栏保持静止。
 
-来源：[demo4-motion-guidelines.md · 第 43 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 43 行](../sources/motion.txt)
 
 > - Tab 容器隐藏滚动条且禁用垂直溢出；横向溢出仍可滚动，滑动下划线保留。
 
-来源：[demo4-UI规则.md · 第 75 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 75 行](../sources/ui.txt)
 
 ## 其他样式与规格
 

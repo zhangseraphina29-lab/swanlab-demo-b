@@ -13,7 +13,7 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/foundations.css:2](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:7](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`color-mix(in oklch,var(--ink) 5%,var(--surface))`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`lch(92.44% .5 282)`
@@ -30,9 +30,9 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/foundations.css:38](../../../src/styles/foundations.css)：`background: var(--control-hover)`
-- [src/styles/foundations.css:38](../../../src/styles/foundations.css)：`background: var(--control-hover)`
-- [src/styles/foundations.css:51](../../../src/styles/foundations.css)：`background: var(--control-hover)`
-- [src/styles/foundations.css:125](../../../src/styles/foundations.css)：`background: var(--control-hover)`
+- [src/styles/foundations.css:43](../../../src/styles/foundations.css)：`background: var(--control-hover)`
+- [src/styles/foundations.css:43](../../../src/styles/foundations.css)：`background: var(--control-hover)`
+- [src/styles/foundations.css:56](../../../src/styles/foundations.css)：`background: var(--control-hover)`
+- [src/styles/foundations.css:130](../../../src/styles/foundations.css)：`background: var(--control-hover)`
 - [src/styles/linear.css:29](../../../src/styles/linear.css)：`background: var(--control-hover)`
 <!-- generated:end -->

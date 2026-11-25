@@ -13,8 +13,10 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:31](../../../src/styles/lucide-tokens.css) · 条件：`:root`
-  - 值：`oklch(0.362 0.061 154.801)`
+- [src/styles/fireworks-tokens.css:30](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
+  - 值：`oklch(0.347 0.048 140.351)`
+- [src/styles/fireworks-neutral-tokens.css:31](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`oklch(0.375 0.068 160.774)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

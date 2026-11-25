@@ -6,7 +6,7 @@
 
 > 角色：警告；Token：warning-text / warning-bg；用途：有风险但可继续、即将到期、需要注意；配警告图标。
 
-来源：[usage.md · 第 23 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 23 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,9 +15,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:81](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:80](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--warning-50)`
-- [src/styles/lucide-tokens.css:108](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:109](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--warning-900)`
+- [src/styles/fireworks-neutral-tokens.css:81](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--warning-50)`
+- [src/styles/fireworks-neutral-tokens.css:110](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--warning-900)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。

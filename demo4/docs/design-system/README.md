@@ -72,6 +72,8 @@
 
 ## 交互与页面模式
 
+- [权限组 · Permission Group](patterns/permission-group.md)
+
 - [组织概览 · Organization Overview](patterns/organization-overview.md)
 
 - [表单校验 · Validation](patterns/form-validation.md)
@@ -93,3 +95,5 @@
 - [日期选择器 · Date Picker](reference/date-picker.md) · [树形控件 · Tree](reference/tree.md)
 - [步骤指示器 · Stepper](reference/stepper.md) · [拖放上传区 · Dropzone](reference/dropzone.md)
 - [分隔线 · Divider](reference/divider.md) · [滚动区域 · Scroll Area](reference/scroll-area.md)
+
+- [项目转移 · Project Transfer](patterns/project-transfer.md)

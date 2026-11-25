@@ -6,11 +6,11 @@
 
 > - 输入框错误时采用 danger-text 边框，字段下方提供具体错误原因；聚焦时保留独立 focus-ring。
 
-来源：[usage.md · 第 36 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 36 行](../sources/color.txt)
 
 > 3. 区分未创建、无结果、零值、加载、失败；表单错误、提交及成功有反馈。
 
-来源：[结论.md · 第 42 行](../../../../Project改版/版本记录/V0.3.1_设计目标与边界/结论.md)
+来源：[结论.md · 第 42 行](../sources/scope.txt)
 
 ## 其他样式与规格
 

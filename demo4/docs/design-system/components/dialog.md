@@ -6,7 +6,7 @@
 
 > - 遮罩淡入，避免强烈模糊和突兀跳变。
 
-来源：[demo4-motion-guidelines.md · 第 20 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 20 行](../sources/motion.txt)
 
 ## 其他样式与规格
 

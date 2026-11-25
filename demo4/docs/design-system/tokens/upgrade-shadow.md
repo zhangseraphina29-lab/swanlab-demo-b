@@ -21,10 +21,8 @@
   - 值：`inset 0 0 0 1px #ffffff26, inset 0 1px 0 #ffffff30, 0 1px 2px #9d30431a`
 - [src/styles/demo4-ui.css:434](../../../src/styles/demo4-ui.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
   - 值：`inset 0 0 0 1px #ffffff20, inset 0 1px 0 #ffffff18`
-- [src/styles/palette-magenta.css:16](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`inset 0 0 0 1px #ffffff26,inset 0 1px 0 #ffffff30,0 1px 2px #7a155c1a`
-- [src/styles/palette-magenta.css:23](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
-  - 值：`inset 0 0 0 1px #ffffff26,inset 0 1px 0 #ffffff18`
+- [src/styles/fireworks-theme.css:3](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`none`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

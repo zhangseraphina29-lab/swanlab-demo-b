@@ -6,19 +6,19 @@
 
 > - 侧栏显示控制只显示对齐的图标，可选择固定展开、固定收起、hover 展开。
 
-来源：[demo4-UI规则.md · 第 55 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 55 行](../sources/ui.txt)
 
 > 主侧栏选中态灰色微调：使用 bg-muted 65% 与 bg-canvas 35% 的 sRGB 混合，比原选中底色更浅；文字保持 text-primary，hover 仍为 brand-soft。仅应用于主侧栏导航，不改变其他组件的中性灰。
 
-来源：[demo4-UI规则.md · 第 78 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 78 行](../sources/ui.txt)
 
 > - 幽灵按钮：hover 浅灰，不加下划线。主侧栏 hover 例外为浅红，静止选中为中性灰。
 
-来源：[demo4-UI规则.md · 第 37 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 37 行](../sources/ui.txt)
 
 > - 展开宽度变化约 100ms，文字淡入延迟约 60ms。
 
-来源：[demo4-motion-guidelines.md · 第 34 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 34 行](../sources/motion.txt)
 
 ## 其他样式与规格
 

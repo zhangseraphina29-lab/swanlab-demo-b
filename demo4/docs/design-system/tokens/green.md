@@ -17,7 +17,7 @@
   - 值：`#247252`
 - [src/styles/style.css:13](../../../src/styles/style.css) · 条件：`:root[data-theme=dark]`
   - 值：`#8bc5a7`
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#286d3c`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`#2d7958`
@@ -27,6 +27,8 @@
   - 值：`var(--sb-color-action-primary)`
 - [src/styles/supabase.css:5](../../../src/styles/supabase.css) · 条件：`:root[data-theme=dark]`
   - 值：`var(--accent)`
+- [src/styles/fireworks-theme.css:5](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--success-text)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

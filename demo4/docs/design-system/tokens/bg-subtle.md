@@ -6,7 +6,7 @@
 
 > 角色：次级背景；Token：bg-subtle；用途：侧栏、工具栏、分组容器；区分相邻内容区域。
 
-来源：[usage.md · 第 8 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 8 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,9 +15,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:64](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:63](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--neutral-100)`
-- [src/styles/lucide-tokens.css:91](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:92](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--neutral-800)`
+- [src/styles/fireworks-neutral-tokens.css:64](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--neutral-100)`
+- [src/styles/fireworks-neutral-tokens.css:93](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--neutral-800)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。

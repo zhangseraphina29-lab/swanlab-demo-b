@@ -6,11 +6,11 @@
 
 > - 组织名 hover 下划线；项目名称 hover 无下划线，各页面项目卡片保持一致。
 
-来源：[demo4-UI规则.md · 第 43 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 43 行](../sources/ui.txt)
 
 > - 普通链接使用 brand-text 并带下划线或其他可识别线索；不要仅靠颜色传达状态、选中或错误。
 
-来源：[usage.md · 第 35 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 35 行](../sources/color.txt)
 
 ## 其他样式与规格
 

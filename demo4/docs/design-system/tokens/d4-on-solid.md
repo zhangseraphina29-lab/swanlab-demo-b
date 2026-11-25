@@ -17,8 +17,6 @@
   - 值：`#fafcfb`
 - [src/styles/demo4-ui.css:14](../../../src/styles/demo4-ui.css) · 条件：`html[data-demo="4"][data-theme=dark]`
   - 值：`#edefee`
-- [src/styles/palette-magenta.css:10](../../../src/styles/palette-magenta.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
-  - 值：`#fff`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
   - 值：`var(--action-text)`
 

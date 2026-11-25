@@ -6,11 +6,11 @@
 
 > - 基线社区、官方文档等图标 hover 底色浅红，原有边框、圆角及图标色不变，不加阴影。
 
-来源：[demo4-UI规则.md · 第 40 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 40 行](../sources/ui.txt)
 
 > - 表格中的纯图标按钮不套用文字下划线；危险操作仍使用 danger 语义，主要提交仍使用 primary，不能仅因位于表格内而改为普通文字按钮。
 
-来源：[usage.md · 第 54 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 54 行](../sources/color.txt)
 
 ## 其他样式与规格
 

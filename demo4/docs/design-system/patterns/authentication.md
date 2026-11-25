@@ -6,11 +6,11 @@
 
 > - 登录页全屏左右结构、左侧交互粒子，保留现有文案；不恢复暂停按钮和演示说明。创建流程头像始终可点击。
 
-来源：[demo4-UI规则.md · 第 57 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 57 行](../sources/ui.txt)
 
 > - 看看案例参考 https://transitions.dev/detail.html?t=learn-more-hover ；登录文案参考 https://pro.reactbits.dev/docs/components/ghost-type ，保留现有文案与静止前缀。
 
-来源：[demo4-motion-guidelines.md · 第 47 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 47 行](../sources/motion.txt)
 
 ## 其他样式与规格
 

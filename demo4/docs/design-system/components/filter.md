@@ -6,15 +6,15 @@
 
 > - 重置筛选仅在非默认搜索/筛选时显示；项目数量不带边框。
 
-来源：[demo4-UI规则.md · 第 52 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 52 行](../sources/ui.txt)
 
 > - 筛选按钮点击不产生缩放或位移动效。
 
-来源：[demo4-motion-guidelines.md · 第 25 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 25 行](../sources/motion.txt)
 
 > - 全局搜索聚焦框包住搜索图标与输入区，只保留一层框；输入透明底、占位文字浅。
 
-来源：[demo4-UI规则.md · 第 56 行](../../../../../设计系统搭建/demo4-UI规则.md)
+来源：[demo4-UI规则.md · 第 56 行](../sources/ui.txt)
 
 ## 其他样式与规格
 

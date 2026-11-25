@@ -17,13 +17,13 @@
   - 值：`rgba(20,25,32,.09)`
 - [src/styles/style.css:13](../../../src/styles/style.css) · 条件：`:root[data-theme=dark]`
   - 值：`#34383f`
-- [src/styles/foundations.css:76](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:81](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#e4e4e1`
-- [src/styles/foundations.css:92](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:97](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#383835`
-- [src/styles/foundations.css:110](../../../src/styles/foundations.css) · 条件：`:root`
+- [src/styles/foundations.css:115](../../../src/styles/foundations.css) · 条件：`:root`
   - 值：`#eaeaea`
-- [src/styles/foundations.css:119](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
+- [src/styles/foundations.css:124](../../../src/styles/foundations.css) · 条件：`[data-theme=dark]`
   - 值：`#2e2e2e`
 - [src/styles/linear.css:4](../../../src/styles/linear.css) · 条件：`:root`
   - 值：`lch(88.49% 0 282)`

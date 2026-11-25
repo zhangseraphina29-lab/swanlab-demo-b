@@ -6,7 +6,7 @@
 
 > 角色：危险按钮悬停；Token：danger-hover；用途：仅用于危险按钮 hover。
 
-来源：[usage.md · 第 27 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 27 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,9 +15,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:177](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:87](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--danger-800)`
-- [src/styles/lucide-tokens.css:178](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:116](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--danger-200)`
+- [src/styles/fireworks-neutral-tokens.css:88](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--danger-800)`
+- [src/styles/fireworks-neutral-tokens.css:117](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--danger-200)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。

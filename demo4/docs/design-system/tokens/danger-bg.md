@@ -6,7 +6,7 @@
 
 > 角色：危险 / 错误；Token：danger-text / danger-bg；用途：操作失败、字段校验错误、删除确认中的风险说明。
 
-来源：[usage.md · 第 25 行](../../../../outputs/lucide-colors/usage.md)
+来源：[usage.md · 第 25 行](../sources/color.txt)
 
 ## 其他使用规则
 
@@ -15,9 +15,13 @@
 <!-- generated:start -->
 ## 当前代码定义（按样式导入和声明顺序）
 
-- [src/styles/lucide-tokens.css:85](../../../src/styles/lucide-tokens.css) · 条件：`:root`
+- [src/styles/fireworks-tokens.css:84](../../../src/styles/fireworks-tokens.css) · 条件：`:root`
   - 值：`var(--danger-50)`
-- [src/styles/lucide-tokens.css:112](../../../src/styles/lucide-tokens.css) · 条件：`[data-theme="dark"]`
+- [src/styles/fireworks-tokens.css:113](../../../src/styles/fireworks-tokens.css) · 条件：`[data-theme="dark"]`
+  - 值：`var(--danger-900)`
+- [src/styles/fireworks-neutral-tokens.css:85](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"]`
+  - 值：`var(--danger-50)`
+- [src/styles/fireworks-neutral-tokens.css:114](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--danger-900)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。

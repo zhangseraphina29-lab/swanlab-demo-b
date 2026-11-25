@@ -6,19 +6,19 @@
 
 > - 仅对图标按钮或截断信息使用 Tooltip。
 
-来源：[demo4-motion-guidelines.md · 第 12 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 12 行](../sources/motion.txt)
 
 > - 鼠标悬停约 500ms 后显示，键盘聚焦可立即显示。
 
-来源：[demo4-motion-guidelines.md · 第 13 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 13 行](../sources/motion.txt)
 
 > - 以淡入、轻微上移和缩放进入，约 160–220ms。
 
-来源：[demo4-motion-guidelines.md · 第 14 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 14 行](../sources/motion.txt)
 
 > - Tooltip 不产生布局位移，不覆盖触控目标；Hover 时不增加按钮阴影。
 
-来源：[demo4-motion-guidelines.md · 第 15 行](../../../../../设计系统搭建/demo4-motion-guidelines.md)
+来源：[demo4-motion-guidelines.md · 第 15 行](../sources/motion.txt)
 
 ## 其他样式与规格
 
