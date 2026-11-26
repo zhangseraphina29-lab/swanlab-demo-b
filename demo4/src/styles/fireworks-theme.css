@@ -1,0 +1,16 @@
+/* Compatibility aliases use the user-selected Fireworks semantic roles. */
+html[data-demo="4"],html[data-demo="4"][data-theme="dark"] {
+ --upgrade-surface:var(--action-primary);--upgrade-shadow:none;
+ --text-muted:var(--text-secondary);--danger-action-text:var(--action-text);
+ --green:var(--success-text);--amber:var(--warning-text);
+}
+html[data-demo="4"] body .upgrade-btn {color:var(--action-text)!important;}
+html[data-demo="4"] body .upgrade-btn:hover {background:var(--action-hover)!important;}
+html[data-demo="4"] body .capacitymini .upgrade-entry {color:var(--action-text)!important;}
+html[data-demo="4"] body .capacitymini .upgrade-entry:hover {background:var(--action-hover)!important;}
+html[data-demo="4"] body .capacitymini .upgrade-entry::before,
+html[data-demo="4"] body .capacitymini .upgrade-entry::after {display:none;}
+
+/* Softer default control outlines; focus and error roles remain independent. */
+html[data-demo="4"] {--border-control:var(--neutral-400);}
+html[data-demo="4"][data-theme="dark"] {--border-control:var(--neutral-700);}

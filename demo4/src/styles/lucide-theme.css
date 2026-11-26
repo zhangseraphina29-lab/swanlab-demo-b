@@ -1,0 +1,169 @@
+/* Semantic color roles from outputs/lucide-colors/usage.md. */
+html[data-demo="4"],html[data-demo="4"][data-theme="dark"] {
+ --d4-bg:var(--bg-canvas);--d4-card:var(--bg-canvas);--d4-popover:var(--bg-canvas);--d4-fg:var(--text-primary);--d4-muted:var(--text-secondary);--d4-tertiary:var(--text-secondary);
+ --d4-border:var(--border-subtle);--d4-input:var(--border-control);--d4-hover-border:var(--border-control);--d4-field:var(--bg-subtle);--d4-accent:var(--bg-muted);
+ --d4-primary:var(--brand-text);--d4-solid:var(--action-primary);--d4-solid-hover:var(--action-hover);--d4-on-solid:var(--action-text);--d4-ring:var(--focus-ring);--d4-danger:var(--danger-text);--d4-hover-tint:var(--brand-display);
+ --d4-warning-bg:var(--warning-bg);--d4-warning-fg:var(--warning-text);--d4-warning-border:color-mix(in oklch,var(--warning-text) 18%,var(--warning-bg));
+ --accent:var(--brand-text);--focus:var(--focus-ring);--ink:var(--text-primary);--muted:var(--text-secondary);--border:var(--border-subtle);--surface:var(--bg-canvas);--back:var(--bg-canvas);--sidebar:var(--bg-subtle);--soft:var(--bg-subtle);--selected:var(--brand-soft);--control-hover:var(--bg-muted);
+ --sb-color-action-primary:var(--action-primary);--sb-color-raw-green:var(--brand-text);--sb-color-action-text:var(--action-text);--sb-color-proposed-focus-strong:var(--focus-ring);--sb-color-raw-focus:var(--focus-ring);
+}
+html[data-demo="4"] body [data-d4-button=primary] {background:var(--action-primary);color:var(--action-text)}
+html[data-demo="4"] body [data-d4-button=primary]:active:not(:disabled) {background:var(--action-active)}
+html[data-demo="4"] body [data-d4-button=danger] {background:var(--danger-action);color:var(--danger-action-text);border-color:transparent}
+html[data-demo="4"] body [data-d4-button=danger]:active:not(:disabled) {background:var(--danger-active)}
+html[data-demo="4"] body :is(button,a,input,textarea,select,[tabindex]):focus-visible {outline:2px solid var(--focus-ring);outline-offset:3px}
+html[data-demo="4"] body :is(button,input,textarea,select):disabled {background:var(--bg-muted);color:var(--text-disabled);opacity:1;cursor:not-allowed;pointer-events:none}
+html[data-demo="4"] body :is(input,textarea)::placeholder {color:var(--text-secondary);opacity:1}
+html[data-demo="4"] body .badge.green {background:var(--success-bg);color:var(--success-text);border-color:transparent}
+html[data-demo="4"] body .badge.red {background:var(--danger-bg);color:var(--danger-text);border-color:transparent}
+html[data-demo="4"] body .badge.amber {background:var(--warning-bg);color:var(--warning-text);border-color:transparent}
+html[data-demo="4"] body :is(.error,.billing-error) {color:var(--danger-text)}
+html[data-demo="4"] body .error {background:var(--danger-bg)}
+html[data-demo="4"] body .billing-processing {background:var(--info-bg);color:var(--info-text);padding:10px 12px;border-radius:var(--radius-control)}
+html[data-demo="4"] body :is(.single-select-option[aria-selected=true],.organization-layout .settings-nav button.active,.segments button.selected) {background:var(--brand-soft)!important;color:var(--brand-text)!important}
+html[data-demo="4"] body .single-select-option[aria-selected=true] .single-select-check {background:transparent;color:var(--brand-text)}
+html[data-demo="4"] input:is([type=checkbox],[type=radio]) {accent-color:var(--action-primary)}
+html[data-demo="4"] body .scope-options button[aria-pressed=true]:before {background:var(--action-primary)}
+html[data-demo="4"] body :is(input,textarea,select)[aria-invalid=true] {border-color:var(--danger-text)}
+html[data-demo="4"] body .filter-manage-tags {color:var(--brand-text);text-decoration:underline;text-underline-offset:3px}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body [data-d4-button=primary]:hover:not(:disabled) {background:var(--action-hover);color:var(--action-text)}
+ html[data-demo="4"] body [data-d4-button=danger]:hover:not(:disabled) {background:var(--danger-hover);color:var(--danger-action-text);border-color:transparent}
+ html[data-demo="4"] body :is(.single-select-option,.organization-layout .settings-nav button):hover {background:var(--brand-soft)!important;color:var(--text-primary)!important}
+}
+
+/* Preserve the optional comparison palette in the validation panel. */
+html[data-demo="4"][data-palette="magenta"] {
+ --action-primary:var(--magenta-500);--action-hover:var(--magenta-600);--action-active:var(--magenta-700);--brand-text:var(--magenta-500);--brand-soft:var(--magenta-50);--brand-display:var(--magenta-400);--focus-ring:color-mix(in oklch,var(--magenta-500) 35%,transparent);
+}
+html[data-demo="4"][data-palette="magenta"][data-theme="dark"] {
+ --action-primary:var(--magenta-300);--action-hover:var(--magenta-200);--action-active:var(--magenta-100);--brand-text:var(--magenta-200);--brand-soft:var(--magenta-900);--focus-ring:color-mix(in oklch,var(--magenta-300) 40%,transparent);
+}
+
+/* Text actions use underline; ghost actions use a neutral hover surface. */
+html[data-demo="4"] body :is([data-d4-button="text"],[data-d4-button="ghost"]) {
+ background:transparent;border-color:transparent;box-shadow:none;color:var(--text-primary);text-decoration:none;
+}
+html[data-demo="4"] body :is(.alert-link,.filter-manage-tags) {text-decoration:none;color:var(--brand-text)}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body [data-d4-button="text"]:hover:not(:disabled) {
+  background:transparent!important;color:var(--text-primary)!important;text-decoration:underline;text-underline-offset:3px;box-shadow:none;
+ }
+ html[data-demo="4"] body :is(.alert-link,.filter-manage-tags):hover:not(:disabled) {background:transparent!important;color:var(--brand-text)!important;text-decoration:underline;text-underline-offset:3px}
+ html[data-demo="4"] body [data-d4-button="ghost"]:hover:not(:disabled),
+ html[data-demo="4"] body .sidebar :is(.navgroup button,.sidebar-mode-trigger):hover:not(:disabled),
+ html[data-demo="4"] body .organization-layout .settings-nav button:hover:not(:disabled) {
+  background:var(--bg-muted)!important;color:var(--text-primary)!important;text-decoration:none!important;
+ }
+}
+
+/* Dark interaction surfaces stay below the resting accent in lightness. */
+html[data-demo="4"][data-theme="dark"][data-palette="magenta"] {
+ --action-primary:var(--magenta-500);--action-hover:var(--magenta-600);--action-active:var(--magenta-700);--brand-soft:color-mix(in oklch,var(--magenta-900) 40%,var(--bg-canvas));
+}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"][data-theme="dark"] body :is([data-d4-icon="true"],.header-resources>a,.header-resources>button):hover:not(:disabled) {background:var(--bg-muted)!important}
+}
+
+/* Dark mode changes luminance, never the active red hue. */
+html[data-demo="4"][data-theme="dark"] {
+ --d4-hover-tint:var(--brand-display);
+}
+
+/* Navigation selection is neutral; never tint the rail or settings nav purple. */
+html[data-demo="4"] body .shell>.sidebar .navgroup button.active,
+html[data-demo="4"] body #content .organization-layout>.settings-nav button.active {
+ background:var(--bg-muted)!important;color:var(--text-primary)!important;
+}
+
+/* Account hover keeps the avatar border and adds no surrounding ring. */
+html[data-demo="4"] body #account-trigger,
+html[data-demo="4"] body #account-trigger:hover {
+ border:0!important;box-shadow:none!important;background:transparent!important;
+}
+html[data-demo="4"] body #account-trigger:hover:not(:focus-visible) {outline:none!important;}
+html[data-demo="4"] body #account-trigger>.avatar,
+html[data-demo="4"] body #account-trigger:hover>.avatar {
+ border:1px solid var(--border-subtle)!important;box-shadow:none!important;outline:none!important;
+}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body .shell>.sidebar .navgroup button:hover:not(:disabled) {
+  background:var(--brand-soft)!important;color:var(--text-primary)!important;
+ }
+}
+
+/* Compact classification labels; neutral state badges remain distinguishable. */
+html[data-demo="4"] body .tag {font-size:11px!important;line-height:16px!important;}
+html[data-demo="4"] body .badge:not(.green):not(.red):not(.amber) {
+ background:color-mix(in srgb,var(--text-primary) 10%,var(--bg-canvas));color:var(--text-secondary);
+}
+html[data-demo="4"][data-theme="dark"] body .badge:not(.green):not(.red):not(.amber) {
+ background:color-mix(in srgb,var(--text-primary) 14%,var(--bg-canvas));
+}
+html[data-demo="4"] body .project-card-actions button.danger {
+ color:var(--danger-text)!important;background:transparent;
+}
+html[data-demo="4"] body .single-select-option,
+html[data-demo="4"] body .single-select-option[aria-selected=true] .single-select-check {
+ color:var(--text-primary)!important;
+}
+html[data-demo="4"] body .single-select-option[aria-selected=true],
+html[data-demo="4"] body .single-select-option:hover:not(:disabled) {
+ background:var(--bg-muted)!important;color:var(--text-primary)!important;
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout) {
+ grid-template-columns:220px minmax(0,1fr);
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav {
+ width:220px;box-sizing:border-box;
+}
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav>button,
+html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav>h3 {
+ font-size:13px!important;line-height:20px!important;
+}
+html[data-demo="4"] body .tabs {position:relative;}
+html[data-demo="4"] body .tabs>button,
+html[data-demo="4"] body .tabs>button.active {border-bottom-color:transparent!important;}
+html[data-demo="4"] body .tabs>button::after {display:none!important;}
+html[data-demo="4"] body .tabs>.d4-tab-line {
+ position:absolute;left:0;bottom:0;width:1px;height:2px;min-width:0;padding:0;margin:0;
+ background:var(--text-primary);transform-origin:left center;pointer-events:none;
+}
+@media(max-width:760px) {
+ html[data-demo="4"] body .organization-layout:not(.account-layout) {grid-template-columns:minmax(0,1fr);}
+ html[data-demo="4"] body .organization-layout:not(.account-layout)>.settings-nav {width:100%;}
+}
+@media(prefers-reduced-motion:reduce) {
+ html[data-demo="4"] body .tabs>.d4-tab-line {animation:none!important;transition:none!important;}
+}
+
+/* Keep the global search outline visible in both themes and every resting state. */
+html[data-demo="4"] body .topbar button.global-search,
+html[data-demo="4"] body .topbar button.global-search:hover {
+ border:1px solid var(--border);box-shadow:none;
+}
+/* Preserve existing control typography independently of settings-body inheritance. */
+html[data-demo="4"] body .single-select-option {
+ font:450 13px/20px var(--sb-font-body);
+}
+html[data-demo="4"] body #content :is(.toolbar,.recycle-toolbar) :is(.single-select-trigger,.filter-trigger) {
+ font-size:12px;line-height:16px;
+}
+
+/* Header outlines share the resource-icon border; plan badges stay unfilled. */
+html[data-demo="4"] body .topbar .badge.org-plan {
+ background:transparent!important;border:1px solid var(--border);
+}
+/* Keep horizontal tab navigation available without transient scrollbars. */
+html[data-demo="4"] body .tabs {overflow-y:hidden;scrollbar-width:none;}
+html[data-demo="4"] body .tabs::-webkit-scrollbar {display:none;width:0;height:0;}
+
+/* A lighter neutral selection for the main navigation rail. */
+html[data-demo="4"] body .shell>.sidebar .navgroup button.active {
+ background:color-mix(in srgb,var(--bg-muted) 65%,var(--bg-canvas))!important;
+}
+@media(hover:hover) and (pointer:fine) {
+ html[data-demo="4"] body .shell>.sidebar .navgroup button.active:hover:not(:disabled) {
+  background:var(--brand-soft)!important;
+ }
+}

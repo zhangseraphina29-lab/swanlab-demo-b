@@ -1,0 +1,49 @@
+# Demo4 动效规范
+
+## 目标
+动效用于说明状态变化、层级关系和交互反馈。默认轻量、快速、可中断；不改变页面功能和信息架构。
+
+## 页面切换
+- 骨架只用于真实加载状态，参考 https://transitions.dev/detail.html?t=skeleton-loader-and-reveal 。
+- 已撤回内容 reveal：页面刷新、搜索、筛选和一级导航切换均不额外上移/淡入内容。
+- 常规、成员管理、项目管理、用量与账单、回收站切换时侧栏固定，无动效。
+
+## Tooltip
+- 仅对图标按钮或截断信息使用 Tooltip。
+- 鼠标悬停约 500ms 后显示，键盘聚焦可立即显示。
+- 以淡入、轻微上移和缩放进入，约 160–220ms。
+- Tooltip 不产生布局位移，不覆盖触控目标；Hover 时不增加按钮阴影。
+
+## 抽屉与弹窗
+- 管理标签侧弹窗使用 panel reveal：从右侧约 28px 位置滑入并淡入，约 280ms。
+- 账号菜单使用轻微下移、缩放和淡入，约 180ms。
+- 遮罩淡入，避免强烈模糊和突兀跳变。
+
+## Tab 与选择器
+- 列表／卡片视图和 Tab 切换使用背景、颜色、边框的滑动式过渡，约 180–220ms。
+- 单选菜单 Hover 使用浅色背景反馈，不缩放、不位移。
+- 筛选按钮点击不产生缩放或位移动效。
+
+## 展开与收起
+- 所有下拉、折叠、菜单箭头使用 Accordion 风格旋转。
+- 展开时旋转约 180°，缓动使用 `cubic-bezier(.22,1,.36,1)`，约 220ms。
+- 箭头旋转不改变按钮尺寸和布局。
+
+## 侧栏
+- 默认 hover 时展开；可切换为固定展开或固定收起。
+- 展开宽度变化约 100ms，文字淡入延迟约 60ms。
+- 组织设置内侧栏固定，不随内容切换移动。
+
+## 无障碍
+所有动效必须响应 `prefers-reduced-motion: reduce`：取消动画和过渡，保留最终状态和焦点反馈。
+
+
+## 当前统一实现（2026-11-24）
+- 所有 `.tabs` 使用单条 2px 中性下划线，220ms cubic-bezier(.65,0,.35,1)，从当前显示位置移动至目标；只动画 transform，首次渲染不播放。
+- 减少动态效果时直接定位；内容和设置侧栏保持静止。
+- 参考：Tab https://transitions.dev/detail.html?t=tabs-sliding 、Tooltip https://transitions.dev/detail.html?t=tooltip-open-close 、箭头 https://transitions.dev/detail.html?t=accordion 。
+- 抽屉参考 https://transitions.dev/detail.html?t=panel-reveal ；账号菜单参考 https://transitions.dev/detail.html?t=modal-open-close 。
+- 单选菜单参考 https://reactbits.dev/c/micro/glide-select ，但文字不得位移或缩放，使用中性灰反馈。
+- 看看案例参考 https://transitions.dev/detail.html?t=learn-more-hover ；登录文案参考 https://pro.reactbits.dev/docs/components/ghost-type ，保留现有文案与静止前缀。
+- 省略号点击不旋转；展开箭头默认向下、展开向上，收起时翻回，约 220ms；点击空白同步收起。
+- 与旧段落冲突时以本节及 demo4-UI规则.md 为准。

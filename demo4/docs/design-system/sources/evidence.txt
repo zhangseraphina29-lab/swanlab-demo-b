@@ -1,0 +1,29 @@
+# Supabase Token 证据规则
+
+从本轮开始，S 站只呈现可在 Supabase 官方仓库文件中直接定位的内容。
+
+## 纳入
+
+- `apps/studio/styles/globals.css`
+- `packages/config/css/shadows.css`
+- `packages/config/css/utilities.css`
+- `packages/ui/**`
+- `packages/ui-patterns/**`
+- 官方仓库的 LICENSE、package.json、README、Storybook 和测试中明确写出的 Token/API/行为
+
+## 排除
+
+- 本地 `tokens.css` 中的 `--sb-*` 命名
+- `SUPABASE-TOKENS-EXTRACTED.css` 中的整理值
+- `SPEC.md` 中标为推断、补全、未知或演示适配的内容
+- 由页面测量推导但官方文件没有写出的数值
+- SwanLab 适配、品牌替换、中文业务解释
+
+## 页面表达
+
+- 直接来自源码的内容标为 **Source**，附文件路径和 commit。
+- 官方文件没有定义的内容不显示为 Supabase 规则。
+- 同一变量在不同 selector 或主题下有多个值时，逐条保留来源上下文，不合并成一个自创“最终值”。
+- 官方代码只表达实现行为时，页面只能描述代码实际做的事，不能扩写成设计原则。
+
+当前官方源码目录扫描得到的变量定义已写入 S 站的 `token-catalog.js`；数量会随源码快照变动。
