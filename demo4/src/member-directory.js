@@ -12,3 +12,8 @@ export function formatMemberDate(value) {
  const part = type => parts.find(item => item.type === type).value;
  return `${part('year')}-${part('month')}-${part('day')} ${part('hour')}:${part('minute')}:${part('second')}`;
 }
+
+export function directoryEntries(org,statuses=[]){
+ const entries=[...org.members.map(member=>({...member,kind:'member'})),...org.invites.filter(invite=>['pending','expired','revoked'].includes(invite.status)).map(invite=>({...invite,kind:'invite'}))];
+ return statuses.length?entries.filter(entry=>statuses.includes(entry.status)):entries;
+}

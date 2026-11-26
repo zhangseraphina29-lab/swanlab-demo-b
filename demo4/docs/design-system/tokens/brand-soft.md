@@ -35,9 +35,9 @@
 ## 直接引用示例（最多六处）
 
 - [src/styles/billing.css:50](../../../src/styles/billing.css)：`background: var(--brand-soft)`
+- [src/styles/billing.css:66](../../../src/styles/billing.css)：`fill: var(--brand-soft)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--selected: var(--brand-soft)`
 - [src/styles/lucide-theme.css:23](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:32](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:91](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
-- [src/styles/lucide-theme.css:167](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 <!-- generated:end -->

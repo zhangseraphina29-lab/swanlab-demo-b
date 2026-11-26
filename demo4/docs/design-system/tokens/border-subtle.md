@@ -29,9 +29,9 @@
 ## 直接引用示例（最多六处）
 
 - [src/styles/billing.css:50](../../../src/styles/billing.css)：`border: 1px solid var(--border-subtle)`
+- [src/styles/billing.css:64](../../../src/styles/billing.css)：`stroke: var(--border-subtle)`
 - [src/styles/lucide-theme.css:4](../../../src/styles/lucide-theme.css)：`--d4-border: var(--border-subtle)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--border: var(--border-subtle)`
 - [src/styles/lucide-theme.css:87](../../../src/styles/lucide-theme.css)：`border: 1px solid var(--border-subtle)`
 - [src/styles/auth.css:1](../../../src/styles/auth.css)：`border: 1px solid var(--border-subtle)`
-- [src/styles/pricing.css:1](../../../src/styles/pricing.css)：`border: 1px solid var(--border-subtle)`
 <!-- generated:end -->

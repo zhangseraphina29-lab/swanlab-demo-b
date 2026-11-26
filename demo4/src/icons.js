@@ -1,5 +1,6 @@
 // QingIcon 2.0.8 · https://qingicon.com · locally bundled line SVGs
 export const iconNodes = {
+  "refresh": '<path d="M20 7v5h-5M4 17v-5h5M6.1 6.1A8 8 0 0 1 19.5 9M4.5 15a8 8 0 0 0 13.4 2.9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>',
   "book": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 20V8m0 12H3.75V4H8a4 4 0 0 1 4 4m0 12h8.25V4H16a4 4 0 0 0-4 4m0 12v1\" data-role=\"stroke\"/></g>",
   "bolt": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m21 10-8-1V1.5L3 14l8 1v7.5z\" data-role=\"stroke\"/></g>",
   "github": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 7-5 5 5 5M17 7l5 5-5 5M14.5 3l-5 18\" data-role=\"stroke\"/></g>",

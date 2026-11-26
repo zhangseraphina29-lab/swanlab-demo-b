@@ -36,4 +36,5 @@
 - [src/styles/lucide-theme.css:4](../../../src/styles/lucide-theme.css)：`--d4-hover-border: var(--border-control)`
 - [src/styles/auth.css:49](../../../src/styles/auth.css)：`--particle-guide: var(--border-control)`
 - [src/styles/pricing.css:8](../../../src/styles/pricing.css)：`border: 1px solid var(--border-control)`
+- [src/styles/organization-overview.css:258](../../../src/styles/organization-overview.css)：`border: 1px solid var(--border-control)`
 <!-- generated:end -->

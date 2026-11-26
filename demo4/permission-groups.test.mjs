@@ -1,3 +1,4 @@
+import {permissionGroupHistory} from './src/permission-group-history.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as M from './src/model.js';
@@ -8,7 +9,7 @@ const add=(s,o,p,role='贡献',memberIds=['u3'],name='算法组')=>G.savePermiss
 test('per-project group roles combine with direct grants by allowed actions; organization read-only is not a cap',()=>{const {s,o,p,q}=fixture();const g=G.savePermissionGroup(s,o,{name:'多项目',memberIds:['u3'],projects:{[p.id]:'贡献',[q.id]:'查看'}});s.user='u3';assert(M.canAccessProject(s,p));assert(M.canPerformAction(s,'write',p));assert(!M.canPerformAction(s,'write',q));p.members.u3='管理';assert(G.canAuthorize(o,p,'u3'));assert.equal(G.effectivePermission(o,p,'u3').sources.length,2);assert.equal(permissionGroupCount(o.members[3],o),1);assert(memberProjectsFor(o,'u3').includes(p));assert.equal(G.projectMemberIds(o,p).filter(id=>id==='u3').length,1);assert.equal(g.projects[q.id],'查看');});
 test('organization administrator can govern but cannot automatically authorize project or add group members',()=>{const {s,o,p}=fixture();const g=add(s,o,p);s.user='u1';assert(M.canPerformAction(s,'manage',p));assert(!M.canPerformAction(s,'authorize',p));const before=JSON.stringify(o);assert.throws(()=>G.savePermissionGroup(s,o,{...g,memberIds:['u3','u4']},g.id),/缺少.*授权管理权/);assert.equal(JSON.stringify(o),before);assert.throws(()=>G.savePermissionGroup(s,o,{name:'新组',memberIds:[],projects:{[p.id]:'查看'}}),/授权管理权/);});
 test('member additions require authorization on every associated project, failures are atomic',()=>{const {s,o,p,q}=fixture();const g=G.savePermissionGroup(s,o,{name:'两项目',memberIds:['u3'],projects:{[p.id]:'查看',[q.id]:'贡献'}});p.members.u1='管理';delete q.members.u1;s.user='u1';assert.throws(()=>G.savePermissionGroup(s,o,{...g,memberIds:['u3','u4']},g.id),new RegExp(q.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));q.members.u1='管理';G.savePermissionGroup(s,o,{...g,memberIds:['u3','u4']},g.id);assert(G.memberGroups(o,'u4').length);});
-test('removal and deletion preview remaining rights from other groups/direct/org, preserve resources',()=>{const {s,o,p}=fixture(),g=add(s,o,p,'管理');add(s,o,p,'查看',['u3'],'另组');p.members.u3='贡献';const next={...g,memberIds:[]},row=G.groupImpact(o,g.id,next)[0];assert.equal(row.before,'管理');assert.equal(row.after,'贡献');assert.deepEqual(row.sources.map(x=>x.name),['直接授权','另组']);const experiments=p.experiments;G.deletePermissionGroup(s,o,g.id);assert.equal(p.experiments,experiments);assert.equal(G.effectivePermission(o,p,'u3').role,'贡献');assert.equal(o.members.length,9);assert(o.permissionChanges.every(x=>x.actor==='u0'&&x.at===s.now));});
+test('removal and deletion preview remaining rights from other groups/direct/org, preserve resources',()=>{const {s,o,p}=fixture(),g=add(s,o,p,'管理');add(s,o,p,'查看',['u3'],'另组');p.members.u3='贡献';const next={...g,memberIds:[]},row=G.groupImpact(o,g.id,next)[0];assert.equal(row.before,'管理');assert.equal(row.after,'贡献');assert.deepEqual(row.sources.map(x=>x.name),['直接授权','另组']);const experiments=p.experiments;G.deletePermissionGroup(s,o,g.id);assert.equal(p.experiments,experiments);assert.equal(G.effectivePermission(o,p,'u3').role,'贡献');assert.equal(o.members.length,9);assert(o.permissionChanges.every(x=>x.actor==='u0'&&Number.isFinite(Date.parse(x.at))));});
 test('disabled members lose group access, leaving removes links permanently, rejoining does not restore',()=>{const {s,o,p}=fixture();add(s,o,p);M.setMemberStatus(s,'u3','disabled');s.user='u3';assert(!M.canAccessProject(s,p));assert.equal(G.memberGroups(o,'u3').length,0);s.user='u0';M.setMemberStatus(s,'u3','active');s.user='u3';M.leaveOrganization(s,o.id);assert(G.groupsFor(o).every(g=>!g.memberIds.includes('u3')));o.members.push({id:'u3',name:'返回',email:'user3@example.com',role:'查看者',status:'active'});assert.equal(G.memberGroups(o,'u3').length,0);});
 test('only managers may edit groups; invalid/outside members, projects and roles rejected',()=>{const {s,o,p}=fixture();for(const draft of [{name:'',memberIds:[],projects:{}},{name:'a',memberIds:['outside'],projects:{}},{name:'a',memberIds:[],projects:{outside:'查看'}},{name:'a',memberIds:[],projects:{[p.id]:'Owner'}}])assert.throws(()=>G.savePermissionGroup(s,o,draft));s.user='u2';assert.throws(()=>add(s,o,p),/Owner/);});
 test('Free cannot create groups or private projects; downgrade never clears existing grants; revocation remains possible',()=>{const {s,o,p}=fixture(),g=add(s,o,p);o.paid=false;const original=JSON.stringify(g);assert.equal(JSON.stringify(G.groupsFor(o)[0]),original);assert.throws(()=>G.savePermissionGroup(s,o,{name:'a',memberIds:[],projects:{}}),/付费/);assert.throws(()=>G.savePermissionGroup(s,o,{...g,memberIds:['u3','u4']},g.id),/付费/);assert.throws(()=>M.createProject(s,{name:'new',desc:'',scope:'MEMBERS',members:{},tags:[]}),/付费/);G.savePermissionGroup(s,o,{...g,memberIds:[]},g.id);assert.equal(G.groupsFor(o)[0].memberIds.length,0);});
@@ -43,4 +44,53 @@ test('individual grants transfer correctly and stale overrides are cleared on pr
  p.name='individual-transfer';const target=s.orgs.find(x=>x.id==='trial');target.capacity=1e12;M.transferProject(s,p.id,o.id,target.id,true);
  const moved=target.projects.find(x=>x.id===p.id);assert.equal(moved.members.u3,'查看');assert.equal(moved.members.u4,'管理');assert(!g.memberProjectRoles.u3[p.id]);
  G.removeGroupMemberships(s,o,'u3');assert(!g.memberProjectRoles.u3);
+});
+
+test('deleted group revokes its source and can restore identity, roles and audit history',()=>{
+ const {s,o,p}=fixture(),g=add(s,o,p);g.memberProjectRoles={u3:{[p.id]:'查看'}};
+ G.deletePermissionGroup(s,o,g.id);
+ assert.equal(G.memberGroups(o,'u3').length,0);assert(!G.explicitSources(o,p,'u3').some(x=>x.id===g.id));
+ assert.equal(o.recycledPermissionGroups[0].deletedAt,s.now);
+ const restored=G.restorePermissionGroup(s,o,g.id);
+ assert.equal(restored.id,g.id);assert.equal(restored.memberProjectRoles.u3[p.id],'查看');
+ assert.equal(G.groupMemberRole(restored,'u3',p.id),'查看');assert.equal(o.recycledPermissionGroups.length,0);
+ assert.equal(o.permissionChanges.at(-1).type,'restore-group');
+});
+test('restoring checks name conflicts, authority, paid entitlement and simulated failure atomically',()=>{
+ for(const reason of ['name','authority','plan','failure','member']){
+  const {s,o,p}=fixture(),g=add(s,o,p);G.deletePermissionGroup(s,o,g.id);
+  if(reason==='name')G.savePermissionGroup(s,o,{name:g.name,memberIds:[],projects:{}});
+  if(reason==='authority')s.user='u1';if(reason==='member')s.user='u3';if(reason==='plan')o.paid=false;if(reason==='failure')s.requestFailure=true;
+  const before=structuredClone(o);assert.throws(()=>G.restorePermissionGroup(s,o,g.id));assert.deepEqual(o,before);
+ }
+});
+test('recycled group never revives departed members or transferred project relationships',()=>{
+ const {s,o,p,q}=fixture();const g=G.savePermissionGroup(s,o,{name:'归档组',memberIds:['u3','u4'],projects:{[p.id]:'查看',[q.id]:'查看'}});
+ G.deletePermissionGroup(s,o,g.id);G.removeGroupMemberships(s,o,'u3');G.detachProjectGroups(s,o,p.id);
+ o.members.find(m=>m.id==='u4').status='disabled';
+ const restored=G.restorePermissionGroup(s,o,g.id);
+ assert.deepEqual(restored.memberIds,[]);assert.deepEqual(restored.projects,{[q.id]:'查看'});
+});
+
+test('history preserves actor and entity names, member changes and role transitions as snapshots',()=>{
+ const {s,o,p}=fixture(),g=add(s,o,p,'查看',['u3']);
+ const actor=s.profiles[s.user].name,oldName=o.members.find(m=>m.id==='u3').name,projectName=p.name;
+ G.savePermissionGroup(s,o,{...g,memberIds:['u4'],projects:{[p.id]:'贡献'}},g.id);
+ let entries=permissionGroupHistory(o,g.id);
+ assert.equal(entries[0].title,'修改权限组');assert.equal(entries[0].actorName,actor);
+ assert(entries[0].details.includes('移除成员：'+oldName));assert(entries[0].details.some(x=>x.startsWith('新增成员：')));
+ assert(entries[0].details.includes(`项目角色：${projectName} · 查看 → 贡献`));
+ o.members.find(m=>m.id==='u3').name='已改名';p.name='renamed';s.profiles[s.user].name='新操作者名称';
+ entries=permissionGroupHistory(o,g.id);assert.equal(entries[0].actorName,actor);assert(entries[0].details.includes('移除成员：'+oldName));assert(entries[0].details.some(x=>x.includes(projectName)));
+ const next=G.groupsFor(o).find(x=>x.id===g.id);G.savePermissionGroup(s,o,{...next,memberProjectRoles:{u4:{[p.id]:'查看'}}},g.id);
+ assert(permissionGroupHistory(o,g.id)[0].details.some(x=>x.includes('跟随组默认 → 查看')));
+ const count=o.permissionChanges.length;s.requestFailure=true;assert.throws(()=>G.savePermissionGroup(s,o,next,g.id));assert.equal(o.permissionChanges.length,count);
+});
+test('history includes lifecycle and legacy entries, excludes other project audit events',()=>{
+ const {s,o,p}=fixture(),g=add(s,o,p);G.deletePermissionGroup(s,o,g.id);G.restorePermissionGroup(s,o,g.id);
+ G.recordPermissionChange(s,o,'update-project-permissions',null,p);
+ const entries=permissionGroupHistory(o,g.id);assert.deepEqual(entries.map(e=>e.type),['restore-group','delete-group','create-group']);
+ assert(entries[0].details.some(x=>x.startsWith('新增成员')));assert(entries[1].details.some(x=>x.startsWith('移除项目')));
+ const legacy=o.permissionChanges[0];delete legacy.details;delete legacy.actorName;
+ assert(permissionGroupHistory(o,g.id).at(-1).details.length>0);assert.equal(permissionGroupHistory(o,'unrelated').length,0);
 });

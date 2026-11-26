@@ -12,7 +12,6 @@
 - 当前仅主布局已拆为 React 组件，其余存在模板兼容层；目录名词不是可直接 import 的组件清单。
 
 ## 基础与 Token
-
 - [产品风格 · Product Style](foundations/product-style.md)
 
 - [设计 Token · Design Token](foundations/design-token.md)
@@ -42,6 +41,7 @@
 - [单选选择器 · Select](components/select.md)
 - [复选框 · Checkbox](components/checkbox.md)
 - [单选项 · Radio](components/radio.md)
+- [开关 · Switch](reference/switch.md)
 - [表单项 · Form Field](components/field.md)
 - [搜索框 · Search](components/search.md)
 - [筛选器 · Filter](components/filter.md)
@@ -90,7 +90,7 @@
 
 ## 常用 UI 名词 · 暂留空
 
-- [开关 · Switch](reference/switch.md) · [组合框 · Combobox](reference/combobox.md)
+- [组合框 · Combobox](reference/combobox.md)
 - [滑块 · Slider](reference/slider.md) · [折叠面板 · Accordion](reference/accordion.md)
 - [日期选择器 · Date Picker](reference/date-picker.md) · [树形控件 · Tree](reference/tree.md)
 - [步骤指示器 · Stepper](reference/stepper.md) · [拖放上传区 · Dropzone](reference/dropzone.md)

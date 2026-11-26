@@ -51,12 +51,18 @@ html[data-demo="4"] .billing-purchase-context {display:flex;justify-content:spac
 html[data-demo="4"] .billing-purchase-context p {font-size:12px;color:var(--text-secondary);margin-top:4px;}
 html[data-demo="4"] .billing-usage-stats strong {font-variant-numeric:tabular-nums;font-size:24px;}
 html[data-demo="4"] .usage-section-heading + .billing-box .bar {margin-top:16px;}
-html[data-demo="4"] .usage-history {display:flex;gap:16px;align-items:flex-end;overflow-x:auto;}
-html[data-demo="4"] .usage-history>div {display:grid;gap:8px;text-align:center;min-width:90px;font-size:12px;flex:1;}
-html[data-demo="4"] .usage-history-track {height:120px;display:flex;align-items:flex-end;justify-content:center;}
-html[data-demo="4"] .usage-history-track i {display:block;width:24px;background:var(--action-primary);border-radius:var(--radius-control) var(--radius-control) 0 0;}
 @media(max-width:700px){
  html[data-demo="4"] .usage-bottom-grid {grid-template-columns:minmax(0,1fr);gap:0;}
  html[data-demo="4"] .billing-usage-stats {grid-template-columns:minmax(0,1fr);gap:16px;}
  html[data-demo="4"] .billing-purchase-context {align-items:flex-start;flex-wrap:wrap;}
 }
+
+html[data-demo="4"] .usage-trend-latest {font-size:12px;color:var(--text-secondary);}
+html[data-demo="4"] .usage-trend-latest strong {color:var(--text-primary);font-weight:500;font-variant-numeric:tabular-nums;}
+html[data-demo="4"] .usage-trend-scroll {overflow-x:auto;margin-top:16px;}
+html[data-demo="4"] .usage-trend-chart {display:block;width:100%;min-width:560px;height:auto;}
+html[data-demo="4"] .usage-trend-grid {stroke:var(--border-subtle);stroke-width:1;stroke-dasharray:3 4;}
+html[data-demo="4"] .usage-trend-label {fill:var(--text-secondary);font:12px var(--sb-font-body);}
+html[data-demo="4"] .usage-trend-area {fill:var(--brand-soft);}
+html[data-demo="4"] .usage-trend-line {fill:none;stroke:var(--brand-text);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+html[data-demo="4"] .usage-trend-point {fill:var(--bg-canvas);stroke:var(--brand-text);stroke-width:2;}

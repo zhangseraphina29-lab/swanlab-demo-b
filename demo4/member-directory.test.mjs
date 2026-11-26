@@ -44,3 +44,32 @@ test('role edits enforce actor permissions and preserve sole Owner',async()=>{
  updateMemberRole(s,'u2','贡献者');
  s.user='u3';assert.throws(()=>updateMemberRole(s,'u2','查看者'),/无权/);
 });
+
+test('member removal blocks owned resources in active projects and recycle until transfer',async()=>{
+ const M=await import('./src/model.js'),s=M.seed();M.upgradePrototypeState(s);const org=M.currentOrg(s),source=org.members.find(m=>m.id==='u2'),target=org.members.find(m=>m.id==='u3');
+ org.projects[0].createdBy=source.id;org.projects[0].members[source.id]='管理';
+ const recycled=structuredClone(org.projects[1]);recycled.id='recycled-owned';recycled.createdBy=source.id;org.recycle=[recycled];
+ M.setMemberStatus(s,source.id,'disabled');const before=structuredClone(s);
+ assert.throws(()=>M.removeMember(s,source.id),/先转移/);assert.deepEqual(s,before);
+ assert.equal(M.memberOwnedProjects(s,source.id).length,2);
+ assert.equal(M.transferMemberResources(s,source.id,target.id),2);
+ assert.equal(M.memberOwnedProjects(s,source.id).length,0);
+ M.removeMember(s,source.id);assert.equal(org.members.some(m=>m.id===source.id),false);
+ assert.equal(org.projects[0].createdBy,target.id);assert.equal(recycled.createdBy,target.id);
+ assert.equal(org.projects[0].members[target.id],'管理');assert.equal(recycled.members[target.id],'管理');
+});
+test('failed resource transfer does not mutate resources or unlock member removal',async()=>{
+ const M=await import('./src/model.js'),s=M.seed();M.upgradePrototypeState(s);const org=M.currentOrg(s);
+ org.projects[0].createdBy='u2';M.setMemberStatus(s,'u2','disabled');const before=structuredClone(s);
+ assert.throws(()=>M.transferMemberResources(s,'u2','u2'),/有效成员/);assert.deepEqual(s,before);
+ assert.throws(()=>M.removeMember(s,'u2'),/先转移/);
+ s.user='u3';assert.throws(()=>M.transferMemberResources(s,'u2','u0'),/无权/);assert.equal(org.projects[0].createdBy,'u2');
+});
+
+test('member directory defaults to all statuses and supports multiple status filters',async()=>{
+ const {directoryEntries}=await import('./src/member-directory.js'),org=seed().orgs[0];
+ org.members[2].status='disabled';org.invites.push({id:'old',email:'old@example.com',status:'expired'},{id:'done',email:'done@example.com',status:'accepted'});
+ const all=directoryEntries(org);assert.equal(all.length,org.members.length+2);assert(all.some(m=>m.status==='disabled'));assert(!all.some(m=>m.id==='done'));
+ const filtered=directoryEntries(org,['disabled','pending']);assert.deepEqual(new Set(filtered.map(m=>m.status)),new Set(['disabled','pending']));assert.equal(filtered.length,2);
+ assert.equal(directoryEntries(org,[]).length,all.length);
+});

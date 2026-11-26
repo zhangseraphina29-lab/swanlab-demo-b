@@ -28,10 +28,10 @@
 
 ## 直接引用示例（最多六处）
 
+- [src/styles/billing.css:61](../../../src/styles/billing.css)：`color: var(--text-primary)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-fg: var(--text-primary)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--ink: var(--text-primary)`
 - [src/styles/lucide-theme.css:32](../../../src/styles/lucide-theme.css)：`color: var(--text-primary)`
 - [src/styles/lucide-theme.css:45](../../../src/styles/lucide-theme.css)：`color: var(--text-primary)`
 - [src/styles/lucide-theme.css:50](../../../src/styles/lucide-theme.css)：`color: var(--text-primary)`
-- [src/styles/lucide-theme.css:56](../../../src/styles/lucide-theme.css)：`color: var(--text-primary)`
 <!-- generated:end -->

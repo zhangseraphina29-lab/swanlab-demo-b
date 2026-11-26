@@ -1,3 +1,4 @@
+import {groupChangeDetails} from './permission-group-history.js';
 export const PROJECT_ROLES=['查看','贡献','管理'];
 const ROLE_ACTIONS={查看:['read','media'],贡献:['read','media','write'],管理:['read','media','write','manage','authorize','download','export']};
 export const groupsFor=org=>org.permissionGroups||[];
@@ -41,9 +42,32 @@ export function validateGroup(s,org,draft,id){
  return value;
 }
 export function groupImpact(org,id,draft){const before=groupsFor(org).find(g=>g.id===id),copy=structuredClone(org);copy.permissionGroups=groupsFor(copy).filter(g=>g.id!==id);if(draft)copy.permissionGroups.push({...draft,id:id||'draft'});const people=new Set([...(before?.memberIds||[]),...(draft?.memberIds||[])]),projects=new Set([...Object.keys(before?.projects||{}),...Object.keys(draft?.projects||{})]),rows=[];for(const uid of people)for(const pid of projects){const p=org.projects.find(p=>p.id===pid),m=activeMember(org,uid);if(!p||!m)continue;const oldGroup=groupMemberRole(before,uid,pid),newGroup=groupMemberRole(draft,uid,pid);if(oldGroup!==newGroup){const next=effectivePermission(copy,p,uid);rows.push({member:m.name,project:p.name,before:effectivePermission(org,p,uid).role,after:next.role,sources:next.sources});}}return rows;}
-export function recordPermissionChange(s,org,type,before,after){org.permissionChanges??=[];org.permissionChanges.push({id:crypto.randomUUID(),actor:s.user,at:s.now,type,before:structuredClone(before),after:structuredClone(after)});}
+export function recordPermissionChange(s,org,type,before,after){org.permissionChanges??=[];const entry={id:crypto.randomUUID(),actor:s.user,actorName:s.profiles?.[s.user]?.name||org.members.find(m=>m.id===s.user)?.name||s.user,at:new Date().toISOString(),type,before:structuredClone(before),after:structuredClone(after)};entry.details=groupChangeDetails(org,entry);org.permissionChanges.push(entry);}
 export function savePermissionGroup(s,org,draft,id){const value=validateGroup(s,org,draft,id),before=groupsFor(org).find(g=>g.id===id)||null,g={...value,id:id||'group-'+crypto.randomUUID(),updatedAt:s.now,createdAt:before?.createdAt||s.now};org.permissionGroups=groupsFor(org).filter(g=>g.id!==id).concat(g);recordPermissionChange(s,org,before?'update-group':'create-group',before,g);return g;}
-export function deletePermissionGroup(s,org,id){manager(s,org);const before=groupsFor(org).find(g=>g.id===id);if(!before)throw Error('权限组不存在');org.permissionGroups=groupsFor(org).filter(g=>g.id!==id);recordPermissionChange(s,org,'delete-group',before,null);}
+export function deletePermissionGroup(s,org,id){manager(s,org);const before=groupsFor(org).find(g=>g.id===id);if(!before)throw Error('权限组不存在');org.recycledPermissionGroups??=[];org.recycledPermissionGroups.push({...structuredClone(before),deletedAt:s.now});org.permissionGroups=groupsFor(org).filter(g=>g.id!==id);recordPermissionChange(s,org,'delete-group',before,null);}
 export function replaceDirectGrant(s,org,p,id){manager(s,org);if(!canAuthorize(org,p,s.user))throw Error('缺少该项目的授权管理权');if(!memberGroups(org,id).some(g=>g.projects[p.id]))throw Error('该成员没有可替换的权限组授权');if(!p.members[id])throw Error('直接授权已不存在');const before={projectId:p.id,userId:id,role:p.members[id]};delete p.members[id];recordPermissionChange(s,org,'replace-direct',before,{projectId:p.id,userId:id,permission:effectivePermission(org,p,id)});}
-export function removeGroupMemberships(s,org,id){for(const g of groupsFor(org).filter(g=>g.memberIds.includes(id))){const before=structuredClone(g);g.memberIds=g.memberIds.filter(x=>x!==id);if(g.memberProjectRoles)delete g.memberProjectRoles[id];g.updatedAt=s.now;recordPermissionChange(s,org,'member-left-group',before,g);}}
-export function detachProjectGroups(s,org,pid){for(const g of groupsFor(org).filter(g=>g.projects[pid])){const before=structuredClone(g);delete g.projects[pid];for(const roles of Object.values(g.memberProjectRoles||{}))delete roles[pid];g.updatedAt=s.now;recordPermissionChange(s,org,'project-transferred',before,g);}}
+export function removeGroupMemberships(s,org,id){for(const g of [...groupsFor(org),...(org.recycledPermissionGroups||[])].filter(g=>g.memberIds.includes(id))){const before=structuredClone(g);g.memberIds=g.memberIds.filter(x=>x!==id);if(g.memberProjectRoles)delete g.memberProjectRoles[id];g.updatedAt=s.now;recordPermissionChange(s,org,'member-left-group',before,g);}}
+export function detachProjectGroups(s,org,pid){for(const g of [...groupsFor(org),...(org.recycledPermissionGroups||[])].filter(g=>g.projects[pid])){const before=structuredClone(g);delete g.projects[pid];for(const roles of Object.values(g.memberProjectRoles||{}))delete roles[pid];g.updatedAt=s.now;recordPermissionChange(s,org,'project-transferred',before,g);}}
+
+export function restoredGroupDraft(org,id){
+ const group=org.recycledPermissionGroups?.find(g=>g.id===id);
+ if(!group)throw Error('回收站中没有此权限组');
+ const value=structuredClone(group);
+ value.memberIds=value.memberIds.filter(uid=>activeMember(org,uid));
+ value.projects=Object.fromEntries(Object.entries(value.projects).filter(([pid])=>[...org.projects,...(org.recycle||[])].some(p=>p.id===pid)));
+ return value;
+}
+export function previewGroupRestore(s,org,id){
+ const draft=restoredGroupDraft(org,id);
+ const value=validateGroup(s,{...org,projects:[...org.projects,...(org.recycle||[])]},draft);
+ if(groupsFor(org).some(g=>g.id===id))throw Error('权限组已存在');
+ return value;
+}
+export function restorePermissionGroup(s,org,id){
+ const value=previewGroupRestore(s,org,id),before=org.recycledPermissionGroups.find(g=>g.id===id);
+ const group={...value,id,createdAt:before.createdAt,updatedAt:s.now};
+ org.permissionGroups=groupsFor(org).concat(group);
+ org.recycledPermissionGroups=org.recycledPermissionGroups.filter(g=>g.id!==id);
+ recordPermissionChange(s,org,'restore-group',before,group);
+ return group;
+}

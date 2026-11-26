@@ -92,7 +92,9 @@ export function isBillingContact(s,id,org=currentOrg(s)){const email=s.orgs.flat
 export function addBillingContact(s,name,email){const org=currentOrg(s);if(!isOwner(s))throw Error('仅 Owner 可管理账单联系人');email=email.trim().toLowerCase();name=name.trim();if(!name||name.length>40)throw Error('请输入姓名，最多 40 字符');if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))throw Error('请输入有效邮箱');if(isBillingEmail(org,email))throw Error('该账单联系人已存在');org.billingContacts??=[];const c={id:'billing:'+email,name,email};org.billingContacts.push(c);return c;}
 export function removeBillingContact(s,id){if(!isOwner(s))throw Error('仅 Owner 可管理账单联系人');const org=currentOrg(s);org.billingContacts=(org.billingContacts||[]).filter(c=>c.id!==id);}
 
-export function removeMember(s,id){const org=currentOrg(s),m=org.members.find(m=>m.id===id);if(!m||m.status!=='disabled')throw Error('仅可彻底移出已禁用成员');if(!canPerformAction(s,'members')||m.role==='Owner'||m.role==='管理员'&&!isOwner(s))throw Error('无权移出此成员');removeGroupMemberships(s,org,id);org.members=org.members.filter(x=>x.id!==id);for(const p of [...org.projects,...(org.recycle||[])])delete p.members[id];}
+export function memberOwnedProjects(s,id){const org=currentOrg(s);return [...org.projects,...(org.recycle||[])].filter(p=>p.createdBy===id);}
+
+export function removeMember(s,id){const org=currentOrg(s),m=org.members.find(m=>m.id===id);if(!m||m.status!=='disabled')throw Error('仅可彻底移出已禁用成员');if(!canPerformAction(s,'members')||m.role==='Owner'||m.role==='管理员'&&!isOwner(s))throw Error('无权移出此成员');if(memberOwnedProjects(s,id).length)throw Error('请先转移该成员的全部资源，再移除成员');removeGroupMemberships(s,org,id);org.members=org.members.filter(x=>x.id!==id);for(const p of [...org.projects,...(org.recycle||[])])delete p.members[id];}
 
 export function leaveOrganization(s,id){const org=s.orgs.find(o=>o.id===id),m=org?.members.find(m=>m.id===s.user);if(!m)throw Error('你不是该组织成员');if(m.role==='Owner'||org.owner===s.user)throw Error('请先转移 Owner 后退出组织');removeGroupMemberships(s,org,s.user);org.members=org.members.filter(m=>m.id!==s.user);for(const p of [...org.projects,...(org.recycle||[])])delete p.members[s.user];for(const i of org.invites)if(i.email.toLowerCase()===m.email.toLowerCase()&&i.status==='pending')i.status='revoked';if(s.orgId===id){const next=s.orgs.find(o=>o.members.some(m=>m.id===s.user&&m.status==='active'));if(next)s.orgId=next.id;}s.page='myOrganizations';}
 
@@ -118,7 +120,7 @@ export function transferMemberResources(s,sourceId,targetId){
  const org=currentOrg(s),source=org.members.find(m=>m.id===sourceId),target=org.members.find(m=>m.id===targetId);
  if(!isManager(s)||!source||source.role==='Owner'||source.role==='管理员'&&!isOwner(s))throw Error('无权转移此成员资源');
  if(!target||target.status!=='active'||sourceId===targetId)throw Error('请选择其他有效成员');
- const projects=[...org.projects,...(org.recycle||[])].filter(p=>p.createdBy===sourceId);
+ const projects=memberOwnedProjects(s,sourceId);
  for(const project of projects){project.createdBy=targetId;project.members[targetId]='管理';delete project.members[sourceId];}
  return projects.length;
 }
@@ -149,7 +151,7 @@ export function transferProject(s,id,sourceId,targetId,includeMembers=false){
     if(members.some(m=>m.email.toLowerCase()===person.email.toLowerCase()))throw Error('接收组织存在相同邮箱的其他账户');
     recipient={id:person.id,name:person.name,email:person.email,role:role==='查看'?'查看者':'贡献者',status:'active',joinedAt:members.length,joinedAtTime:s.now};members.push(recipient);
    }
-   if(recipient&&recipient.status!=='active')throw Error('项目成员在接收组织已停用，请先恢复或取消带入成员');
+   if(recipient&&recipient.status!=='active')throw Error('项目成员在接收组织已禁用，请先恢复或取消带入成员');
   }
   if(recipient?.status==='active')grants[userId]=role;
  }
