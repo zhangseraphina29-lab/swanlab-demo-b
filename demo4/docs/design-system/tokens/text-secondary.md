@@ -30,8 +30,8 @@
 
 - [src/styles/billing.css:46](../../../src/styles/billing.css)：`color: var(--text-secondary)`
 - [src/styles/billing.css:51](../../../src/styles/billing.css)：`color: var(--text-secondary)`
+- [src/styles/billing.css:60](../../../src/styles/billing.css)：`color: var(--text-secondary)`
+- [src/styles/billing.css:65](../../../src/styles/billing.css)：`fill: var(--text-secondary)`
 - [src/styles/fireworks-tokens.css:119](../../../src/styles/fireworks-tokens.css)：`--text-muted: var(--text-secondary)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-muted: var(--text-secondary)`
-- [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-tertiary: var(--text-secondary)`
-- [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--muted: var(--text-secondary)`
 <!-- generated:end -->

@@ -36,10 +36,10 @@
 
 ## 直接引用示例（最多六处）
 
+- [src/styles/billing.css:67](../../../src/styles/billing.css)：`stroke: var(--brand-text)`
+- [src/styles/billing.css:68](../../../src/styles/billing.css)：`stroke: var(--brand-text)`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css)：`--d4-primary: var(--brand-text)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--accent: var(--brand-text)`
 - [src/styles/lucide-theme.css:8](../../../src/styles/lucide-theme.css)：`--sb-color-raw-green: var(--brand-text)`
 - [src/styles/lucide-theme.css:23](../../../src/styles/lucide-theme.css)：`color: var(--brand-text)`
-- [src/styles/lucide-theme.css:24](../../../src/styles/lucide-theme.css)：`color: var(--brand-text)`
-- [src/styles/lucide-theme.css:28](../../../src/styles/lucide-theme.css)：`color: var(--brand-text)`
 <!-- generated:end -->

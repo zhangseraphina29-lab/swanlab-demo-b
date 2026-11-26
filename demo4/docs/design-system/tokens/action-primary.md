@@ -34,10 +34,10 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/billing.css:57](../../../src/styles/billing.css)：`background: var(--action-primary)`
 - [src/styles/lucide-theme.css:5](../../../src/styles/lucide-theme.css)：`--d4-solid: var(--action-primary)`
 - [src/styles/lucide-theme.css:8](../../../src/styles/lucide-theme.css)：`--sb-color-action-primary: var(--action-primary)`
 - [src/styles/lucide-theme.css:10](../../../src/styles/lucide-theme.css)：`background: var(--action-primary)`
 - [src/styles/lucide-theme.css:25](../../../src/styles/lucide-theme.css)：`accent-color: var(--action-primary)`
 - [src/styles/lucide-theme.css:26](../../../src/styles/lucide-theme.css)：`background: var(--action-primary)`
+- [src/styles/pricing.css:8](../../../src/styles/pricing.css)：`background: var(--action-primary)`
 <!-- generated:end -->

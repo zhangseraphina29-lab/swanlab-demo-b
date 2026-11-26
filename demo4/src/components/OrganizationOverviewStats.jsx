@@ -17,7 +17,7 @@ export function OrganizationOverviewStats({ stats }) {
     <section className="org-management-stats" aria-label="组织管理统计">
       <article className="org-summary-card org-usage-card">
         <div className="org-summary-body">
-          <header><h3>使用情况</h3></header>
+          <header><h3>使用情况</h3><div className="org-summary-actions"><button className="org-summary-icon" type="button" data-action="refreshOverview" aria-label="刷新使用情况" title="刷新使用情况"><StatIcon name="refresh" /></button></div></header>
           <dl className="org-activity-metrics">
             <div><dt>当前实验人数</dt><dd><LiveNumber value={stats.experimenters} /><span className="org-metric-total"> / {number(stats.members)}</span></dd></div>
             <div><dt>运行中的项目</dt><dd><LiveNumber value={stats.runningProjects} /><span className="org-metric-total"> / {number(stats.projects)}</span></dd></div>

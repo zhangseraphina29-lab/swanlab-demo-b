@@ -80,3 +80,13 @@ test('recent updates filter inaccessible projects and sort experiment records by
  org.projects=[];
  assert.deepEqual(organizationRecentUpdates(state),{projects:[],experiments:[],projectCount:0,experimentCount:0});
 });
+
+test('recent updates prioritize participation by default, retain others and respect an explicit opt-out',()=>{
+ const state=M.upgradePrototypeState(M.seed()),org=M.currentOrg(state);state.user='u1';
+ for(const p of org.projects){p.members={u0:'管理'};p.createdBy='u0';p.lastExperimentAt='2026-11-01';p.experimentRecords=[];}
+ const [recent,mine]=org.projects;recent.lastExperimentAt='2026-11-25';recent.experimentRecords=[{id:'other',name:'other',createdBy:'u0',updatedAt:'2026-11-25'}];
+ mine.members.u1='查看';mine.experimentRecords=[{id:'mine',name:'mine',createdBy:'u1',updatedAt:'2026-11-01'}];
+ let result=organizationRecentUpdates(state);assert.equal(result.projects[0].id,mine.id);assert.equal(result.experiments[0].id,'mine');assert(result.projects.some(p=>p.id===recent.id));assert.equal(result.projectCount,4);
+ state.profiles.u1.recentPrioritizeMine=false;result=organizationRecentUpdates(state);assert.equal(result.projects[0].id,recent.id);assert.equal(result.experiments[0].id,'other');
+ state.profiles.u1.recentPrioritizeMine=true;assert.equal(organizationRecentUpdates(state).projects[0].id,mine.id);
+});

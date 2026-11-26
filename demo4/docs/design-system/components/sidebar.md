@@ -38,3 +38,7 @@
 - [src/styles/lucide-theme.css:166](../../../src/styles/lucide-theme.css)
 - [业务模板与事件：controller.js](../../../src/controller.js)
 - [按钮与导航装饰：demo4-ui.js](../../../src/demo4-ui.js)
+
+## 超级管理员看板入口
+
+用户于 2026-11-26 要求替换底部「查看用量」为「超级管理员看板」；正式使用范围为私有化部署，demo 仅展示入口按钮。当前 `VITE_DEPLOYMENT_MODE` 默认为 `demo`，`private` 同样展示，其他值隐藏；沿用原用量可见权限及页面范围。点击只显示入口演示提示，未实现看板。收起侧栏时显示图标及可访问名称。

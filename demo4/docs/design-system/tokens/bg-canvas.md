@@ -29,9 +29,9 @@
 ## 直接引用示例（最多六处）
 
 - [src/styles/demo4-ui.css:689](../../../src/styles/demo4-ui.css)：`background: var(--bg-canvas)`
+- [src/styles/billing.css:68](../../../src/styles/billing.css)：`fill: var(--bg-canvas)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-bg: var(--bg-canvas)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-card: var(--bg-canvas)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-popover: var(--bg-canvas)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--surface: var(--bg-canvas)`
-- [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--back: var(--bg-canvas)`
 <!-- generated:end -->
