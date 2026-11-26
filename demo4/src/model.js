@@ -64,7 +64,7 @@ export function profileProjects(s){
 export function searchDestinations(s,query=''){
  const org=currentOrg(s),q=query.trim().toLowerCase();
  const pages=[{id:'page:profile',group:'页面',label:'个人主页',detail:'个人资料、参与组织与项目',page:'profile',icon:'user'},{id:'page:projects',group:'页面',label:'所有项目',detail:org.name,page:'projects',icon:'grid'},
- ...[['members','成员管理','users','members'],['usage','用量与账单','chart','usage'],['settings','组织设置','settings','members']].filter(([, , ,action])=>canPerformAction(s,action)).map(([page,label,icon])=>({id:'page:'+page,group:'页面',label,detail:org.name,page,icon}))];
+ ...[['members','成员管理','users','members'],['usage','用量','chart','usage'],['billing','账单','billing','billing'],['settings','组织设置','settings','members']].filter(([, , ,action])=>canPerformAction(s,action)).map(([page,label,icon])=>({id:'page:'+page,group:'页面',label,detail:org.name,page,icon}))];
  const orgs=s.orgs.filter(o=>member(s,o)).map(o=>({id:'org:'+o.id,group:'组织',label:o.name,detail:o.region==='region-a'?'演示区域 A':'演示区域 B',orgId:o.id,icon:'users'}));
  const projects=profileProjects(s).map(({org,project:p})=>({id:'project:'+p.id,group:'项目',label:p.name,detail:org.name,orgId:org.id,projectId:p.id,icon:'project'}));
  return [...pages,...orgs,...projects].filter(x=>!q||(x.label+' '+x.detail).toLowerCase().includes(q));

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {seed,currentOrg} from './src/model.js';
-import {billingAdapter as api,money} from './src/billing-adapter.js';
+import {billingAdapter as api,money,BILLING_CONFIG} from './src/billing-adapter.js';
 
 test('billing denies non-owners and allows administrator usage',async()=>{
  const s=seed();s.user='u1';assert.equal(api.getUsage(s).orgId,'free');
@@ -38,7 +38,7 @@ test('email edits preserve historical snapshots and refund/payment independence'
  const bill=await api.getBill(s,first.id);
  assert.equal(bill.billingSnapshot.email,first.billingSnapshot.email);
  assert.equal(bill.paymentStatus,'paid');assert.equal(bill.refund.status,'refunded');
- assert.equal(bill.totalMinor,9900);assert.equal(bill.refund.amountMinor,9900);
+ assert.equal(bill.totalMinor,BILLING_CONFIG.plan.amountMinor);assert.equal(bill.refund.amountMinor,BILLING_CONFIG.plan.amountMinor);
  await assert.rejects(api.updateEmail(s,'bad'),/有效/);
 });
 test('pagination, load error, retry and cross-organization isolation',async()=>{

@@ -28,10 +28,10 @@
 
 ## 直接引用示例（最多六处）
 
+- [src/styles/billing.css:46](../../../src/styles/billing.css)：`color: var(--text-secondary)`
+- [src/styles/billing.css:51](../../../src/styles/billing.css)：`color: var(--text-secondary)`
 - [src/styles/fireworks-tokens.css:119](../../../src/styles/fireworks-tokens.css)：`--text-muted: var(--text-secondary)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-muted: var(--text-secondary)`
 - [src/styles/lucide-theme.css:3](../../../src/styles/lucide-theme.css)：`--d4-tertiary: var(--text-secondary)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--muted: var(--text-secondary)`
-- [src/styles/lucide-theme.css:16](../../../src/styles/lucide-theme.css)：`color: var(--text-secondary)`
-- [src/styles/lucide-theme.css:98](../../../src/styles/lucide-theme.css)：`color: var(--text-secondary)`
 <!-- generated:end -->

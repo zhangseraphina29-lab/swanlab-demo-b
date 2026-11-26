@@ -34,10 +34,10 @@
 
 ## 直接引用示例（最多六处）
 
+- [src/styles/billing.css:50](../../../src/styles/billing.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:7](../../../src/styles/lucide-theme.css)：`--selected: var(--brand-soft)`
 - [src/styles/lucide-theme.css:23](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:32](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:91](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
 - [src/styles/lucide-theme.css:167](../../../src/styles/lucide-theme.css)：`background: var(--brand-soft)`
-- [src/styles/auth.css:2](../../../src/styles/auth.css)：`background: radial-gradient(ellipse at 25% 85%,color-mix(in srgb,var(--brand-display) 65%,transparent),transparent 65%),radial-gradient(ellipse at 90% 60%,color-mix(in srgb,var(--warning-bg) 75%,transparent),transparent 70%),var(--brand-soft)`
 <!-- generated:end -->

@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node test.mjs && node --test billing.test.mjs organization-overview.test.mjs member-directory.test.mjs project-transfer.test.mjs permission-groups.test.mjs permission-groups-ui.test.mjs",
+    "test": "node test.mjs && node --test billing.test.mjs organization-overview.test.mjs member-directory.test.mjs project-transfer.test.mjs permission-groups.test.mjs permission-groups-ui.test.mjs usage-billing-pages.test.mjs",
     "docs:sync": "node scripts/design-system.mjs --write",
     "docs:check": "node scripts/design-system.mjs",
     "postinstall": "node scripts/restore-assets.mjs"

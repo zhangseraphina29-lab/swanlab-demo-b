@@ -84,7 +84,7 @@
 - [未保存修改 · Unsaved Changes](patterns/unsaved-changes.md)
 - [文本截断 · Truncation](patterns/truncation.md)
 - [套餐比较 · Pricing](patterns/pricing.md)
-- [用量与账单 · Billing](patterns/billing.md)
+- [用量 · Usage](patterns/usage.md) · [账单 · Billing](patterns/billing.md)
 - [引导与创建流程 · Onboarding](patterns/onboarding.md)
 - [登录与注册界面 · Authentication](patterns/authentication.md)
 

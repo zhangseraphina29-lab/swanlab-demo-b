@@ -54,5 +54,6 @@
 - [src/pricing-ui.js](../../../src/pricing-ui.js)
 - [src/render-page.jsx](../../../src/render-page.jsx)
 - [src/tab-motion.js](../../../src/tab-motion.js)
+- [src/usage-ui.js](../../../src/usage-ui.js)
 - [vite.config.js](../../../vite.config.js)
 <!-- generated:end -->
