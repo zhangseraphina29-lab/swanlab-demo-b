@@ -1,0 +1,60 @@
+name: Deploy React preview to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demo4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: demo4/package-lock.json
+      - name: Install dependencies and restore static assets
+        run: npm ci
+      - name: Test
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Prepare Pages artifact
+        working-directory: .
+        run: |
+          mkdir -p _site
+          git archive HEAD | tar -x -C _site
+          rm -rf _site/demo4 _site/.github _site/demo4-preview
+          cp -R demo4/dist _site/demo4-preview
+          touch _site/.nojekyll
+          node --input-type=module -e "import fs from 'node:fs'; fs.writeFileSync('_site/demo4-preview/version.json', JSON.stringify({commit: process.env.GITHUB_SHA, run: process.env.GITHUB_RUN_ID}) + '\\n')"
+          test -s _site/demo4-preview/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
