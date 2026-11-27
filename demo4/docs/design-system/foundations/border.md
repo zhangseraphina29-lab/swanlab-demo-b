@@ -4,6 +4,10 @@
 
 ## 已确定规则
 
+用户于 2026-11-26 指定搜索框聚焦描边例外：`1px solid #594DB9`，未聚焦仍为全局 `0.5px`。
+
+最新用户要求（2026-11-26）：全站 CSS border 宽度统一为 `0.5px`，通过 `--border-width` 应用于元素及伪元素，覆盖下方历史 1px 规则。无边框样式（border-style: none）保持不可见；outline 焦点环、SVG 图标描边不属于 CSS border。
+
 > - 边框保持轻量：卡片和分组使用 border-subtle；可交互控件使用 border-control。默认 1px，不将 text-secondary 或更深文字色用作组件描边，也不因 hover 大幅加深。通过标签、背景和焦点环共同表达可交互性。
 
 来源：[usage.md · 第 42 行](../sources/color.txt)

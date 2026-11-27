@@ -29,6 +29,8 @@
   - 值：`var(--magenta-200)`
 - [src/styles/lucide-theme.css:62](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"][data-palette="magenta"]`
   - 值：`var(--magenta-600)`
+- [src/styles/fireworks-theme.css:30](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`#443998`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
@@ -39,4 +41,5 @@
 - [src/styles/pricing.css:8](../../../src/styles/pricing.css)：`background: var(--action-hover)`
 - [src/styles/fireworks-theme.css:8](../../../src/styles/fireworks-theme.css)：`background: var(--action-hover)`
 - [src/styles/fireworks-theme.css:10](../../../src/styles/fireworks-theme.css)：`background: var(--action-hover)`
+- [src/styles/fireworks-theme.css:236](../../../src/styles/fireworks-theme.css)：`background: var(--action-hover)`
 <!-- generated:end -->

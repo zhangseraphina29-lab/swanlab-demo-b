@@ -1,7 +1,8 @@
 // QingIcon 2.0.8 · https://qingicon.com · locally bundled line SVGs
 export const iconNodes = {
+  "manageProject": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 9.75V4H4v16h5.75M4 12h6.145M10 8H8m.57 8H8m8.745-3.5v.944m0 0a3.306 3.306 0 0 0 0 6.612m0-6.612a3.306 3.306 0 0 1 0 6.612m0 0V21m3.006-7.258-.667.667m-4.675 4.675-.668.668M21 16.745h-.944m-6.612 0H12.5m7.258 3.007-.668-.668m-4.674-4.675-.668-.668\" data-role=\"stroke\"/></g>",
+  "book": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v15m0 0s1.889-1 4.25-1 4.25 1 4.25 1V5s-1.889-1-4.25-1S12 5 12 5s-1.889-1-4.25-1S3.5 5 3.5 5v15s1.889-1 4.25-1S12 20 12 20\" data-role=\"stroke\"/></g>",
   "refresh": '<path d="M20 7v5h-5M4 17v-5h5M6.1 6.1A8 8 0 0 1 19.5 9M4.5 15a8 8 0 0 0 13.4 2.9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>',
-  "book": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 20V8m0 12H3.75V4H8a4 4 0 0 1 4 4m0 12h8.25V4H16a4 4 0 0 0-4 4m0 12v1\" data-role=\"stroke\"/></g>",
   "bolt": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m21 10-8-1V1.5L3 14l8 1v7.5z\" data-role=\"stroke\"/></g>",
   "github": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 7-5 5 5 5M17 7l5 5-5 5M14.5 3l-5 18\" data-role=\"stroke\"/></g>",
   "sun": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2v1.5m0 17V22m7.073-17.075-1.061 1.061M5.99 18.006l-1.06 1.061M22 11.997h-1.5m-17 0H2m17.075 7.072-1.06-1.06M5.994 5.986l-1.061-1.06M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0\" data-role=\"stroke\"/></g>",
@@ -15,7 +16,7 @@ export const iconNodes = {
   "chart": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m20 8-5.1 3.96-3-2.8L8 12M4 4v16h17\" data-role=\"stroke\"/></g>",
   "settings": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 12h-9m-3 0H4m9 6.5H4m9-13H4m16 0h-4m4 13h-4m0-15v4m0 9v4M8 10v4\" data-role=\"stroke\"/></g>",
   "clock": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 7v5l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0\" data-role=\"stroke\"/></g>",
-  "search": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16.658 16.658 21 21m-2-10a8 8 0 1 1-16 0 8 8 0 0 1 16 0\" data-role=\"stroke\"/></g>",
+  "search": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M18.83 18.83 21 21m-2-10a8 8 0 1 1-16 0 8 8 0 0 1 16 0\" data-role=\"stroke\"/></g>",
   "plus": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 6v6m0 0v6m0-6H6m6 0h6\" data-role=\"stroke\"/></g>",
   "list": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 12H9m11 7H9M20 5H9M4.5 5h.01m-.01 7h.01m-.01 7h.01m.24-14a.25.25 0 1 1-.5 0 .25.25 0 0 1 .5 0m0 7a.25.25 0 1 1-.5 0 .25.25 0 0 1 .5 0m0 7a.25.25 0 1 1-.5 0 .25.25 0 0 1 .5 0\" data-role=\"stroke\"/></g>",
   "arrow": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12h18m-7 7 7-7-7-7\" data-role=\"stroke\"/></g>",
@@ -31,7 +32,8 @@ export const iconNodes = {
   "edit": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m17.33 12.33-5.658-5.658m4.07-4.072L21.4 8.257 9.157 20.5H3.5v-5.657z\" data-role=\"stroke\"/></g>",
   "building": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M2 20h20M4 20V6l9-3v17V7l7 3v10\" data-role=\"stroke\"/></g>",
   "trash": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m16 7-1-4H9L8 7M3 7h18m-2 0-1.5 13.5h-11L5 7\" data-role=\"stroke\"/></g>",
-  "pin": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 16.5v5m-6-18h12l-1 6 3 7H4l3-7z\" data-role=\"stroke\"/></g>",
+  "pin": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m8.172 15.328-4.243 4.243M14.535 1.893l7.071 7.071-4.95 3.536-3.535 7.778-9.9-9.9L11 6.844z\" data-role=\"stroke\"/></g>",
+  "pinOff": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m8.172 15.328-4.243 4.243m7.695-13.602 2.911-4.076 7.071 7.071-4.075 2.912M8.14 8.143l-4.92 2.236 9.9 9.9 2.236-4.92M20 20 4 4\" data-role=\"stroke\"/></g>",
   "move": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 13h6m-3 3 3-3-3-3M3.5 4v16h17V6H12L9.5 4z\" data-role=\"stroke\"/></g>",
   "billing": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3.5 9.5h17M8 14.5h4m-8.5-10h17v15h-17z\" data-role=\"stroke\"/></g>",
   "community": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 4h6v16H4zm10 0h6v6h-6zm0 10h6v6h-6z\" data-role=\"stroke\"/></g>",
@@ -43,7 +45,8 @@ export const iconNodes = {
   "sidebar": "<g data-style=\"line\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 4h6v16H4zm10 0h6v6h-6zm0 10h6v6h-6z\" data-role=\"stroke\"/></g>"
 };
 export const iconNames = {
-  "book": "book-open",
+  "manageProject": "server-settings",
+  "book": "book-open-2",
   "bolt": "lightning",
   "github": "code",
   "sun": "sun",
@@ -57,7 +60,7 @@ export const iconNames = {
   "chart": "chart-line-up",
   "settings": "settings",
   "clock": "clock",
-  "search": "search",
+  "search": "search-2",
   "plus": "char-plus",
   "list": "list-unordered",
   "arrow": "arrow-right",
@@ -73,7 +76,8 @@ export const iconNames = {
   "edit": "pencil",
   "building": "building",
   "trash": "delete-trash",
-  "pin": "pushpin",
+  "pin": "pushpin-diagonal",
+  "pinOff": "pushpin-diagonal-off",
   "move": "folder-arrow-right",
   "billing": "credit-card",
   "community": "layout-panel-left",

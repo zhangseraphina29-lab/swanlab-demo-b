@@ -19,7 +19,7 @@ html[data-demo="4"][data-theme=dark] {
 /* Buttons: tiny by default; keep icon/text controls free of raised surfaces. */
 html[data-demo="4"] body [data-d4-button] {
  --d4-button-shadow:0 1px 3px rgb(0 0 0 / var(--d4-drop)),inset 0 1px 0 rgb(var(--d4-edge) / .024),inset 0 0 0 1px rgb(var(--d4-edge) / .06);
- height:26px;min-height:26px;gap:8px;padding:4px 10px;border:0;border-radius:var(--radius-input);
+ height:26px;min-height:26px;gap:8px;padding:4px 10px;border:0;border-radius:4px;
  background:var(--d4-card);color:var(--d4-fg);box-shadow:var(--d4-button-shadow);
  font:500 12px/16px var(--sb-font-body);transform:none;
  transition:color 200ms cubic-bezier(.22,1,.36,1),background-color 200ms cubic-bezier(.22,1,.36,1),scale 200ms cubic-bezier(.22,1,.36,1);
@@ -41,28 +41,28 @@ html[data-demo="4"] body [data-d4-button]:focus-visible {outline:2px solid var(-
 /* Independent navigation items: no ordinary button chrome. */
 html[data-demo="4"] .organization-layout .settings-nav {background:var(--d4-bg);border-color:var(--d4-border);gap:2px}
 html[data-demo="4"] .organization-layout .settings-nav>h3 {padding:0;margin:0 12px 16px;border:0;font:500 13px/20px var(--sb-font-body);color:var(--d4-tertiary);letter-spacing:0;text-align:left}
-html[data-demo="4"] .organization-layout .settings-nav button {height:30px;min-height:30px;padding:4px 12px;border:0;border-radius:var(--radius-input);background:transparent;box-shadow:none;font:450 13px/20px var(--sb-font-body);color:var(--d4-muted);text-align:left}
+html[data-demo="4"] .organization-layout .settings-nav button {height:30px;min-height:30px;padding:4px 12px;border:0;border-radius:4px;background:transparent;box-shadow:none;font:450 13px/20px var(--sb-font-body);color:var(--d4-muted);text-align:left}
 html[data-demo="4"] .organization-layout .settings-nav button.active {background:var(--d4-accent);color:var(--d4-fg);font-weight:600}
 @media(hover:hover) and (pointer:fine){html[data-demo="4"] .organization-layout .settings-nav button:hover{background:var(--d4-accent);color:var(--d4-fg)}}
 /* Input and Select small size. No enlargement of the existing dense project toolbar. */
-html[data-demo="4"] body :is(input:not([type=checkbox],[type=radio],[type=color],[type=file]),textarea,select):not(.topbar *,#org-menu *,#account-menu *) {border-color:var(--d4-input);border-radius:var(--radius-input);background:var(--d4-field);color:var(--d4-fg);box-shadow:none;font-family:var(--sb-font-body)}
+html[data-demo="4"] body :is(input:not([type=checkbox],[type=radio],[type=color],[type=file]),textarea,select):not(.topbar *,#org-menu *,#account-menu *) {border-color:var(--d4-input);border-radius:4px;background:var(--d4-field);color:var(--d4-fg);box-shadow:none;font-family:var(--sb-font-body)}
 html[data-demo="4"] body :is(input,textarea)::placeholder {color:var(--d4-tertiary);opacity:1}
 html[data-demo="4"] body :is(input,textarea,select):focus-visible {outline:2px solid var(--d4-ring);outline-offset:2px;border-color:var(--d4-hover-border)}
-html[data-demo="4"] .single-select-trigger {border:0;background:var(--d4-card);color:var(--d4-fg);box-shadow:0 1px 3px rgb(0 0 0 / var(--d4-drop)),inset 0 0 0 1px var(--d4-input);border-radius:var(--radius-input)}
+html[data-demo="4"] .single-select-trigger {border:0;background:var(--d4-card);color:var(--d4-fg);box-shadow:0 1px 3px rgb(0 0 0 / var(--d4-drop)),inset 0 0 0 1px var(--d4-input);border-radius:4px}
 html[data-demo="4"] .projects-toolbar {--toolbar-height:26px;gap:8px;align-items:center}
 html[data-demo="4"] .projects-toolbar :is(.search,.search input,.single-select-trigger,.filter-trigger,.reset-project-filters,.projects-primary-actions>.primary,.segments,.segments button) {height:26px;min-height:26px;box-sizing:border-box;font-size:12px;line-height:16px}
-html[data-demo="4"] .projects-toolbar :is(.single-select-trigger,.filter-trigger) {padding:4px 10px;border-radius:var(--radius-input);gap:8px}
+html[data-demo="4"] .projects-toolbar :is(.single-select-trigger,.filter-trigger) {padding:4px 10px;border-radius:4px;gap:8px}
 html[data-demo="4"] .projects-toolbar .filter-trigger {background:transparent;border-color:var(--d4-input);font-weight:450}
-html[data-demo="4"] .projects-toolbar .segments button {width:26px;min-width:26px;flex-basis:26px;padding:5px;border:0;border-radius:var(--radius-control);box-shadow:none;background:transparent;color:var(--d4-tertiary)}
+html[data-demo="4"] .projects-toolbar .segments button {width:26px;min-width:26px;flex-basis:26px;padding:5px;border:0;border-radius:4px;box-shadow:none;background:transparent;color:var(--d4-tertiary)}
 html[data-demo="4"] .projects-toolbar .segments button.selected {background:var(--d4-accent);color:var(--d4-fg)}
 html[data-demo="4"] .projects-toolbar .segments svg {width:16px;height:16px}
-html[data-demo="4"] .projects-toolbar>.search {position:relative;display:flex;align-items:center;border:1px solid var(--d4-input);border-radius:var(--radius-input);background:var(--d4-field);padding:0;box-shadow:none}
+html[data-demo="4"] .projects-toolbar>.search {position:relative;display:flex;align-items:center;border:1px solid var(--d4-input);border-radius:4px;background:var(--d4-field);padding:0;box-shadow:none}
 html[data-demo="4"] .projects-toolbar .search>svg {position:absolute;top:50%;left:8px;transform:translateY(-50%);width:14px;height:14px;color:var(--d4-tertiary);pointer-events:none}
 html[data-demo="4"] .projects-toolbar .search :is(#search,#pg-search) {height:24px;min-height:24px;padding:4px 8px 4px 28px;border:0;background:transparent;box-shadow:none;border-radius:0;outline:none;font:450 12px/16px var(--sb-font-body)}
 html[data-demo="4"] .projects-toolbar .search:focus-within {border-color:var(--d4-hover-border);outline:none;box-shadow:none}
 html[data-demo="4"] .projects-toolbar .search:has(input:focus-visible) {outline:2px solid var(--d4-ring);outline-offset:2px}
 /* Tables and tags: compact body retained, quieter metadata and consistent surfaces. */
-html[data-demo="4"] .tablewrap {background:var(--d4-card);border-color:var(--d4-border);border-radius:var(--radius-input);box-shadow:none}
+html[data-demo="4"] .tablewrap {background:var(--d4-card);border-color:var(--d4-border);border-radius:4px;box-shadow:none}
 html[data-demo="4"] table {background:transparent;font:450 13px/20px var(--sb-font-body)}
 html[data-demo="4"] table thead tr {border-bottom:1px solid var(--d4-border)}
 html[data-demo="4"] table th,html[data-demo="4"] #project-results table th {height:40px;padding:0 16px;background:var(--d4-field);color:var(--d4-tertiary);font:450 12px/16px var(--sb-font-body);border-color:var(--d4-border);vertical-align:middle}
@@ -70,19 +70,19 @@ html[data-demo="4"] table td,html[data-demo="4"] #project-results table td {padd
 html[data-demo="4"] table tbody tr:last-child td {border-bottom:0}
 html[data-demo="4"] #project-results .projecttitle {font:500 13px/20px var(--sb-font-body)}
 html[data-demo="4"] #project-results .project-discovery .projectdesc {font:450 12px/16px var(--sb-font-body);color:var(--d4-tertiary)}
-html[data-demo="4"] .tag {font:450 11px/18px var(--sb-font-body);border-radius:var(--radius-xs)}
-html[data-demo="4"] .badge {font-size:11px;line-height:18px;border-radius:var(--radius-control);border-color:var(--d4-border)}
+html[data-demo="4"] .tag {font:450 11px/18px var(--sb-font-body);border-radius:4px}
+html[data-demo="4"] .badge {font-size:11px;line-height:18px;border-radius:4px;border-color:var(--d4-border)}
 @media(hover:hover) and (pointer:fine){html[data-demo="4"] table tbody tr:hover{background:var(--d4-field)}}
 /* Preserve underline Tabs and page composition; unify their component type. */
 html[data-demo="4"] .tabs {border-color:var(--d4-border)}
 html[data-demo="4"] .tabs button {box-shadow:none;font-family:var(--sb-font-body);font-size:13px;font-weight:450;color:var(--d4-tertiary)}
 html[data-demo="4"] .tabs button.active {font-weight:500;color:var(--d4-fg);border-bottom-color:var(--d4-fg)}
 /* Floating surfaces use the official multi-layer outline shadow instead of double borders. */
-html[data-demo="4"] :is(.single-select-menu,.filter-popover,.scope-options,.project-card-actions,.admin-project-actions) {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:var(--radius-input);box-shadow:var(--d4-shadow)}
-html[data-demo="4"] .single-select-option {font:450 13px/20px var(--sb-font-body);padding-block:6px;border-radius:var(--radius-control);color:var(--d4-muted)}
+html[data-demo="4"] :is(.single-select-menu,.filter-popover,.scope-options,.project-card-actions,.admin-project-actions) {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:4px;box-shadow:var(--d4-shadow)}
+html[data-demo="4"] .single-select-option {font:450 13px/20px var(--sb-font-body);padding-block:6px;border-radius:4px;color:var(--d4-muted)}
 html[data-demo="4"] .single-select-option[aria-selected=true] {color:var(--d4-fg)}
 html[data-demo="4"] .filter-popover :is(header,footer) {background:transparent;border-color:var(--d4-border)}
-html[data-demo="4"] dialog {border:0;border-radius:var(--radius-surface);background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
+html[data-demo="4"] dialog {border:0;border-radius:4px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
 html[data-demo="4"] dialog.role-drawer {border-radius:0}
 html[data-demo="4"] dialog::backdrop {background:rgb(0 0 0 / .4);backdrop-filter:none}
 html[data-demo="4"] .modalhead {background:transparent;border-color:var(--d4-border)}
@@ -91,10 +91,10 @@ html[data-demo="4"] .modalfoot {background:transparent;border-color:var(--d4-bor
 html[data-demo="4"] .project-card {border-color:var(--d4-border);background:var(--d4-card);box-shadow:0 1px 2px #0000000d}
 /* Keep the deployed banner's placement, single-line composition and height. */
 html[data-demo="4"] .shell>.main>.capacity-alert.warning {background:var(--d4-warning-bg);border-color:var(--d4-warning-border);color:var(--d4-fg)}
-html[data-demo="4"] .capacity-alert .capacity-alert-symbol {border:0;background:var(--d4-warning-fg);color:var(--d4-warning-bg);border-radius:var(--radius-xs)}
+html[data-demo="4"] .capacity-alert .capacity-alert-symbol {border:0;background:var(--d4-warning-fg);color:var(--d4-warning-bg);border-radius:4px}
 html[data-demo="4"] .capacity-alert [data-d4-button].alert-close {background:transparent;border:0;box-shadow:none}
-html[data-demo="4"] :is(.card-text-tooltip,.info-tip [role=tooltip],.inline-help [role=tooltip],.project-fullname) {padding:6px 8px;border:0;border-radius:var(--radius-input);background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow);font:400 12px/16px var(--sb-font-body)}
-html[data-demo="4"] #toast {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:var(--radius-input);box-shadow:var(--d4-shadow);font:450 13px/20px var(--sb-font-body)}
+html[data-demo="4"] :is(.card-text-tooltip,.info-tip [role=tooltip],.inline-help [role=tooltip],.project-fullname) {padding:6px 8px;border:0;border-radius:4px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow);font:400 12px/16px var(--sb-font-body)}
+html[data-demo="4"] #toast {background:var(--d4-popover);color:var(--d4-fg);border:0;border-radius:4px;box-shadow:var(--d4-shadow);font:450 13px/20px var(--sb-font-body)}
 @media(prefers-reduced-motion:reduce){html[data-demo="4"] [data-d4-button]{transition:none;scale:1}}
 html[data-demo="4"] .organization-layout .settings-nav {padding:24px 12px}
 html[data-demo="4"] .capacity-alert [data-d4-button].alert-close {position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;min-height:26px;padding:4px}
@@ -140,12 +140,12 @@ html[data-demo="4"] .organization-layout:not(.account-layout)>.settings-body .re
 html[data-demo="4"] body :is(.filter-trigger,.single-select-trigger):is(:hover,:active,[aria-expanded=true]) {transform:none!important;scale:1!important;translate:none!important}
 
 html[data-demo="4"] .sidebar-mode-control {width:100%;padding-bottom:8px}
-html[data-demo="4"] body .sidebar-mode-trigger {display:flex;align-items:center;gap:10px;width:191px;height:32px;min-height:32px;padding:8px;border:0;background:transparent;color:var(--muted);box-shadow:none;border-radius:var(--radius-control);font-size:13px;white-space:nowrap}
+html[data-demo="4"] body .sidebar-mode-trigger {display:flex;align-items:center;gap:10px;width:191px;height:32px;min-height:32px;padding:8px;border:0;background:transparent;color:var(--muted);box-shadow:none;border-radius:4px;font-size:13px;white-space:nowrap}
 html[data-demo="4"] .sidebar-mode-trigger svg {width:16px;height:16px;flex:0 0 16px}
 html[data-demo="4"] .sidebar-mode-trigger>span {opacity:0}
 html[data-demo="4"] .sidebar:hover .sidebar-mode-trigger>span,html[data-demo="4"] .sidebar:focus-within .sidebar-mode-trigger>span {opacity:1}
-html[data-demo="4"] .sidebar-mode-menu {position:fixed;margin:0;padding:4px;width:172px;border:0;border-radius:var(--radius-input);background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
-html[data-demo="4"] body .sidebar-mode-menu button {display:flex;justify-content:space-between;width:100%;height:32px;padding:6px 8px;border:0;border-radius:var(--radius-sm);background:transparent;box-shadow:none;color:var(--d4-fg);font:450 13px/20px var(--sb-font-body)}
+html[data-demo="4"] .sidebar-mode-menu {position:fixed;margin:0;padding:4px;width:172px;border:0;border-radius:4px;background:var(--d4-popover);color:var(--d4-fg);box-shadow:var(--d4-shadow)}
+html[data-demo="4"] body .sidebar-mode-menu button {display:flex;justify-content:space-between;width:100%;height:32px;padding:6px 8px;border:0;border-radius:4px;background:transparent;box-shadow:none;color:var(--d4-fg);font:450 13px/20px var(--sb-font-body)}
 html[data-demo="4"] .sidebar-mode-menu button span {visibility:hidden}
 html[data-demo="4"] .sidebar-mode-menu button[aria-checked=true] span {visibility:visible}
 html[data-demo="4"] body .sidebar-mode-menu button:hover {background:var(--d4-accent)}
@@ -172,7 +172,7 @@ html[data-demo="4"] #content:has(>.org-overview) {padding-inline:0}
 html[data-demo="4"] .org-overview {width:min(1100px,calc(100% - 48px));margin-inline:auto}
 @media(max-width:760px){html[data-demo="4"] .org-overview{width:calc(100% - 32px);margin-inline:auto}}
 /* Upgrade is the one emphasized rail action. */
-html[data-demo="4"] body .capacitymini .upgrade-entry {background:var(--d4-solid);color:#fff;border-radius:var(--radius-input);box-shadow:0 1px 2px #0002}
+html[data-demo="4"] body .capacitymini .upgrade-entry {background:var(--d4-solid);color:#fff;border-radius:4px;box-shadow:0 1px 2px #0002}
 html[data-demo="4"] body .capacitymini .upgrade-entry:hover {background:var(--d4-solid-hover);color:#fff}
 html[data-demo="4"] body .capacitymini .upgrade-entry svg {color:currentColor}
 
@@ -189,7 +189,7 @@ html[data-demo="4"] #modal.tag-management-drawer::backdrop {animation:d4-panel-b
 @keyframes d4-skeleton-shimmer {0%{background-position:200% 0}100%{background-position:-200% 0}}
 @keyframes d4-content-reveal {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 html[data-demo="4"] .skeleton {gap:16px;min-height:360px;max-width:1100px;margin:0 auto;padding-top:8px}
-html[data-demo="4"] .skeleton div {height:72px;border-radius:var(--radius-input);background:linear-gradient(100deg,var(--d4-field) 30%,var(--d4-accent) 45%,var(--d4-field) 60%);background-size:200% 100%;animation:d4-skeleton-shimmer 1.25s ease-in-out infinite}
+html[data-demo="4"] .skeleton div {height:72px;border-radius:4px;background:linear-gradient(100deg,var(--d4-field) 30%,var(--d4-accent) 45%,var(--d4-field) 60%);background-size:200% 100%;animation:d4-skeleton-shimmer 1.25s ease-in-out infinite}
 html[data-demo="4"] .skeleton div:first-child {width:38%;height:28px}
 html[data-demo="4"] .skeleton div:nth-child(2) {width:100%;height:180px}
 html[data-demo="4"] .skeleton p {color:var(--d4-tertiary);font-size:12px}
@@ -212,7 +212,7 @@ html[data-demo="4"] .organization-layout > .settings-nav button:is(:hover,:activ
 
 /* Delayed tooltips for compact icon-only controls. */
 html[data-demo="4"] [data-d4-tooltip] {position:relative}
-html[data-demo="4"] [data-d4-tooltip]::after {content:attr(data-d4-tooltip);position:absolute;z-index:100;top:calc(100% + 8px);right:0;white-space:nowrap;padding:5px 8px;border-radius:var(--radius-control);background:var(--d4-fg);color:var(--d4-bg);font:450 11px/16px var(--sb-font-body);pointer-events:none;opacity:0;transform:translateY(-2px);transition:opacity 140ms ease,transform 140ms ease;transition-delay:500ms}
+html[data-demo="4"] [data-d4-tooltip]::after {content:attr(data-d4-tooltip);position:absolute;z-index:100;top:calc(100% + 8px);right:0;white-space:nowrap;padding:5px 8px;border-radius:4px;background:var(--d4-fg);color:var(--d4-bg);font:450 11px/16px var(--sb-font-body);pointer-events:none;opacity:0;transform:translateY(-2px);transition:opacity 140ms ease,transform 140ms ease;transition-delay:500ms}
 html[data-demo="4"] [data-d4-tooltip]:hover::after,html[data-demo="4"] [data-d4-tooltip]:focus-visible::after {opacity:1;transform:translateY(0)}
 html[data-demo="4"] #account-trigger::after {right:0}
 html[data-demo="4"] .header-resources [data-d4-tooltip]::after {right:0}
@@ -242,7 +242,7 @@ html[data-demo="4"] .crumb-org-switch[aria-expanded="true"] > svg:last-child {tr
 @media(prefers-reduced-motion:reduce){html[data-demo="4"] :is(summary,button[aria-expanded],.single-select-trigger,.filter-trigger,.crumb-org-switch)>svg:last-child{transition:none}html[data-demo="4"] :is(.info-tip [role=tooltip],.inline-help [role=tooltip],.card-text-tooltip,.project-fullname){animation:none}}
 /* Changelog-card treatment: preserve project data while emphasizing title, update meta and bookmark action. */
 html[data-demo="4"] #project-results .project-card,
-html[data-demo="4"] .org-overview .project-card {position:relative;overflow:hidden;border-radius:var(--radius-card);background:var(--d4-card);box-shadow:0 1px 2px #0000000b,0 8px 24px #00000008;transition:border-color 180ms ease,box-shadow 220ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1)}
+html[data-demo="4"] .org-overview .project-card {position:relative;overflow:hidden;border-radius:4px;background:var(--d4-card);box-shadow:0 1px 2px #0000000b,0 8px 24px #00000008;transition:border-color 180ms ease,box-shadow 220ms cubic-bezier(.22,1,.36,1),transform 220ms cubic-bezier(.22,1,.36,1)}
 html[data-demo="4"] #project-results .project-card::before,
 html[data-demo="4"] .org-overview .project-card::before {content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--d4-solid);opacity:0;transition:opacity 180ms ease}
 html[data-demo="4"] #project-results .project-card:hover,
@@ -310,7 +310,7 @@ html[data-demo="4"] #search::placeholder,
 html[data-demo="4"] .projects-toolbar .search input::placeholder {color:var(--d4-tertiary);opacity:.65}
 html[data-demo="4"] #modal.command-dialog .command-search input {font-size:16px;line-height:24px}
 html[data-demo="4"] #modal.command-dialog .command-result {transition:background-color 160ms ease,color 160ms ease}
-html[data-demo="4"] #modal.command-dialog .command-search:focus-within {outline:2px solid var(--d4-ring);outline-offset:1px;border-radius:var(--radius-control)}
+html[data-demo="4"] #modal.command-dialog .command-search:focus-within {outline:2px solid var(--d4-ring);outline-offset:1px;border-radius:4px}
 html[data-demo="4"] #modal.command-dialog .command-search:focus-within > svg {color:var(--d4-primary)}
 /* Organization switch chevron points upward while its menu is active. */
 html[data-demo="4"] .crumb-org-switch[aria-expanded="true"] > svg:last-child {transform:rotate(-90deg)!important}
@@ -357,7 +357,7 @@ html[data-demo="4"] .badge.red { background: #fde8e8; color: #a33a3a; border-col
     background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important;
     color: inherit !important;
     box-shadow: none !important;
-    border-radius: var(--radius-input);
+    border-radius:4px;
   }
 }
 @media (hover:hover) and (pointer:fine) {
@@ -365,7 +365,7 @@ html[data-demo="4"] .badge.red { background: #fde8e8; color: #a33a3a; border-col
     background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important;
     color: inherit !important;
     box-shadow: none !important;
-    border-radius: var(--radius-input);
+    border-radius:4px;
   }
 }
 
@@ -382,7 +382,7 @@ html[data-demo="4"] .projects-page-title { margin-bottom: 16px !important; }
 html[data-demo="4"] .organization-layout .settings-nav button.active { background: var(--d4-accent) !important; color: var(--d4-fg) !important; }
 html[data-demo="4"] .organization-layout .settings-nav button:hover:not(.active) { background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important; color: var(--d4-primary) !important; }
 html[data-demo="4"] .badge { min-height: 22px; line-height: 20px; padding: 1px 8px; }
-html[data-demo="4"] .organization-content > .panel.row { border: 1px solid var(--d4-border); border-radius: var(--radius-input); padding: 16px; background: var(--d4-card); }
+html[data-demo="4"] .organization-content > .panel.row { border: 1px solid var(--d4-border); border-radius:4px; padding: 16px; background: var(--d4-card); }
 html[data-demo="4"] .single-select-option[aria-selected="true"] { background: var(--d4-accent) !important; color: var(--d4-fg) !important; }
 html[data-demo="4"] .single-select-option:hover,
 html[data-demo="4"] .single-select-option:focus-visible { background: color-mix(in srgb, var(--d4-hover-tint, #f56565) 12%, transparent) !important; color: var(--d4-primary) !important; }
@@ -393,7 +393,7 @@ html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: var(--radius-control) !important;
+  border-radius:4px !important;
   background: var(--upgrade-surface) !important;
   color: #fff !important;
   box-shadow: var(--upgrade-shadow) !important;
@@ -433,7 +433,7 @@ html[data-demo="4"][data-theme="dark"] {
   --upgrade-surface: linear-gradient(110deg, #ad3e50 0%, #a33957 58%, #953b60 100%);
   --upgrade-shadow: inset 0 0 0 1px #ffffff20, inset 0 1px 0 #ffffff18;
 }
-html[data-demo="4"] body .capacitymini .upgrade-entry {border-radius:var(--radius-input) !important;}
+html[data-demo="4"] body .capacitymini .upgrade-entry {border-radius:4px !important;}
 html[data-demo="4"] body .capacitymini .upgrade-entry::before {display:none;}
 html[data-demo="4"] body .capacitymini .upgrade-entry svg {fill:currentColor;stroke:none;width:14px;height:14px;}
 html[data-demo="4"] body .capacitymini .upgrade-entry:hover {filter:brightness(1.08);}
@@ -460,7 +460,7 @@ html[data-demo="4"] body .capacitymini .upgrade-entry:hover {filter:brightness(1
 /* Upgrade CTA keeps its shape and saturated gradient during hover. */
 html[data-demo="4"] body .capacitymini .upgrade-entry,
 html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
-  border-radius:var(--radius-input) !important;
+  border-radius:4px !important;
   background:var(--upgrade-surface) !important;
   color:#fff !important;
   box-shadow:var(--upgrade-shadow) !important;
@@ -484,7 +484,7 @@ html[data-demo="4"] #modal.command-dialog .command-search {
   box-sizing:border-box;
   padding:0 12px;
   border:1px solid var(--d4-input) !important;
-  border-radius:var(--radius-input) !important;
+  border-radius:4px !important;
   background:var(--d4-field) !important;
   box-shadow:none !important;
 }
@@ -595,7 +595,7 @@ html[data-demo="4"] .shell > .main > .capacity-alert {padding-left:32px;padding-
 html[data-demo="4"] body .admin-project-menu {display:inline-block;width:max-content;vertical-align:middle;}
 html[data-demo="4"] body .project-card-menu > summary,
 html[data-demo="4"] body .project-card-menu > summary:hover {
- border-radius:var(--radius-control) !important;
+ border-radius:4px !important;
 }
 /* Outline upgrade CTA retains its existing dimensions and pointer feedback. */
 html[data-demo="4"] body .capacitymini .upgrade-entry,
@@ -603,7 +603,7 @@ html[data-demo="4"] body .capacitymini .upgrade-entry:hover {
  background:transparent !important;
  color:var(--d4-primary) !important;
  border:1px solid var(--d4-primary) !important;
- border-radius:var(--radius-input) !important;
+ border-radius:4px !important;
  box-shadow:none !important;
  filter:none !important;
 }

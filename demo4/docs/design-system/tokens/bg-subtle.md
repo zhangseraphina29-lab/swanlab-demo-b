@@ -23,6 +23,8 @@
   - 值：`var(--neutral-100)`
 - [src/styles/fireworks-neutral-tokens.css:93](../../../src/styles/fireworks-neutral-tokens.css) · 条件：`html[data-palette="neutral-purple"][data-theme="dark"]`
   - 值：`var(--neutral-800)`
+- [src/styles/fireworks-theme.css:20](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"]:not([data-theme="dark"])`
+  - 值：`#F7F7F7`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

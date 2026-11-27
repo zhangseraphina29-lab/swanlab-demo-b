@@ -29,6 +29,12 @@
   - 值：`var(--magenta-900)`
 - [src/styles/lucide-theme.css:62](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"][data-palette="magenta"]`
   - 值：`color-mix(in oklch,var(--magenta-900) 40%,var(--bg-canvas))`
+- [src/styles/fireworks-theme.css:35](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`color-mix(in srgb,var(--action-primary) 8%,var(--bg-canvas))`
+- [src/styles/fireworks-theme.css:40](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
+  - 值：`color-mix(in srgb,var(--action-primary) 20%,var(--bg-canvas))`
+- [src/styles/fireworks-theme.css:67](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--selection-bg)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

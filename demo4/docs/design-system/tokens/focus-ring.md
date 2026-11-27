@@ -27,6 +27,10 @@
   - 值：`color-mix(in oklch,var(--magenta-500) 35%,transparent)`
 - [src/styles/lucide-theme.css:40](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
   - 值：`color-mix(in oklch,var(--magenta-300) 40%,transparent)`
+- [src/styles/fireworks-theme.css:36](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--action-primary)`
+- [src/styles/fireworks-theme.css:41](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--brand-text)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
