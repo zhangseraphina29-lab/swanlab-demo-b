@@ -3,7 +3,7 @@
   "version": "2.0.8",
   "style": "line",
   "mapping": {
-    "book": "book-open",
+    "book": "book-open-2",
     "bolt": "lightning",
     "github": "code",
     "sun": "sun",
@@ -17,7 +17,7 @@
     "chart": "chart-line-up",
     "settings": "settings",
     "clock": "clock",
-    "search": "search",
+    "search": "search-2",
     "plus": "char-plus",
     "list": "list-unordered",
     "arrow": "arrow-right",
@@ -33,7 +33,7 @@
     "edit": "pencil",
     "building": "building",
     "trash": "delete-trash",
-    "pin": "pushpin",
+    "pin": "pushpin-diagonal",
     "move": "folder-arrow-right",
     "billing": "credit-card",
     "community": "layout-panel-left",
@@ -42,7 +42,9 @@
     "userPlus": "user-plus",
     "sparkles": "sparkles",
     "arrowUpRight": "arrow-up-right",
-    "sidebar": "layout-panel-left"
+    "sidebar": "layout-panel-left",
+    "pinOff": "pushpin-diagonal-off",
+    "manageProject": "server-settings"
   },
   "note": "GitHub entry uses QingIcon code: the catalog has no GitHub brand mark. Product brand logos and chart graphics are unchanged."
 }

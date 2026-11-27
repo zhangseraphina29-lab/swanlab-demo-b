@@ -15,7 +15,7 @@
 
 - [design-reference/supabase/tokens.css:31](../../../design-reference/supabase/tokens.css) · 条件：`[data-design-system],
 [data-design-system][data-ds-mode="light"]`
-  - 值：`5.33333px`
+  - 值：`4px`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

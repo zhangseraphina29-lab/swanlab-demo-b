@@ -37,4 +37,5 @@
 - [src/styles/auth.css:49](../../../src/styles/auth.css)：`--particle-guide: var(--border-control)`
 - [src/styles/pricing.css:8](../../../src/styles/pricing.css)：`border: 1px solid var(--border-control)`
 - [src/styles/organization-overview.css:258](../../../src/styles/organization-overview.css)：`border: 1px solid var(--border-control)`
+- [src/styles/fireworks-theme.css:74](../../../src/styles/fireworks-theme.css)：`border: 0.5px solid var(--border-control)`
 <!-- generated:end -->

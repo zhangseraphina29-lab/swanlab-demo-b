@@ -12,12 +12,11 @@
 ## 当前代码定义（按样式导入和声明顺序）
 
 - [src/styles/foundations.css:4](../../../src/styles/foundations.css) · 条件：`:root`
-  - 值：`12px`
+  - 值：`4px`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/auth.css:1](../../../src/styles/auth.css)：`border-radius: var(--radius-large)`
-- [src/styles/pricing.css:1](../../../src/styles/pricing.css)：`border-radius: var(--radius-large)`
+当前已导入的 CSS 中未发现 var() 直接引用；不能仅凭声明认定组件正在使用。
 <!-- generated:end -->

@@ -5,6 +5,7 @@
 <!-- generated:start -->
 | Token | 条件声明数 |
 | --- | ---: |
+| [`--danger-action-text`](../tokens/danger-action-text.md) | 2 |
 | [`--danger-active`](../tokens/danger-active.md) | 4 |
 | [`--danger-bg`](../tokens/danger-bg.md) | 4 |
 | [`--danger-hover`](../tokens/danger-hover.md) | 4 |
@@ -12,8 +13,10 @@
 | [`--disabled-text`](../tokens/disabled-text.md) | 6 |
 | [`--floating-shadow`](../tokens/floating-shadow.md) | 6 |
 | [`--focus`](../tokens/focus.md) | 9 |
-| [`--focus-ring`](../tokens/focus-ring.md) | 6 |
+| [`--focus-ring`](../tokens/focus-ring.md) | 8 |
 | [`--green`](../tokens/green.md) | 8 |
+| [`--hover-bg`](../tokens/hover-bg.md) | 1 |
+| [`--hover-fg`](../tokens/hover-fg.md) | 1 |
 | [`--info-100`](../tokens/info-100.md) | 2 |
 | [`--info-200`](../tokens/info-200.md) | 2 |
 | [`--info-300`](../tokens/info-300.md) | 2 |
@@ -62,7 +65,4 @@
 | [`--sb-color-raw-control-border`](../tokens/sb-color-raw-control-border.md) | 2 |
 | [`--sb-color-raw-focus`](../tokens/sb-color-raw-focus.md) | 2 |
 | [`--sb-color-raw-green`](../tokens/sb-color-raw-green.md) | 3 |
-| [`--sb-color-raw-ink`](../tokens/sb-color-raw-ink.md) | 2 |
-| [`--sb-color-raw-input`](../tokens/sb-color-raw-input.md) | 2 |
-| [`--sb-color-raw-muted`](../tokens/sb-color-raw-muted.md) | 2 |
 <!-- generated:end -->

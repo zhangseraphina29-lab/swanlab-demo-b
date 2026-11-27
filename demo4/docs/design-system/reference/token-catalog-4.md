@@ -5,6 +5,10 @@
 <!-- generated:start -->
 | Token | 条件声明数 |
 | --- | ---: |
+| [`--success-300`](../tokens/success-300.md) | 2 |
+| [`--success-400`](../tokens/success-400.md) | 2 |
+| [`--success-50`](../tokens/success-50.md) | 2 |
+| [`--success-500`](../tokens/success-500.md) | 2 |
 | [`--success-600`](../tokens/success-600.md) | 2 |
 | [`--success-700`](../tokens/success-700.md) | 2 |
 | [`--success-800`](../tokens/success-800.md) | 2 |

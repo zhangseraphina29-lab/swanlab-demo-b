@@ -18,10 +18,5 @@
 
 ## 直接引用示例（最多六处）
 
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
-- [src/styles/style.css:1](../../../src/styles/style.css)：`border-radius: var(--radius-control)`
+当前已导入的 CSS 中未发现 var() 直接引用；不能仅凭声明认定组件正在使用。
 <!-- generated:end -->

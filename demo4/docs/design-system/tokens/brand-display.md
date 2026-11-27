@@ -25,6 +25,8 @@
   - 值：`var(--wine-300)`
 - [src/styles/lucide-theme.css:37](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-palette="magenta"]`
   - 值：`var(--magenta-400)`
+- [src/styles/fireworks-theme.css:33](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--action-primary)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

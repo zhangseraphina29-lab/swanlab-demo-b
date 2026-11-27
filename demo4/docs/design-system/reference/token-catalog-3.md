@@ -5,6 +5,9 @@
 <!-- generated:start -->
 | Token | 条件声明数 |
 | --- | ---: |
+| [`--sb-color-raw-ink`](../tokens/sb-color-raw-ink.md) | 2 |
+| [`--sb-color-raw-input`](../tokens/sb-color-raw-input.md) | 2 |
+| [`--sb-color-raw-muted`](../tokens/sb-color-raw-muted.md) | 2 |
 | [`--sb-color-raw-on-green`](../tokens/sb-color-raw-on-green.md) | 2 |
 | [`--sb-color-raw-secondary`](../tokens/sb-color-raw-secondary.md) | 2 |
 | [`--sb-color-raw-selected`](../tokens/sb-color-raw-selected.md) | 2 |
@@ -56,13 +59,10 @@
 | [`--sb-type-weight-500`](../tokens/sb-type-weight-500.md) | 1 |
 | [`--sb-type-weight-600`](../tokens/sb-type-weight-600.md) | 1 |
 | [`--selected`](../tokens/selected.md) | 5 |
+| [`--selection-bg`](../tokens/selection-bg.md) | 1 |
 | [`--sidebar`](../tokens/sidebar.md) | 5 |
 | [`--sidebar-width`](../tokens/sidebar-width.md) | 5 |
 | [`--soft`](../tokens/soft.md) | 9 |
 | [`--success-100`](../tokens/success-100.md) | 2 |
 | [`--success-200`](../tokens/success-200.md) | 2 |
-| [`--success-300`](../tokens/success-300.md) | 2 |
-| [`--success-400`](../tokens/success-400.md) | 2 |
-| [`--success-50`](../tokens/success-50.md) | 2 |
-| [`--success-500`](../tokens/success-500.md) | 2 |
 <!-- generated:end -->

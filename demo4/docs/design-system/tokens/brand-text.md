@@ -31,6 +31,10 @@
   - 值：`var(--magenta-500)`
 - [src/styles/lucide-theme.css:40](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-palette="magenta"][data-theme="dark"]`
   - 值：`var(--magenta-200)`
+- [src/styles/fireworks-theme.css:34](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`var(--action-primary)`
+- [src/styles/fireworks-theme.css:39](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"]`
+  - 值：`color-mix(in srgb,var(--action-primary) 55%,white)`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

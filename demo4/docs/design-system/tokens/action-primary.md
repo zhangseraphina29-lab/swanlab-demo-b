@@ -29,6 +29,8 @@
   - 值：`var(--magenta-300)`
 - [src/styles/lucide-theme.css:62](../../../src/styles/lucide-theme.css) · 条件：`html[data-demo="4"][data-theme="dark"][data-palette="magenta"]`
   - 值：`var(--magenta-500)`
+- [src/styles/fireworks-theme.css:29](../../../src/styles/fireworks-theme.css) · 条件：`html[data-demo="4"],html[data-demo="4"][data-theme="dark"]`
+  - 值：`#594DB9`
 
 这些是声明记录，并非浏览器计算值；具体元素还受选择器优先级、继承和媒体条件影响。
 

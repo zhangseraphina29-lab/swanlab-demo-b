@@ -4,6 +4,12 @@
 
 ## 已确定规则
 
+用户于 2026-11-26 更新置顶规则：置顶前后均使用 pushpin-diagonal，已置顶为 #594DB9 实心；不再使用 pushpin-diagonal-off。操作含义和无障碍名称仍随状态切换。
+
+用户于 2026-11-26 指定取消置顶 `pushpin-diagonal-off` 内部不填充；SVG 及内部路径固定 `fill:none`，包括已置顶状态及 hover，保持线性描边。
+
+用户于 2026-11-26 指定 Qingicon 线性图标映射：置顶 `pushpin-diagonal`、取消置顶 `pushpin-diagonal-off`、官方文档 `book-open-2`、搜索 `search-2`。SVG 来自 Qingicon 官方 `assets.qingicon.com/icons/line/{Map,Education,System}.json`；置顶图标按可执行操作切换，卡片及更多菜单一致。图标名称映射同步于 `qingicon-mapping.json`。
+
 > - 图标统一 QingIcon 对应语义的线性图标、1.5px 线宽；升级按钮使用指定四芒星 SVG，当前为 outline 样式。
 
 来源：[demo4-UI规则.md · 第 42 行](../sources/ui.txt)
